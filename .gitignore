@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.spec.bak
+
+# 업로드/보고서/이력 (운영 데이터)
+uploads/
+reports/
+history/
+test_output/
+sample_logs/
+
+# 환경
+.env
+*.local
+
+# IDE
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# 배포 패키지 (용량 큼)
+*.zip
