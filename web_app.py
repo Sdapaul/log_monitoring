@@ -516,7 +516,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <!-- 항목 설명 -->
         <div class="mt-2 small text-muted p-2 rounded" style="background:#f8f9fa">
           <div id="desc-misuse"><strong>&#128274; 오남용:</strong> SELECT절 PII 노출, 야간 개인정보 조회, 대량 레코드 반환</div>
-          <div id="desc-excess" class="mt-1"><strong>&#128200; 과다조회:</strong> 시간당/일당 임계값 초과, 대량 조회(BULK), 대상 다양성</div>
+          <div id="desc-excess" class="mt-1"><strong>&#128200; 과다조회:</strong> 일별(≥500)/시간당(≥100) 임계값 초과, 대량 조회(BULK), 대상 다양성, 최근 30일 평균 대비 추세 급증</div>
         </div>
       </div>
 
@@ -844,7 +844,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                   </div>
                   <div class="small text-muted">
                     <strong>개인정보 오남용:</strong> SELECT 절에서 PII 컬럼 노출, 야간/업무시간 외 개인정보 조회, 단일 쿼리 대량 레코드 반환<br>
-                    <strong>과다조회:</strong> 시간당/일당 쿼리 수 임계값 초과, 대량 내보내기(BULK), 다수 대상 반복 조회<br>
+                    <strong>과다조회:</strong> 일별(≥500) / 시간당(≥100) 쿼리 임계값 초과, 대량 내보내기(BULK), 다수 대상 반복 조회, 최근 30일 평균 대비 10% 초과 시 추세 급증 탐지<br>
                     둘 다 선택 권장 (기본값)
                   </div>
                 </div>
