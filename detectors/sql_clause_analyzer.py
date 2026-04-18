@@ -31,6 +31,10 @@ RESULT_ROW_PATTERNS: list[re.Pattern] = [
     re.compile(r'fetch(?:Size|Count)\s*[=:]\s*([\d,]+)', re.IGNORECASE),
     # MySQL CLI: 1847 rows in set
     re.compile(r'([\d,]+)\s+rows?\s+in\s+set', re.IGNORECASE),
+    # PostgreSQL: rows=1847
+    re.compile(r'\brows\s*=\s*([\d,]+)', re.IGNORECASE),
+    # PostgreSQL pgaudit / 일반: Rows Affected: 1847
+    re.compile(r'rows?\s+affected\s*[=:]\s*([\d,]+)', re.IGNORECASE),
 ]
 
 # ── PII 컬럼명 키워드 (SELECT 절) ─────────────────────────

@@ -1,7 +1,7 @@
 """
 대용량 로그 파일을 청크 단위로 스트리밍 읽기.
 UTF-8, EUC-KR, CP949 인코딩 자동 감지 지원.
-gzip 파일 지원.
+gzip 파일 지원. Word/PDF/Excel 문서 지원.
 """
 from __future__ import annotations
 import gzip
@@ -36,12 +36,22 @@ def stream_lines(
 ) -> Iterator[tuple[int, str]]:
     """
     파일을 한 줄씩 스트리밍합니다.
+    Word/PDF/Excel 문서는 텍스트 추출 후 라인 단위로 yield합니다.
     Yields: (line_no, line_text)
     """
     path = Path(file_path)
+    file_size = os.path.getsize(path)
+
+    # 문서 파일 (Word/PDF/Excel)
+    from pipeline.doc_extractor import is_document, extract_lines
+    if is_document(path):
+        if show_progress:
+            print(f"  [문서읽기] {path.name} ({file_size / 1024 / 1024:.1f} MB)")
+        yield from extract_lines(path)
+        return
+
     encoding = detect_encoding(path)
     opener = gzip.open if path.suffix == '.gz' else open
-    file_size = os.path.getsize(path)
 
     if show_progress:
         print(f"  [읽기] {path.name} ({file_size / 1024 / 1024:.1f} MB, 인코딩: {encoding})")

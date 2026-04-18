@@ -35,7 +35,7 @@ def get_parser(file_path: str, force_format: str = 'auto'):
     from parsers.web_access_parser import WebAccessParser
     from parsers.app_log_parser import AppLogParser
 
-    if force_format == 'db':
+    if force_format in ('db', 'postgresql'):
         return DbAccessParser()
     elif force_format == 'web':
         return WebAccessParser()

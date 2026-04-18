@@ -38,6 +38,8 @@ def detect_format(file_path: str, sample_size: int = 100) -> tuple[str, object]:
         'oracle_audit': 10,
         'mysql_general': 9,
         'mssql_audit': 9,
+        'postgresql': 9,
+        'postgresql_csv': 8,
         'apache_combined': 8,
         'log4j_standard': 7,
         'syslog_rfc5424': 4,
@@ -64,7 +66,7 @@ def detect_format(file_path: str, sample_size: int = 100) -> tuple[str, object]:
         print(f"  [형식감지] {best_fmt} (신뢰도: {confidence:.0f}%)")
 
         # 형식에 맞는 파서 선택
-        if 'oracle' in best_fmt or 'mysql' in best_fmt or 'mssql' in best_fmt:
+        if 'oracle' in best_fmt or 'mysql' in best_fmt or 'mssql' in best_fmt or 'postgresql' in best_fmt:
             return best_fmt, DbAccessParser()
         elif 'apache' in best_fmt:
             return best_fmt, WebAccessParser()

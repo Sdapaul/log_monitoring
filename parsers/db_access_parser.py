@@ -1,4 +1,4 @@
-"""DB 접근 로그 파서 - Oracle, MySQL, MSSQL 지원"""
+"""DB 접근 로그 파서 - Oracle, MySQL, MSSQL, PostgreSQL 지원"""
 from __future__ import annotations
 import re
 import hashlib
@@ -41,6 +41,44 @@ MSSQL_PATTERN = re.compile(
     re.IGNORECASE | re.MULTILINE
 )
 
+# ── PostgreSQL Server Log ────────────────────────────────
+# 표준: 2024-01-15 14:23:01.123 UTC [12345] user@db LOG:  statement: SELECT ...
+# 축약: 2024-01-15 14:23:01 LOG:  statement: SELECT ...
+PG_STANDARD = re.compile(
+    r'^(\d{4}-\d{2}-\d{2}[\sT]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:\s+UTC|\s+[+-]\d{2}:?\d{2})?)'
+    r'(?:[^[]*\[(\d+)\])?'           # optional [pid]
+    r'(?:[^@]*?(\w[\w.]+)@(\w+))?'  # optional user@db
+    r'\s+(?:LOG|ERROR|WARNING|NOTICE|FATAL|PANIC|DEBUG|INFO):\s+(.*)',
+    re.IGNORECASE | re.DOTALL
+)
+# CSV 형식: timestamp,user,db,app,client,...,"message"
+PG_CSV = re.compile(
+    r'^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(?:\.\d+)?\s*\w*),'
+    r'"([^"]*)",'   # user
+    r'"([^"]*)",'   # db
+    r'"[^"]*",'     # app
+    r'"([^"]*)"',   # client_addr
+    re.IGNORECASE
+)
+# message 열 (CSV 마지막 의미 있는 필드)
+PG_CSV_MSG = re.compile(r'(?:^|,)"((?:statement|execute|duration|AUDIT)[^"]*)"', re.IGNORECASE)
+
+# SQL 문 추출 (statement:/execute .:/query:)
+PG_STMT_RE  = re.compile(r'(?:statement|execute(?:\s+\S+)?|query):\s+(.*)', re.IGNORECASE | re.DOTALL)
+PG_DURATION_RE = re.compile(
+    r'duration:\s+[\d.]+\s+ms\s+(?:statement|execute(?:\s+\S+)?):\s+(.*)',
+    re.IGNORECASE | re.DOTALL
+)
+# pgaudit: AUDIT: SESSION,1,1,READ,SELECT,,,"SELECT ..."
+PG_AUDIT_RE = re.compile(
+    r'AUDIT:\s+\w+,\d+,\d+,(\w+),(\w+),+,"([^"]*)"',
+    re.IGNORECASE
+)
+
+def _is_pg_line(line: str) -> bool:
+    """PostgreSQL 로그 라인 빠른 판별."""
+    return bool(PG_STANDARD.match(line))
+
 # ── 공통 SQL 패턴 ────────────────────────────────────────
 TABLE_NAME_PATTERN = re.compile(
     r'\bFROM\s+([`"]?[\w.]+[`"]?)|\bJOIN\s+([`"]?[\w.]+[`"]?)|\bINTO\s+([`"]?[\w.]+[`"]?)',
@@ -78,7 +116,13 @@ class DbAccessParser(BaseParser):
         mysql_count = sum(1 for line in sample_lines if MYSQL_GENERAL.match(line))
         oracle_count = sum(1 for f in ORACLE_FIELDS.values() if f.search(full_text))
         mssql_count = len(re.findall(r'(?:LoginName|StatementText|DatabaseName)', full_text, re.IGNORECASE))
-        return (mysql_count / max(len(sample_lines), 1) > 0.1) or oracle_count >= 2 or mssql_count >= 2
+        pg_count = sum(1 for line in sample_lines if _is_pg_line(line))
+        return (
+            (mysql_count / max(len(sample_lines), 1) > 0.1)
+            or oracle_count >= 2
+            or mssql_count >= 2
+            or (pg_count / max(len(sample_lines), 1) > 0.1)
+        )
 
     def parse_line(self, line: str, line_no: int, source_file: str, context: dict) -> LogEvent | None:
         if not line.strip():
@@ -111,6 +155,11 @@ class DbAccessParser(BaseParser):
             context['oracle_block'] = [line]
             context['oracle_start_line'] = line_no
             return None
+
+        # PostgreSQL 표준/CSV 로그
+        m = PG_STANDARD.match(line)
+        if m:
+            return self._parse_pg_line(m, line, line_no, source_file)
 
         # MSSQL 또는 일반 DB 로그 폴백
         return self._parse_generic_db_line(line, line_no, source_file)
@@ -165,6 +214,78 @@ class DbAccessParser(BaseParser):
             target=obj_name,
             query_text=sql_text,
             extra={'os_user': os_user, 'is_bulk': is_bulk, 'db_type': 'oracle'},
+        )
+
+    def _parse_pg_line(self, m, line: str, line_no: int, source_file: str) -> LogEvent:
+        ts   = try_parse_timestamp(m.group(1))
+        pid  = m.group(2)
+        user = m.group(3)
+        db   = m.group(4)
+        msg  = (m.group(5) or '').strip()
+
+        # SQL 추출 (duration: ... statement: ... 또는 statement: ...)
+        sql_text = None
+        dm = PG_DURATION_RE.match(msg)
+        if dm:
+            sql_text = dm.group(1).strip()
+        else:
+            sm = PG_STMT_RE.match(msg)
+            if sm:
+                sql_text = sm.group(1).strip()
+
+        # pgaudit 파싱
+        am = PG_AUDIT_RE.search(msg)
+        if am and not sql_text:
+            sql_text = am.group(3).strip()
+
+        if not sql_text:
+            sql_text = msg  # 비정형 메시지도 PII 스캔 대상으로 유지
+
+        table = extract_table_name(sql_text) if sql_text else None
+        is_bulk = self._check_bulk(sql_text, ts) if sql_text else False
+
+        return self.make_event(
+            raw_line=line,
+            source_file=source_file,
+            line_no=line_no,
+            timestamp=ts,
+            user_id=user or self.extract_user_id(line),
+            ip_address=self.extract_ip(line),
+            action=self.extract_action(sql_text or line),
+            target=db or table,
+            query_text=sql_text,
+            extra={'pid': pid, 'pg_db': db, 'is_bulk': is_bulk, 'db_type': 'postgresql'},
+        )
+
+    def _parse_pg_csv_line(self, line: str, line_no: int, source_file: str) -> LogEvent | None:
+        m = PG_CSV.match(line)
+        if not m:
+            return None
+        ts      = try_parse_timestamp(m.group(1))
+        user    = m.group(2)
+        db      = m.group(3)
+        client  = m.group(4)
+
+        msg_m = PG_CSV_MSG.search(line)
+        msg   = msg_m.group(1) if msg_m else line
+
+        sm = PG_STMT_RE.match(msg)
+        sql_text = sm.group(1).strip() if sm else msg
+
+        table   = extract_table_name(sql_text)
+        is_bulk = self._check_bulk(sql_text, ts)
+
+        return self.make_event(
+            raw_line=line[:500],
+            source_file=source_file,
+            line_no=line_no,
+            timestamp=ts,
+            user_id=user,
+            ip_address=client,
+            action=self.extract_action(sql_text),
+            target=db or table,
+            query_text=sql_text,
+            extra={'pg_db': db, 'is_bulk': is_bulk, 'db_type': 'postgresql'},
         )
 
     def _parse_generic_db_line(self, line: str, line_no: int, source_file: str) -> LogEvent:

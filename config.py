@@ -161,6 +161,16 @@ LOG_FORMAT_SIGNATURES: dict = {
         "timestamp_fmt": "%Y-%m-%d %H:%M:%S",
         "description": "MSSQL Audit Log"
     },
+    "postgresql": {
+        "pattern": r"^\d{4}-\d{2}-\d{2}[\sT]\d{2}:\d{2}:\d{2}.*(?:LOG|ERROR|WARNING|NOTICE|FATAL|PANIC):\s{1,3}(?:statement:|duration:|execute|AUDIT:)",
+        "timestamp_fmt": "%Y-%m-%d %H:%M:%S",
+        "description": "PostgreSQL Server Log"
+    },
+    "postgresql_csv": {
+        "pattern": r'^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}[.\d]* \w+,"[^"]*","[^"]*","',
+        "timestamp_fmt": "%Y-%m-%d %H:%M:%S",
+        "description": "PostgreSQL CSV Log"
+    },
     "csv_generic": {
         "pattern": r"^[^,\n]+,[^,\n]+,[^,\n]+,",
         "timestamp_fmt": None,

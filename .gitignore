@@ -30,3 +30,9 @@ Desktop.ini
 
 # 배포 패키지 (용량 큼)
 *.zip
+build_v2/
+dist_v2/
+pii_checker_v1.0_offline/
+pii_checker_v2.0_offline/
+sample_docs/
+*.egg
