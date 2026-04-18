@@ -1600,6 +1600,16 @@ RowsAffected: 1000</div>
                       <td class="small">LIMIT/TOP/ROWNUM &ge;1,000 건<br>or SELECT * FROM &lt;테이블&gt; (WHERE 없음)<br>하루 3건 초과 시 경고</td>
                       <td><span class="badge badge-HIGH">HIGH</span></td>
                     </tr>
+                    <tr>
+                      <td><strong>EXCESSIVE_ACCESS</strong><br><small>고유 대상 다양성</small></td>
+                      <td class="small">하루 서로 다른 대상 &ge;50명(건) 접근 시 경고</td>
+                      <td><span class="badge badge-MEDIUM">MEDIUM</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>EXCESSIVE_ACCESS</strong><br><small>일별 추세 급증</small></td>
+                      <td class="small">당일 조회 건수가 최근 30일 평균 대비 10% 초과<br>(50% 초과 시 HIGH, 최소 7일 이력 필요)</td>
+                      <td><span class="badge badge-HIGH">HIGH</span>~<span class="badge badge-MEDIUM">MEDIUM</span></td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
