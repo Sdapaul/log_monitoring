@@ -60,6 +60,21 @@ PII_PATTERNS: dict[str, tuple[str, str]] = {
         r"(?:birth|생년월일|dob|birthday)\s*[=:'\"\s]+(\d{4}[-./]\d{2}[-./]\d{2}|\d{8})",
         "HIGH"
     ),
+    # IP 주소 (IPv4 + IPv6)
+    # validate_ip()로 루프백/브로드캐스트 제외
+    "IP_ADDRESS": (
+        r"(?<!\d)"
+        r"(?:"
+        r"(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)"
+        r"(?:\.(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)){3}"
+        r"|"
+        r"(?:[0-9a-fA-F]{1,4}:){2,7}[0-9a-fA-F]{1,4}"
+        r"|"
+        r"(?:[0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}"
+        r")"
+        r"(?!\d)",
+        "LOW"
+    ),
 }
 
 # 컴파일된 패턴 (시작 시 1회만 컴파일)
@@ -76,6 +91,7 @@ PII_TRIGGER_KEYWORDS: frozenset = frozenset([
     "고객", "customer", "account", "acct", "card",
     "email", "passport", "여권", "사원번호", "empno",
     "cust", "member", "회원", "개인", "personal",
+    "ip", "addr", "client", "remote", "src_ip", "접속",
 ])
 
 # ─────────────────────────────────────────────

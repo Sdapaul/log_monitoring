@@ -111,6 +111,9 @@ def _scan_text(candidate: str) -> list[PiiHit]:
             elif pii_type == 'CREDIT_CARD':
                 if not validate_luhn(matched_value):
                     continue
+            elif pii_type == 'IP_ADDRESS':
+                if not validate_ip(matched_value):
+                    continue
             elif pii_type == 'ACCOUNT_NO':
                 if match.lastindex and match.lastindex >= 1:
                     matched_value = match.group(1)
@@ -221,6 +224,48 @@ def validate_luhn(value: str) -> bool:
     return total % 10 == 0
 
 
+def validate_ip(value: str) -> bool:
+    """
+    IP 주소 유효성 검사 - 오탐 제외.
+    제외 대상:
+      IPv4: 루프백(127.x), 브로드캐스트(0.0.0.0 / 255.255.255.255),
+            링크로컬(169.254.x), 모두 0인 옥텟 패턴(버전번호 오탐)
+      IPv6: 루프백(::1), 미지정(::/0)
+    """
+    clean = value.strip()
+    if ':' in clean:
+        # IPv6 루프백·미지정 제외
+        if clean in ('::1', '::', '0:0:0:0:0:0:0:1', '0:0:0:0:0:0:0:0'):
+            return False
+        return True
+
+    # IPv4 검증
+    parts = clean.split('.')
+    if len(parts) != 4:
+        return False
+    try:
+        octets = [int(p) for p in parts]
+    except ValueError:
+        return False
+    if not all(0 <= o <= 255 for o in octets):
+        return False
+
+    # 제외 목록
+    first = octets[0]
+    if first == 127:          # 루프백
+        return False
+    if first == 0:             # 0.x.x.x (버전번호 오탐 등)
+        return False
+    if first == 255:           # 브로드캐스트
+        return False
+    if first == 169 and octets[1] == 254:  # 링크로컬
+        return False
+    if all(o == 0 for o in octets):        # 0.0.0.0
+        return False
+
+    return True
+
+
 def redact_pii(value: str, pii_type: str) -> str:
     """PII 값을 보고서 표시용으로 마스킹합니다."""
     clean = value.strip()
@@ -265,6 +310,18 @@ def redact_pii(value: str, pii_type: str) -> str:
         if re.match(r'\d{4}', clean):
             return clean[:4] + '-**-**'
         return clean[:4] + '****'
+
+    elif pii_type == 'IP_ADDRESS':
+        if ':' in clean:
+            # IPv6: 앞 두 그룹만 노출
+            parts = clean.split(':')
+            return ':'.join(parts[:2]) + ':****:****'
+        else:
+            # IPv4: 마지막 옥텟 마스킹  예) 192.168.1.55 → 192.168.1.***
+            parts = clean.split('.')
+            if len(parts) == 4:
+                return '.'.join(parts[:3]) + '.' + '*' * len(parts[3])
+            return clean[:7] + '***'
 
     else:
         if len(clean) > 4:

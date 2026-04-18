@@ -1357,7 +1357,9 @@ RowsAffected: 1000</div>
                   <span class="fw-bold text-muted">영문 PII:</span>
                   <code>name · phone · address · email · account · acct · card · ssn · rrn · birth · passport · empno · cust · member · personal</code><br>
                   <span class="fw-bold text-muted">한글 PII:</span>
-                  <code>이름 · 전화 · 주민 · 계좌 · 주소 · 생년 · 고객 · 회원 · 개인 · 여권 · 사원번호</code>
+                  <code>이름 · 전화 · 주민 · 계좌 · 주소 · 생년 · 고객 · 회원 · 개인 · 여권 · 사원번호 · 접속</code><br>
+                  <span class="fw-bold text-muted">IP 관련:</span>
+                  <code>ip · addr · client · remote · src_ip · 접속</code>
                 </div>
               </div>
             </div><!-- /row -->
@@ -1444,6 +1446,13 @@ RowsAffected: 1000</div>
                     <td class="small font-monospace">emp_id/사원번호/empno=<br>5-10자리</td>
                     <td class="small"><code>emp_id=12345</code><br><code>사원번호: 9876543</code></td>
                     <td class="small"><code>12***45</code></td>
+                  </tr>
+                  <tr>
+                    <td><strong>IP 주소</strong><br><code class="small">IP_ADDRESS</code></td>
+                    <td><span class="badge" style="background:#6c757d">LOW</span></td>
+                    <td class="small font-monospace">IPv4: 0-255 점4개<br>IPv6: 16진수:콜론<br>루프백·브로드캐스트 제외</td>
+                    <td class="small"><code>192.168.1.55</code><br><code>10.0.5.200</code><br><code>2001:db8::1</code></td>
+                    <td class="small"><code>192.168.1.**</code><br><code>10.0.5.***</code><br><code>2001:db8:****</code></td>
                   </tr>
                 </tbody>
               </table>
