@@ -1606,7 +1606,7 @@ RowsAffected: 1000</div>
                     </tr>
                     <tr>
                       <td><strong>EXCESSIVE_ACCESS</strong><br><small>일별 추세 급증</small></td>
-                      <td class="small">당일 조회 건수가 최근 30일 평균 대비 10% 초과<br>(50% 초과 시 HIGH, 최소 7일 이력 필요)<br><span class="text-muted">예) 30일 평균 80건 → 당일 350건<br>&nbsp;&nbsp;&nbsp;&nbsp;→ 최근 30일 평균 대비 337.5% 초과</span></td>
+                      <td class="small"><strong>사용자별</strong> 당일 조회 건수가 해당 사용자의 최근 30일 평균 대비 10% 초과<br>(50% 초과 시 HIGH, 최소 7일 이력 필요)<br><span class="text-muted">예) hong 계정: 본인 30일 평균 80건 → 당일 350건<br>&nbsp;&nbsp;&nbsp;&nbsp;→ hong의 평균 대비 337.5% 초과 → HIGH 탐지</span></td>
                       <td><span class="badge badge-HIGH">HIGH</span>~<span class="badge badge-MEDIUM">MEDIUM</span></td>
                     </tr>
                   </tbody>
