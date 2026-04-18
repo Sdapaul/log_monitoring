@@ -1565,20 +1565,19 @@ RowsAffected: 1000</div>
                   <tbody>
                     <tr>
                       <td><strong>PII_EXPOSURE</strong><br><small>개인정보 노출</small></td>
-                      <td class="small">SQL SELECT 절에 PII 컬럼 포함<br>or 로그 라인에서 직접 PII 패턴 매칭</td>
+                      <td class="small">SQL SELECT 절에 PII 컬럼 포함<br>or 로그 라인에서 직접 PII 패턴 매칭<br><span class="text-muted">예) SELECT ssn, name FROM members</span></td>
                       <td><span class="badge badge-CRITICAL">CRITICAL</span>~<span class="badge badge-MEDIUM">MEDIUM</span></td>
                     </tr>
                     <tr>
                       <td><strong>PII_RECORD_EXPOSURE</strong><br><small>대량 레코드 노출</small></td>
                       <td class="small">실효 노출량(건수×PII컬럼):<br>
-                        &ge;1,000: MEDIUM<br>
-                        &ge;10,000: HIGH<br>
-                        &ge;50,000: CRITICAL</td>
+                        &ge;1,000: MEDIUM / &ge;10,000: HIGH / &ge;50,000: CRITICAL<br>
+                        <span class="text-muted">예) SELECT ssn, phone FROM customers → 결과 8,000건<br>&nbsp;&nbsp;&nbsp;&nbsp;→ 실효 노출량 16,000 (HIGH)</span></td>
                       <td><span class="badge badge-CRITICAL">CRITICAL</span>~<span class="badge badge-MEDIUM">MEDIUM</span></td>
                     </tr>
                     <tr>
                       <td><strong>AFTER_HOURS</strong><br><small>업무외시간 조회</small></td>
-                      <td class="small">업무시간(08:00~19:00) 외<br>PII 조회 5건 초과 시</td>
+                      <td class="small">업무시간(08:00~19:00) 외 PII 조회 5건 초과 시<br><span class="text-muted">예) 23:15에 주민번호 포함 쿼리 6회 실행</span></td>
                       <td><span class="badge badge-HIGH">HIGH</span></td>
                     </tr>
                   </tbody>
@@ -1592,22 +1591,22 @@ RowsAffected: 1000</div>
                   <tbody>
                     <tr>
                       <td><strong>EXCESSIVE_ACCESS</strong><br><small>과다 쿼리</small></td>
-                      <td class="small">일별 쿼리: &ge;500 경고 / &ge;2,000 위험<br>시간당: &ge;100 경고 / &ge;500 위험</td>
+                      <td class="small">일별 쿼리: &ge;500 경고 / &ge;2,000 위험<br>시간당: &ge;100 경고 / &ge;500 위험<br><span class="text-muted">예) hong 계정이 하루 1,523건 쿼리 실행<br>&nbsp;&nbsp;&nbsp;&nbsp;→ 일별 조회 건수 1,523건 (임계값: 500건)</span></td>
                       <td><span class="badge badge-CRITICAL">CRITICAL</span>~<span class="badge badge-HIGH">HIGH</span></td>
                     </tr>
                     <tr>
                       <td><strong>BULK_EXPORT</strong><br><small>대량 내보내기</small></td>
-                      <td class="small">LIMIT/TOP/ROWNUM &ge;1,000 건<br>or SELECT * FROM &lt;테이블&gt; (WHERE 없음)<br>하루 3건 초과 시 경고</td>
+                      <td class="small">LIMIT/TOP/ROWNUM &ge;1,000 건<br>or SELECT * FROM &lt;테이블&gt; (WHERE 없음)<br>하루 3건 초과 시 경고<br><span class="text-muted">예) SELECT * FROM members LIMIT 5000<br>&nbsp;&nbsp;&nbsp;&nbsp;→ 하루 대량 조회 4건 (임계값: 3건)</span></td>
                       <td><span class="badge badge-HIGH">HIGH</span></td>
                     </tr>
                     <tr>
                       <td><strong>EXCESSIVE_ACCESS</strong><br><small>고유 대상 다양성</small></td>
-                      <td class="small">하루 서로 다른 대상 &ge;50명(건) 접근 시 경고</td>
+                      <td class="small">하루 서로 다른 대상 &ge;50명(건) 접근 시 경고<br><span class="text-muted">예) 하루 동안 71명의 고객 정보를 개별 조회<br>&nbsp;&nbsp;&nbsp;&nbsp;→ 하루 고유 대상 71개 (임계값: 50개)</span></td>
                       <td><span class="badge badge-MEDIUM">MEDIUM</span></td>
                     </tr>
                     <tr>
                       <td><strong>EXCESSIVE_ACCESS</strong><br><small>일별 추세 급증</small></td>
-                      <td class="small">당일 조회 건수가 최근 30일 평균 대비 10% 초과<br>(50% 초과 시 HIGH, 최소 7일 이력 필요)</td>
+                      <td class="small">당일 조회 건수가 최근 30일 평균 대비 10% 초과<br>(50% 초과 시 HIGH, 최소 7일 이력 필요)<br><span class="text-muted">예) 30일 평균 80건 → 당일 350건<br>&nbsp;&nbsp;&nbsp;&nbsp;→ 최근 30일 평균 대비 337.5% 초과</span></td>
                       <td><span class="badge badge-HIGH">HIGH</span>~<span class="badge badge-MEDIUM">MEDIUM</span></td>
                     </tr>
                   </tbody>
