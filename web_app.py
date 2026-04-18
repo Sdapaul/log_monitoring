@@ -1443,9 +1443,21 @@ RowsAffected: 1000</div>
                   <tr class="pii-row-MEDIUM">
                     <td><strong>사원번호</strong><br><code class="small">EMP_ID_IN_QUERY</code></td>
                     <td><span class="badge badge-MEDIUM">MEDIUM</span></td>
-                    <td class="small font-monospace">emp_id/사원번호/empno=<br>5-10자리</td>
-                    <td class="small"><code>emp_id=12345</code><br><code>사원번호: 9876543</code></td>
-                    <td class="small"><code>12***45</code></td>
+                    <td class="small font-monospace">
+                      키워드 선행 필수:<br>
+                      <code>emp_id · 사번 · 사원번호</code><br>
+                      <code>employee_id · empno</code><br>
+                      <code>staff_id · staff_no</code><br>
+                      값 형태: 숫자(12345) /<br>
+                      영문+숫자(EMP003, K-12345)
+                    </td>
+                    <td class="small">
+                      <code>emp_id=12345</code><br>
+                      <code>사번: K-12345</code><br>
+                      <code>employee_id: 9876543</code><br>
+                      <code>staff_id=A0012345</code>
+                    </td>
+                    <td class="small"><code>em*****45</code><br><code>사번***45</code></td>
                   </tr>
                   <tr>
                     <td><strong>IP 주소</strong><br><code class="small">IP_ADDRESS</code></td>

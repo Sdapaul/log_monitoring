@@ -50,9 +50,13 @@ PII_PATTERNS: dict[str, tuple[str, str]] = {
         r"[가-힣]{2,6}(?:시|도|군|구)\s*[가-힣]{2,6}(?:동|읍|면|로|길)\s*\d+",
         "MEDIUM"
     ),
-    # 쿼리 내 사원번호
+    # 사원번호 (키워드 선행 필수)
+    # 형태: 숫자만(12345678), 영문+숫자(EMP003, K-12345), 영문prefix+숫자(S00123)
     "EMP_ID_IN_QUERY": (
-        r"(?:emp_id|사원번호|employee_id|직원번호|empno)\s*[=:]\s*['\"]?(\d{5,10})['\"]?",
+        r"(?:emp_id|사원번호|사번|employee_id|직원번호|empno|사원\s*id|staff_id|staff_no)"
+        r"\s*[=:\s]\s*['\"]?"
+        r"([A-Za-z]{0,4}[-]?\d{3,10})"
+        r"['\"]?",
         "MEDIUM"
     ),
     # 생년월일
@@ -92,6 +96,7 @@ PII_TRIGGER_KEYWORDS: frozenset = frozenset([
     "email", "passport", "여권", "사원번호", "empno",
     "cust", "member", "회원", "개인", "personal",
     "ip", "addr", "client", "remote", "src_ip", "접속",
+    "사번", "staff", "empno", "emp_id", "employee",
 ])
 
 # ─────────────────────────────────────────────

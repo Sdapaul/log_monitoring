@@ -58,7 +58,7 @@ PII_COLUMN_KEYWORDS: frozenset = frozenset([
     # 여권
     "여권", "여권번호", "passport",
     # 사원번호
-    "사원번호", "emp_id", "employee_id", "empno",
+    "사원번호", "사번", "emp_id", "employee_id", "empno", "staff_id", "staff_no",
 ])
 
 # SELECT * 관련
