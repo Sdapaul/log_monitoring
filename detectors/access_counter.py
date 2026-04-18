@@ -221,6 +221,85 @@ class AccessCounter:
                         raw_reference=f"{event.source_file}:{event.line_no}",
                     )
 
+    def finalize(
+        self,
+        target_date: str | None = None,
+        historical_daily: dict | None = None,
+    ) -> None:
+        """
+        전체 이벤트 처리 완료 후 일별 추세 이상 탐지.
+
+        target_date:      'YYYY-MM-DD'. None이면 현재 분석 기간의 모든 날짜를 검사.
+        historical_daily: load_daily_counts()로 읽어온 과거 일별 건수.
+                          {user_id: {"YYYY-MM-DD": count}} 형식.
+        최근 30일(최대) 평균 대비 당일 조회 건수가 daily_surge_threshold_pct% 초과 시
+        EXCESSIVE_ACCESS Finding을 생성합니다.
+        """
+        surge_ratio = THRESHOLDS.get('daily_surge_threshold_pct', 10) / 100.0
+        min_days    = THRESHOLDS.get('daily_surge_min_baseline_days', 7)
+
+        # 현재 분석 데이터
+        current: dict[str, dict[str, int]] = defaultdict(dict)
+        for (uid, d), cnt in self._daily_counts.items():
+            current[uid][d] = cnt
+
+        # 과거 + 현재 병합 (기준선 계산용)
+        combined: dict[str, dict[str, int]] = defaultdict(dict)
+        if historical_daily:
+            for uid, date_counts in historical_daily.items():
+                combined[uid].update(date_counts)
+        for uid, date_counts in current.items():
+            combined[uid].update(date_counts)  # 현재 분석이 덮어씀
+
+        for uid, cur_dates in current.items():
+            all_sorted = sorted(combined[uid].keys())
+            check_dates = [target_date] if target_date else sorted(cur_dates.keys())
+
+            for check_date in check_dates:
+                if check_date not in cur_dates:
+                    continue
+
+                prior_dates = [d for d in all_sorted if d < check_date][-30:]
+                if len(prior_dates) < min_days:
+                    continue
+
+                prior_avg   = sum(combined[uid][d] for d in prior_dates) / len(prior_dates)
+                if prior_avg == 0:
+                    continue
+
+                today_count = cur_dates[check_date]
+                ratio       = (today_count - prior_avg) / prior_avg
+
+                if ratio > surge_ratio:
+                    warn_key = ('daily_surge', uid, check_date)
+                    if warn_key not in self._warned:
+                        self._warned.add(warn_key)
+                        severity = 'HIGH' if ratio >= 0.5 else 'MEDIUM'
+                        try:
+                            ts = datetime.strptime(check_date, '%Y-%m-%d')
+                        except ValueError:
+                            ts = None
+                        self._add_finding(
+                            category='EXCESSIVE_ACCESS',
+                            severity=severity,
+                            user_id=uid,
+                            timestamp=ts,
+                            evidence=(
+                                f"당일 조회 {today_count}건 - "
+                                f"최근 {len(prior_dates)}일 평균 {prior_avg:.0f}건 대비 "
+                                f"{ratio * 100:.1f}% 초과"
+                            ),
+                            details={
+                                'window': 'daily_surge',
+                                'date': check_date,
+                                'count': today_count,
+                                'baseline_avg': round(prior_avg, 1),
+                                'baseline_days': len(prior_dates),
+                                'surge_pct': round(ratio * 100, 1),
+                            },
+                            raw_reference='',
+                        )
+
     def get_user_stats(self, user_id: str) -> dict:
         """특정 사용자의 통계를 반환합니다."""
         max_daily = max(

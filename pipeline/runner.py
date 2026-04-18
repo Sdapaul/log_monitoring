@@ -22,6 +22,7 @@ from models.finding import Finding
 from reports.excel_reporter import generate_excel
 from reports.html_reporter import generate_html
 from history.manager import save_snapshot, find_snapshot, find_closest_snapshot, compute_deltas
+from history.daily_counts import load_daily_counts, save_daily_counts
 from detectors.sql_clause_analyzer import analyze_sql
 
 # 점검 항목별 Finding 카테고리 매핑
@@ -215,6 +216,11 @@ def run_analysis(
         all_events.extend(events)
         all_pii_findings.extend(pii_findings)
         total_lines += lines
+
+    prog(60, "일별 추세 이상 탐지 중...")
+    hist_daily = load_daily_counts(history_dir)
+    access_counter.finalize(target_date=str(end_date), historical_daily=hist_daily)
+    save_daily_counts(history_dir, access_counter._daily_counts)
 
     prog(62, "사용자별 통계 집계 중...")
     summaries = build_user_summaries(all_events, all_pii_findings, access_counter)

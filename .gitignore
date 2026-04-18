@@ -12,7 +12,8 @@ build/
 # 업로드/보고서/이력 (운영 데이터)
 uploads/
 reports/
-history/
+history/*.json
+history/daily_counts.json
 test_output/
 sample_logs/
 

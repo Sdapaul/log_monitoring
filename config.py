@@ -123,6 +123,10 @@ THRESHOLDS: dict = {
     # 고유 대상 다양성
     "unique_targets_per_day": 50,
 
+    # 일별 추세 이상: 최근 N일 평균 대비 당일 초과 비율
+    "daily_surge_threshold_pct": 10,       # 10% 초과 시 탐지
+    "daily_surge_min_baseline_days": 7,    # 평균 산출에 필요한 최소 과거 일수
+
     # ── 쿼리 결과 기반 개인정보 노출량 임계값 ─────────────────
     # 기간 내 실효 노출 총 건수 (결과건수 × PII필드수)
     "pii_exposure_medium":   1_000,   # MEDIUM 경고
