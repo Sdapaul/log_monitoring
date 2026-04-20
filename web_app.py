@@ -2176,5 +2176,12 @@ if __name__ == '__main__':
     print(f"  종료 : Ctrl+C")
     print("=" * 55)
 
+    import webbrowser
+    threading.Thread(
+        target=lambda: (__import__('time').sleep(1.5),
+                        webbrowser.open(f'http://localhost:{args.port}')),
+        daemon=True
+    ).start()
+
     app.run(host=args.host, port=args.port, debug=args.debug,
             use_reloader=False, threaded=True)

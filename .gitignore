@@ -34,6 +34,7 @@ Desktop.ini
 build_v2/
 dist_v2/
 pii_checker_v1.0_offline/
+pii_checker_v3.0_offline/
 sample_docs/
 *.egg
 
@@ -42,3 +43,4 @@ pii_checker_v2.0_offline/pii_checker/_internal/__pycache__/
 pii_checker_v2.0_offline/pii_checker/_internal/reports/
 pii_checker_v2.0_offline/pii_checker/_internal/uploads/
 pii_checker_v2.0_offline/pii_checker/_internal/history/
+
