@@ -21,7 +21,7 @@ try:
 except ImportError:
     OPENPYXL_AVAILABLE = False
 
-RISK_KR = {'CRITICAL': '위험', 'HIGH': '고위험', 'MEDIUM': '중위험', 'LOW': '저위험'}
+RISK_KR = {'CRITICAL': '최고위험', 'HIGH': '고위험', 'MEDIUM': '중위험', 'LOW': '저위험'}
 
 # ── 색상 정의 ─────────────────────────────────────────────
 COLORS = {
@@ -191,7 +191,7 @@ def _create_summary_sheet(wb, summaries, start_date, end_date, report_ts, total_
 
     write_section_header(9, '■ 점검 결과 요약')
     write_row(10, '분석 대상 사용자 수', f"{total_users:,} 명")
-    write_row(11, '위험(CRITICAL) 사용자', f"{critical_users:,} 명", 'FFCCCC' if critical_users > 0 else None)
+    write_row(11, '최고위험(CRITICAL) 사용자', f"{critical_users:,} 명", 'FFCCCC' if critical_users > 0 else None)
     write_row(12, '고위험(HIGH) 사용자', f"{high_users:,} 명", 'FFE5CC' if high_users > 0 else None)
     write_row(13, '중위험(MEDIUM) 사용자', f"{medium_users:,} 명", 'FFFACC' if medium_users > 0 else None)
     write_row(14, '총 이상 징후 건수', f"{total_findings:,} 건")
@@ -215,7 +215,7 @@ def _create_summary_sheet(wb, summaries, start_date, end_date, report_ts, total_
     ws.cell(row=25, column=3, value='조치 기준').font = Font(bold=True, name='맑은 고딕', size=9)
 
     levels = [
-        ('CRITICAL', '70-100점', '즉각 조사 및 소명 요청', 'FFCCCC'),
+        ('CRITICAL (최고위험)', '70-100점', '즉각 조사 및 소명 요청', 'FFCCCC'),
         ('HIGH', '45-69점', '소명 요청 및 모니터링 강화', 'FFE5CC'),
         ('MEDIUM', '20-44점', '주의 조치 및 교육', 'FFFACC'),
         ('LOW', '0-19점', '정상 범위', 'FFFFFF'),

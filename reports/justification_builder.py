@@ -20,7 +20,7 @@ CATEGORY_KR = {
 }
 
 SEVERITY_KR = {
-    'CRITICAL': '위험',
+    'CRITICAL': '최고위험',
     'HIGH':     '고위험',
     'MEDIUM':   '중위험',
     'LOW':      '저위험',

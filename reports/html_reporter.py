@@ -29,7 +29,7 @@ def _inline_js(*rel_paths: str) -> str:
 
 
 RISK_BADGE = {
-    'CRITICAL': '<span class="badge bg-danger">위험</span>',
+    'CRITICAL': '<span class="badge bg-danger">최고위험</span>',
     'HIGH': '<span class="badge bg-warning text-dark">고위험</span>',
     'MEDIUM': '<span class="badge bg-info text-dark">중위험</span>',
     'LOW': '<span class="badge bg-success">저위험</span>',
@@ -174,7 +174,10 @@ def _user_rows(
         # PII 건수 + 추세
         pii_trend_w = _trend_html(dw.get('pii_event_count'), '1주 전') if has_history else ''
         pii_trend_m = _trend_html(dm.get('pii_event_count'), '1개월 전') if has_history else ''
-        pii_cell = f"{s.pii_event_count:,} {pii_trend_w} {pii_trend_m}"
+        if has_history:
+            pii_cell = f"{s.pii_event_count:,} / {pii_trend_w}(주) / {pii_trend_m}(월)"
+        else:
+            pii_cell = f"{s.pii_event_count:,}"
 
         # 신규 위험 상승 표시
         prev_level_w = dw.get('risk_level_prev', '')
@@ -382,7 +385,7 @@ def _build_html(summaries, start_date, end_date, report_ts, total_events, total_
                                 'js/jquery.dataTables.min.js', 'js/dataTables.bootstrap5.min.js',
                                 'js/chart.umd.min.js')
 
-    risk_labels = json.dumps(['위험(CRITICAL)', '고위험(HIGH)', '중위험(MEDIUM)', '저위험(LOW)'])
+    risk_labels = json.dumps(['최고위험(CRITICAL)', '고위험(HIGH)', '중위험(MEDIUM)', '저위험(LOW)'])
     risk_data = json.dumps([risk_dist['CRITICAL'], risk_dist['HIGH'], risk_dist['MEDIUM'], risk_dist['LOW']])
     risk_colors = json.dumps(['#dc3545', '#fd7e14', '#17a2b8', '#28a745'])
 
@@ -431,7 +434,7 @@ def _build_html(summaries, start_date, end_date, report_ts, total_events, total_
       <div class="card stat-card stat-critical h-100">
         <div class="card-body text-center">
           <div class="fs-1 fw-bold text-danger">{stats['critical_users']}</div>
-          <div class="text-muted">위험(CRITICAL) 사용자</div>
+          <div class="text-muted">최고위험(CRITICAL) 사용자</div>
         </div>
       </div>
     </div>
@@ -497,8 +500,11 @@ def _build_html(summaries, start_date, end_date, report_ts, total_events, total_
       <table id="userTable" class="table table-sm table-hover table-bordered">
         <thead>
           <tr>
-            <th>사원ID</th><th>총조회수</th><th>PII접촉 (↑주/↑월)</th><th>PII유형</th>
-            <th>PII노출레코드수</th><th>단일쿼리최대노출</th>
+            <th>사원ID</th><th>총조회수</th>
+            <th title="개인정보 포함 쿼리 실행 횟수 / 전주 대비 / 전월 대비">PII접촉 (주↑/월↑)</th>
+            <th>PII유형</th>
+            <th title="실제 반환된 PII 레코드 수. 0건=결과건수 확인된 노출 없음, 미상N건=Rows_sent 미확인 쿼리 N개">PII노출레코드수</th>
+            <th title="단일 쿼리에서 최대로 노출된 PII 레코드 수">단일쿼리최대노출</th>
             <th>최대/시간</th><th>최대/일</th><th>야간조회</th><th>대량조회</th>
             <th>이상건수</th><th>위험점수 (↑주/↑월)</th><th>등급</th>
           </tr>
@@ -537,7 +543,7 @@ def _build_html(summaries, start_date, end_date, report_ts, total_events, total_
       <table class="table table-bordered table-sm">
         <thead><tr><th>등급</th><th>점수</th><th>조치 기준</th></tr></thead>
         <tbody>
-          <tr class="table-danger"><td><strong>CRITICAL (위험)</strong></td><td>70-100점</td><td>즉각 조사 및 소명 요청, 접근 권한 즉시 검토</td></tr>
+          <tr class="table-danger"><td><strong>CRITICAL (최고위험)</strong></td><td>70-100점</td><td>즉각 조사 및 소명 요청, 접근 권한 즉시 검토</td></tr>
           <tr class="table-warning"><td><strong>HIGH (고위험)</strong></td><td>45-69점</td><td>소명 요청 및 모니터링 강화, 접근 이력 검토</td></tr>
           <tr class="table-info"><td><strong>MEDIUM (중위험)</strong></td><td>20-44점</td><td>주의 조치 및 개인정보 보호 교육 실시</td></tr>
           <tr><td><strong>LOW (저위험)</strong></td><td>0-19점</td><td>정상 범위, 정기 모니터링 유지</td></tr>
