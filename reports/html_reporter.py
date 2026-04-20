@@ -169,7 +169,7 @@ def _user_rows(
         score_trend_m = _trend_html(dm.get('risk_score'), '1개월 전')
         score_cell = f"{s.risk_score:.1f}"
         if has_history:
-            score_cell += f" {score_trend_w} {score_trend_m}"
+            score_cell += f" / {score_trend_w}(주) / {score_trend_m}(월)"
 
         # PII 건수 + 추세
         pii_trend_w = _trend_html(dw.get('pii_event_count'), '1주 전') if has_history else ''
