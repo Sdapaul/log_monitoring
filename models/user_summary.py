@@ -68,5 +68,5 @@ class UserSummary:
     def exposure_display(self) -> str:
         """노출량 표시 문자열"""
         known = f"{self.total_pii_records_exposed:,}건"
-        unknown = f" + 미상 {self.unknown_exposure_query_count}건" if self.unknown_exposure_query_count > 0 else ""
+        unknown = f" + 건수미확인 {self.unknown_exposure_query_count}건" if self.unknown_exposure_query_count > 0 else ""
         return known + unknown

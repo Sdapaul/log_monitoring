@@ -320,7 +320,7 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
                 finding.timestamp_str,
                 finding.pii_types_str,
                 exposure_type_kr,
-                result_rows if result_rows is not None else '미상',
+                result_rows if result_rows is not None else '건수미확인',
                 RISK_KR.get(summary.risk_level, summary.risk_level),
                 finding.evidence[:300] if finding.evidence else '',
                 finding.raw_reference,
