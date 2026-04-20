@@ -271,7 +271,7 @@ def _create_user_overview_sheet(wb, summaries: list[UserSummary]):
             summary.bulk_export_count,
             summary.flagged_event_count,
             summary.risk_score,
-            summary.risk_level,
+            RISK_KR.get(summary.risk_level, summary.risk_level),
         ]
         for col, val in enumerate(values, start=1):
             cell = ws.cell(row=row, column=col, value=val)
@@ -444,7 +444,7 @@ def _create_justification_sheet(wb, just_items: list, start_date, end_date):
             values_and_fills = [
                 (f'#{item.priority_rank}\n{item.urgency}',  urg_color,   _center()),
                 (item.user_id,                               level_color, _center()),
-                (item.risk_level,                            level_color, _center()),
+                (RISK_KR.get(item.risk_level, item.risk_level), level_color, _center()),
                 (f'{item.risk_score:.1f}',                   level_color, _center()),
                 (reasons_txt,                                level_color, _left()),
                 (questions_txt,                              'FAFAFA',    _left()),
@@ -673,7 +673,7 @@ def _create_comparison_sheet(
             cell.border = border
 
         base_cell(1, s.user_id)
-        base_cell(2, s.risk_level)
+        base_cell(2, RISK_KR.get(s.risk_level, s.risk_level))
         base_cell(3, s.risk_score)
 
         # 1주 전 점수
