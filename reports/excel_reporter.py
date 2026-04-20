@@ -21,6 +21,8 @@ try:
 except ImportError:
     OPENPYXL_AVAILABLE = False
 
+RISK_KR = {'CRITICAL': '위험', 'HIGH': '고위험', 'MEDIUM': '중위험', 'LOW': '저위험'}
+
 # ── 색상 정의 ─────────────────────────────────────────────
 COLORS = {
     'CRITICAL': 'FFCCCC',   # 연빨강
@@ -286,7 +288,7 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
     ws = wb.create_sheet("3. 개인정보 검출 상세")
     ws.sheet_view.showGridLines = False
 
-    headers = ['사원ID', '일시', 'PII유형', '노출유형', '노출레코드수', '위험등급', '증적(마스킹)', '소스파일:라인']
+    headers = ['사원ID', '일시', 'PII유형', '노출유형', '노출레코드수', '위험등급', '증적', '소스파일:라인']
     header_fill = _make_fill(COLORS['HEADER'])
     border = _make_border()
 
@@ -469,7 +471,7 @@ def _create_evidence_detail_sheet(wb, just_items: list):
     ws.sheet_view.showGridLines = False
     border = _make_border()
 
-    ws.merge_cells('A1:I1')
+    ws.merge_cells('A1:J1')
     ws['A1'] = '소명 증거 상세  |  노출량은 SELECT 쿼리 기반 추정값'
     ws['A1'].fill = _make_fill(COLORS['HEADER'])
     ws['A1'].font = _header_font()
@@ -491,6 +493,17 @@ def _create_evidence_detail_sheet(wb, just_items: list):
 
     row = 3
     for item in just_items:
+        # 사용자 구분 헤더 행 삽입
+        ws.merge_cells(f'A{row}:J{row}')
+        user_header = ws.cell(row=row, column=1,
+                              value=f'▶ 사원ID: {item.user_id}  |  위험등급: {RISK_KR.get(item.risk_level, item.risk_level)}  |  위험점수: {item.risk_score:.1f}  |  소명우선순위: #{item.priority_rank}')
+        user_header.fill = _make_fill('2E4057')
+        user_header.font = Font(bold=True, color='FFFFFF', name='맑은 고딕', size=10)
+        user_header.alignment = _left()
+        user_header.border = border
+        ws.row_dimensions[row].height = 20
+        row += 1
+
         for f in item.key_findings:
             sev_color = COLORS.get(f.get('severity', 'LOW'), 'FFFFFF')
             values = [
@@ -512,6 +525,9 @@ def _create_evidence_detail_sheet(wb, just_items: list):
                 cell.font = _normal_font()
                 cell.alignment = _left()
                 cell.border = border
+                # 사원ID 컬럼 굵게 강조
+                if col == 1:
+                    cell.font = Font(bold=True, name='맑은 고딕', size=9)
             row += 1
 
         # 화면 노출 추정 섹션 (구분)
@@ -525,10 +541,10 @@ def _create_evidence_detail_sheet(wb, just_items: list):
         ws.row_dimensions[row].height = 45
         row += 1
 
-    col_widths = [14, 8, 10, 18, 16, 18, 14, 10, 60, 25]
+    col_widths = [16, 8, 10, 18, 16, 18, 14, 10, 60, 30]
     for i, w in enumerate(col_widths, start=1):
         ws.column_dimensions[get_column_letter(i)].width = w
-    ws.freeze_panes = 'A3'
+    ws.freeze_panes = 'B3'
 
 
 def _create_comparison_sheet(
