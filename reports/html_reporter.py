@@ -283,7 +283,7 @@ def _finding_rows(summaries: list[UserSummary]) -> str:
             if count >= 5000:
                 rows.append('<tr><td colspan="7" class="text-muted text-center">이하 생략 (상위 5,000건만 표시)</td></tr>')
                 return '\n'.join(rows)
-            badge = RISK_BADGE.get(f.severity, f.severity)
+            badge = RISK_BADGE.get(s.risk_level, s.risk_level)
             cat_kr = CATEGORY_KR.get(f.category, f.category)
             evidence = (f.evidence or '')[:200].replace('<', '&lt;').replace('>', '&gt;')
             rows.append(f"""

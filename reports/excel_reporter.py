@@ -310,7 +310,7 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
             if row > MAX_ROWS:
                 ws.cell(row=row, column=1, value=f'[이하 {len(summaries)} 건 이상 - 전체 결과는 원본 로그 참조]')
                 break
-            level_color = COLORS.get(finding.severity, 'FFFFFF')
+            level_color = COLORS.get(summary.risk_level, 'FFFFFF')
             exposure_type = finding.details.get('exposure_type', '') if finding.details else ''
             result_rows = finding.details.get('result_row_count') if finding.details else None
             exposure_type_kr = {'FULL_EXPOSURE': 'SELECT절노출', 'PARTIAL_EXPOSURE': '부분노출',
@@ -321,7 +321,7 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
                 finding.pii_types_str,
                 exposure_type_kr,
                 result_rows if result_rows is not None else '미상',
-                RISK_KR.get(finding.severity, finding.severity),
+                RISK_KR.get(summary.risk_level, summary.risk_level),
                 finding.evidence[:300] if finding.evidence else '',
                 finding.raw_reference,
             ]
@@ -365,12 +365,12 @@ def _create_excess_detail_sheet(wb, summaries: list[UserSummary]):
 
     for summary in summaries:
         for finding in summary.findings:
-            level_color = COLORS.get(finding.severity, 'FFFFFF')
+            level_color = COLORS.get(summary.risk_level, 'FFFFFF')
             values = [
                 finding.user_id,
                 finding.timestamp_str,
                 category_names.get(finding.category, finding.category),
-                RISK_KR.get(finding.severity, finding.severity),
+                RISK_KR.get(summary.risk_level, summary.risk_level),
                 finding.evidence[:300] if finding.evidence else '',
                 finding.raw_reference,
             ]
