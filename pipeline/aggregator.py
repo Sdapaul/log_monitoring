@@ -105,10 +105,11 @@ def create_pii_finding_from_event(event: LogEvent) -> list[Finding]:
             f"{event.source_file}{event.line_no}{hit.pii_type}{hit.match_start}".encode()
         ).hexdigest()[:12]
 
-        # 증적: 마스킹된 값 + 컨텍스트
-        context_text = (event.query_text or event.raw_line)[:200]
-        # PII 부분을 마스킹으로 교체
-        evidence = context_text[:hit.match_start] + f"[{hit.pii_type}:{hit.redacted_value}]" + context_text[hit.match_end:]
+        # 증적: 원본 값 + 컨텍스트 (마스킹 없음)
+        full_text = event.query_text or event.raw_line
+        original_value = full_text[hit.match_start:hit.match_end] if hit.match_end <= len(full_text) else hit.redacted_value
+        context_text = full_text[:200]
+        evidence = context_text[:hit.match_start] + f"[{hit.pii_type}:{original_value}]" + context_text[hit.match_end:]
         evidence = evidence[:300]
 
         # 실효 노출량에 따른 심각도 조정
