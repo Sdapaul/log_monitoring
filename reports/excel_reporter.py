@@ -321,7 +321,7 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
                 finding.pii_types_str,
                 exposure_type_kr,
                 result_rows if result_rows is not None else '미상',
-                finding.severity,
+                RISK_KR.get(finding.severity, finding.severity),
                 finding.evidence[:300] if finding.evidence else '',
                 finding.raw_reference,
             ]
@@ -370,7 +370,7 @@ def _create_excess_detail_sheet(wb, summaries: list[UserSummary]):
                 finding.user_id,
                 finding.timestamp_str,
                 category_names.get(finding.category, finding.category),
-                finding.severity,
+                RISK_KR.get(finding.severity, finding.severity),
                 finding.evidence[:300] if finding.evidence else '',
                 finding.raw_reference,
             ]
