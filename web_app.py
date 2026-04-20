@@ -1823,7 +1823,7 @@ function updateProgress(data) {
 
 // ── 결과 표시 ───────────────────────────────────────────
 const RISK_BADGE = {
-  CRITICAL: '<span class="badge badge-CRITICAL">위험</span>',
+  CRITICAL: '<span class="badge badge-CRITICAL">최고위험</span>',
   HIGH:     '<span class="badge badge-HIGH">고위험</span>',
   MEDIUM:   '<span class="badge badge-MEDIUM">중위험</span>',
   LOW:      '<span class="badge badge-LOW">저위험</span>',
@@ -1850,7 +1850,7 @@ function showResults(result) {
     <div class="col-6 col-lg-3">
       <div class="card stat-card stat-critical p-3 text-center">
         <div class="fs-1 fw-bold text-danger">${stats.critical_users}</div>
-        <div class="small text-muted">위험(CRITICAL)</div>
+        <div class="small text-muted">최고위험(CRITICAL)</div>
       </div>
     </div>
     <div class="col-6 col-lg-3">
@@ -2073,7 +2073,7 @@ function drawCharts(summaries, justItems) {
   riskChart = new Chart(document.getElementById('riskChart'), {
     type: 'doughnut',
     data: {
-      labels: ['위험(CRITICAL)','고위험(HIGH)','중위험(MEDIUM)','저위험(LOW)'],
+      labels: ['최고위험(CRITICAL)','고위험(HIGH)','중위험(MEDIUM)','저위험(LOW)'],
       datasets:[{data:[lv.CRITICAL,lv.HIGH,lv.MEDIUM,lv.LOW],
         backgroundColor:['#8B0000','#fd7e14','#17a2b8','#28a745']}]
     },

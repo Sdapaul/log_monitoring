@@ -88,11 +88,11 @@ def compute_risk_score(summary: UserSummary) -> tuple[float, str]:
     if exposed >= exp_critical and level != 'CRITICAL':
         level = 'CRITICAL'
 
-    # 강제 상향: 개별 Finding 심각도 반영 (HIGH 건 있으면 최소 MEDIUM, CRITICAL 건 있으면 최소 HIGH)
-    if summary.high_finding_count > 0 and level == 'LOW':
-        level = 'MEDIUM'
-    if summary.critical_finding_count > 0 and level in ('LOW', 'MEDIUM'):
+    # 강제 상향: 개별 Finding 심각도 반영 (HIGH 건 있으면 최소 HIGH, CRITICAL 건 있으면 최소 CRITICAL)
+    if summary.high_finding_count > 0 and level in ('LOW', 'MEDIUM'):
         level = 'HIGH'
+    if summary.critical_finding_count > 0 and level != 'CRITICAL':
+        level = 'CRITICAL'
 
     return round(total, 2), level
 
