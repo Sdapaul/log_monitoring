@@ -235,8 +235,8 @@ def _create_user_overview_sheet(wb, summaries: list[UserSummary]):
     ws.sheet_view.showGridLines = False
 
     headers = [
-        '사원ID', '총조회건수', 'PII접촉건수', 'PII유형',
-        'PII노출레코드수', '단일쿼리최대노출', 'SELECT절PII조회수',
+        '사원ID', '총조회건수', 'PII쿼리수', 'PII유형',
+        'PII출력건수', '단일쿼리최대출력', 'PII컬럼조회수',
         '최대시간당조회', '최대일당조회', '피크시간', '피크날짜',
         '야간조회수', '대량조회수', '이상건수', '위험점수', '위험등급'
     ]
@@ -313,8 +313,8 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
             level_color = COLORS.get(summary.risk_level, 'FFFFFF')
             exposure_type = finding.details.get('exposure_type', '') if finding.details else ''
             result_rows = finding.details.get('result_row_count') if finding.details else None
-            exposure_type_kr = {'FULL_EXPOSURE': 'SELECT절노출', 'PARTIAL_EXPOSURE': '부분노출',
-                                'SEARCH_ONLY': '검색키만사용', 'NONE': '없음'}.get(exposure_type, exposure_type)
+            exposure_type_kr = {'FULL_EXPOSURE': '전체컬럼노출', 'PARTIAL_EXPOSURE': 'PII컬럼직접출력',
+                                'SEARCH_ONLY': '검색조건만사용', 'NONE': '없음'}.get(exposure_type, exposure_type)
             values = [
                 finding.user_id,
                 finding.timestamp_str,

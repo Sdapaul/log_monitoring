@@ -708,7 +708,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
           <thead>
             <tr>
               <th>사원ID</th><th>위험등급</th><th>위험점수</th>
-              <th>PII접촉</th><th>PII노출레코드</th><th>단일최대노출</th>
+              <th>PII쿼리수</th><th>PII출력건수</th><th>단일최대출력</th>
               <th>최대/시간</th><th>최대/일</th><th>야간조회</th>
               <th>대량조회</th><th>이상건수</th><th>소명</th>
             </tr>

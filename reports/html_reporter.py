@@ -501,10 +501,10 @@ def _build_html(summaries, start_date, end_date, report_ts, total_events, total_
         <thead>
           <tr>
             <th>사원ID</th><th>총조회수</th>
-            <th title="개인정보 포함 쿼리 실행 횟수 / 전주 대비 / 전월 대비">PII접촉 (주↑/월↑)</th>
+            <th title="개인정보(PII)가 사용된 쿼리 건수 / 전주 대비 / 전월 대비">PII쿼리수 (주↑/월↑)</th>
             <th>PII유형</th>
-            <th title="실제 반환된 PII 레코드 수. 0건=결과건수 확인된 노출 없음, 미상N건=Rows_sent 미확인 쿼리 N개">PII노출레코드수</th>
-            <th title="단일 쿼리에서 최대로 노출된 PII 레코드 수">단일쿼리최대노출</th>
+            <th title="쿼리 결과에 개인정보가 출력된 건수. 0건=출력건수 0으로 확인, 미상N건=결과건수 미확인 쿼리 N개">PII출력건수</th>
+            <th title="단일 쿼리에서 최대로 출력된 PII 레코드 수">단일쿼리최대출력</th>
             <th>최대/시간</th><th>최대/일</th><th>야간조회</th><th>대량조회</th>
             <th>이상건수</th><th>위험점수 (↑주/↑월)</th><th>등급</th>
           </tr>

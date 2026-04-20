@@ -374,9 +374,9 @@ def _select_key_findings_dict(s: UserSummary) -> list[dict]:
             summary += f" (노출 추정 {effective:,}건)"
 
         exposure_kr = {
-            'FULL_EXPOSURE': 'SELECT절 직접 노출',
-            'PARTIAL_EXPOSURE': '부분 노출',
-            'SEARCH_ONLY': '검색 조건만 사용',
+            'FULL_EXPOSURE': '전체컬럼 노출(SELECT*)',
+            'PARTIAL_EXPOSURE': 'PII컬럼 직접 출력',
+            'SEARCH_ONLY': '검색조건만 사용',
         }.get(exposure_type, '')
 
         result.append({
