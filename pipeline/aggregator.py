@@ -107,7 +107,10 @@ def create_pii_finding_from_event(event: LogEvent) -> list[Finding]:
 
         # 증적: 원본 값 + 컨텍스트 (마스킹 없음)
         full_text = event.query_text or event.raw_line
-        original_value = full_text[hit.match_start:hit.match_end] if hit.match_end <= len(full_text) else hit.redacted_value
+        # hit.original_value: group(1) 추출 후 보관된 실제 PII 값 (키워드 제외)
+        original_value = hit.original_value or (
+            full_text[hit.match_start:hit.match_end] if hit.match_end <= len(full_text) else ''
+        )
         context_text = full_text[:200]
         evidence = context_text[:hit.match_start] + f"[{hit.pii_type}:{original_value}]" + context_text[hit.match_end:]
         evidence = evidence[:300]
@@ -138,6 +141,7 @@ def create_pii_finding_from_event(event: LogEvent) -> list[Finding]:
                 'pii_select_fields': event.pii_select_fields,
                 'effective_exposure': event.effective_pii_exposure,
                 'is_select_star': event.is_select_star,
+                'original_value': original_value,   # 검출된 원본 PII 값 (비마스킹)
             },
         ))
     return findings

@@ -7,7 +7,8 @@ from datetime import datetime
 class PiiHit:
     pii_type: str          # e.g. 'RRN', 'PHONE', 'CREDIT_CARD'
     severity: str          # 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW'
-    redacted_value: str    # masked representation for reports
+    redacted_value: str    # 마스킹 값 (내부 중복제거용)
+    original_value: str    # 검출된 원본 값 (보고서 검증용, 비마스킹)
     match_start: int
     match_end: int
 

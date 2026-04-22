@@ -12,12 +12,43 @@ from config import COMPILED_PII, PII_TRIGGER_KEYWORDS
 from models.log_event import LogEvent, PiiHit
 
 
-# ── 비정형 로그용 숫자 패턴 (전화번호·주민번호·카드번호 후보) ─────────
+# ── 비정형 로그용 숫자 패턴 (전화번호·주민번호·카드번호·IP 후보) ──────
 _RAW_NUMBER_RE = re.compile(
-    r'\b0(?:1[016-9]|2|[3-9]\d)[-\s]?\d{3,4}[-\s]?\d{4}\b'  # 전화번호
-    r'|\b\d{6}[-\s]?[1-4]\d{6}\b'                             # 주민번호 후보
-    r'|\b(?:\d{4}[-\s]?){3}\d{4}\b'                           # 카드번호 후보
+    r'\b0(?:1[016-9]|2|[3-9]\d)[-\s]?\d{3,4}[-\s]?\d{4}\b'   # 전화번호
+    r'|(?<!\d)\d{6}[-\s]?[1-9]\d{6}(?!\d)'                    # 주민번호 후보 (성별코드 1-9)
+    r'|\b(?:\d{4}[-\s]?){3}\d{4}\b'                            # 카드번호 후보
+    r'|(?<!\d)(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)\.)'
+    r'{3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)(?!\d)'       # IPv4 후보
 )
+
+# ── 한국 이름 유효성 검증용 상수 ─────────────────────────────────────
+# 빈도 상위 한국 성씨 (오탐 감소: 첫 글자가 성씨여야 이름으로 인정)
+_KOREAN_SURNAMES: frozenset[str] = frozenset([
+    '김', '이', '박', '최', '정', '강', '조', '윤', '장', '임',
+    '한', '오', '서', '신', '권', '황', '안', '송', '류', '홍',
+    '전', '고', '문', '손', '양', '배', '백', '허', '유', '남',
+    '심', '노', '하', '곽', '성', '차', '주', '우', '구', '나',
+    '민', '진', '지', '엄', '채', '원', '천', '방', '공', '현',
+    '함', '변', '염', '여', '추', '도', '석', '선', '설', '소',
+    '왕', '용', '은', '음', '예', '봉', '탁', '편', '반', '위',
+    '연', '옥', '표', '어', '제', '모', '마', '길', '라', '경',
+    '부', '태', '형', '기', '목', '피', '화',
+])
+
+# 이름으로 끝나면 안 되는 행정·기능 어미
+# (부서명·직위·시설명 등 — 이름 끝자로 쓰이는 경우가 없는 것만 포함)
+_NAME_ADMIN_SUFFIXES: frozenset[str] = frozenset([
+    '처',   # 연락처, 거주처
+    '팀',   # 개발팀, 영업팀 (현대어, 이름에 쓰이지 않음)
+    '실',   # 사무실, 교무실
+    '청',   # 세관청, 경찰청
+])
+
+# group(1)에서 실제 PII 값을 추출하는 패턴 (키워드+구분자+값 구조)
+_G1_TYPES: frozenset[str] = frozenset([
+    'NAME_IN_QUERY', 'BIRTHDATE', 'EMP_ID_IN_QUERY',
+    'EMP_ID_STANDALONE', 'ACCOUNT_NO',
+])
 
 # ── 한글 숫자 정규화 ──────────────────────────────────────────────────
 # 한글 숫자 → 아라비아 숫자 매핑
@@ -104,6 +135,10 @@ def _scan_text(candidate: str) -> list[PiiHit]:
 
             matched_value = match.group()
 
+            # 키워드+값 패턴: group(1)에서 실제 값만 추출 (키워드·구분자 제외)
+            if pii_type in _G1_TYPES and match.lastindex and match.lastindex >= 1:
+                matched_value = match.group(1) or match.group()
+
             # 타입별 추가 유효성 검사 (오탐 감소)
             if pii_type == 'RRN':
                 if not validate_rrn(matched_value):
@@ -114,14 +149,18 @@ def _scan_text(candidate: str) -> list[PiiHit]:
             elif pii_type == 'IP_ADDRESS':
                 if not validate_ip(matched_value):
                     continue
-            elif pii_type == 'ACCOUNT_NO':
-                if match.lastindex and match.lastindex >= 1:
-                    matched_value = match.group(1)
+            elif pii_type == 'NAME_IN_QUERY':
+                # 한국 성씨로 시작하고 행정 어미로 끝나지 않아야 실제 이름
+                if not matched_value or matched_value[0] not in _KOREAN_SURNAMES:
+                    continue
+                if matched_value[-1] in _NAME_ADMIN_SUFFIXES:
+                    continue
 
             hits.append(PiiHit(
                 pii_type=pii_type,
                 severity=severity,
                 redacted_value=redact_pii(matched_value, pii_type),
+                original_value=matched_value,   # 마스킹 없는 원본 보관
                 match_start=start,
                 match_end=end,
             ))
@@ -160,13 +199,13 @@ def scan_event(event: LogEvent) -> list[PiiHit]:
             return []
 
     # ── 스캔 실행 ─────────────────────────────────────────
-    # (pii_type, redacted_value) 키로 중복 제거
+    # (pii_type, original_value) 키로 중복 제거
     seen_keys: set[tuple[str, str]] = set()
     hits: list[PiiHit] = []
 
     def _add_hits(text: str) -> None:
         for hit in _scan_text(text):
-            key = (hit.pii_type, hit.redacted_value)
+            key = (hit.pii_type, hit.original_value)
             if key not in seen_keys:
                 seen_keys.add(key)
                 hits.append(hit)
@@ -304,6 +343,11 @@ def redact_pii(value: str, pii_type: str) -> str:
     elif pii_type == 'NAME_IN_QUERY':
         if len(clean) >= 2:
             return clean[0] + '*' * (len(clean) - 1)
+        return '*' * len(clean)
+
+    elif pii_type in ('EMP_ID_IN_QUERY', 'EMP_ID_STANDALONE'):
+        if len(clean) >= 3:
+            return clean[0] + '*' * (len(clean) - 2) + clean[-1]
         return '*' * len(clean)
 
     elif pii_type == 'BIRTHDATE':

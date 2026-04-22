@@ -288,7 +288,7 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
     ws = wb.create_sheet("3. 개인정보 검출 상세")
     ws.sheet_view.showGridLines = False
 
-    headers = ['사원ID', '일시', 'PII유형', '노출유형', '노출레코드수', '위험등급', '증적', '소스파일:라인']
+    headers = ['사원ID', '일시', 'PII유형', '검출원본값', '노출유형', '노출레코드수', '위험등급', '증적(컨텍스트)', '소스파일:라인']
     header_fill = _make_fill(COLORS['HEADER'])
     border = _make_border()
 
@@ -313,12 +313,14 @@ def _create_pii_detail_sheet(wb, summaries: list[UserSummary]):
             level_color = COLORS.get(summary.risk_level, 'FFFFFF')
             exposure_type = finding.details.get('exposure_type', '') if finding.details else ''
             result_rows = finding.details.get('result_row_count') if finding.details else None
+            orig_val = finding.details.get('original_value', '') if finding.details else ''
             exposure_type_kr = {'FULL_EXPOSURE': '전체컬럼노출', 'PARTIAL_EXPOSURE': 'PII컬럼직접출력',
                                 'SEARCH_ONLY': '검색조건만사용', 'NONE': '없음'}.get(exposure_type, exposure_type)
             values = [
                 finding.user_id,
                 finding.timestamp_str,
                 finding.pii_types_str,
+                orig_val,                          # 검출원본값 (비마스킹)
                 exposure_type_kr,
                 result_rows if result_rows is not None else '건수미확인',
                 RISK_KR.get(summary.risk_level, summary.risk_level),
@@ -480,8 +482,8 @@ def _create_evidence_detail_sheet(wb, just_items: list):
 
     headers = [
         '사원ID', '우선순위', '위험등급',
-        '발생일시', '위반유형', 'PII유형', '노출유형',
-        '반환건수', '증거', '참조'
+        '발생일시', '위반유형', 'PII유형', '검출원본값',
+        '노출유형', '반환건수', '증거(컨텍스트)', '참조'
     ]
     for col, h in enumerate(headers, start=1):
         cell = ws.cell(row=2, column=col, value=h)
@@ -494,7 +496,7 @@ def _create_evidence_detail_sheet(wb, just_items: list):
     row = 3
     for item in just_items:
         # 사용자 구분 헤더 행 삽입
-        ws.merge_cells(f'A{row}:J{row}')
+        ws.merge_cells(f'A{row}:K{row}')
         user_header = ws.cell(row=row, column=1,
                               value=f'▶ 사원ID: {item.user_id}  |  위험등급: {RISK_KR.get(item.risk_level, item.risk_level)}  |  위험점수: {item.risk_score:.1f}  |  소명우선순위: #{item.priority_rank}')
         user_header.fill = _make_fill('2E4057')
@@ -513,6 +515,7 @@ def _create_evidence_detail_sheet(wb, just_items: list):
                 f.get('timestamp_str', ''),
                 f.get('category_kr', ''),
                 f.get('pii_types_str', ''),
+                f.get('original_value', ''),        # 검출원본값 (비마스킹)
                 f.get('exposure_type_kr', ''),
                 f.get('result_rows') if f.get('result_rows') is not None else '미상',
                 (f.get('evidence') or '')[:300],
@@ -531,7 +534,7 @@ def _create_evidence_detail_sheet(wb, just_items: list):
             row += 1
 
         # 화면 노출 추정 섹션 (구분)
-        ws.merge_cells(f'A{row}:J{row}')
+        ws.merge_cells(f'A{row}:K{row}')
         est_cell = ws.cell(row=row, column=1,
                            value=f'[{item.user_id}] 화면 노출 추정: {item.screen_estimate[:300]}')
         est_cell.fill = _make_fill('D6E4F0')
@@ -541,7 +544,7 @@ def _create_evidence_detail_sheet(wb, just_items: list):
         ws.row_dimensions[row].height = 45
         row += 1
 
-    col_widths = [16, 8, 10, 18, 16, 18, 14, 10, 60, 30]
+    col_widths = [16, 8, 10, 18, 16, 18, 22, 14, 10, 60, 30]
     for i, w in enumerate(col_widths, start=1):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = 'B3'

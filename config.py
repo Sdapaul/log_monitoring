@@ -10,9 +10,9 @@ from pathlib import Path
 # 개인정보 탐지 패턴 (한국 컨텍스트 기반)
 # ─────────────────────────────────────────────
 PII_PATTERNS: dict[str, tuple[str, str]] = {
-    # 주민등록번호: YYMMDD-NNNNNNN (하이픈 선택)
+    # 주민등록번호: YYMMDD-NNNNNNN (하이픈 선택), 성별코드 1-9 (내외국인 포함)
     "RRN": (
-        r"\b\d{6}[-\s]?[1-4]\d{6}\b",
+        r"(?<!\d)\d{6}[-\s]?[1-9]\d{6}(?!\d)",
         "CRITICAL"
     ),
     # 한국 전화번호: 010-XXXX-XXXX, 02-XXX-XXXX 등
@@ -40,9 +40,10 @@ PII_PATTERNS: dict[str, tuple[str, str]] = {
         r"\b[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}\b",
         "MEDIUM"
     ),
-    # 쿼리 내 이름 (한국어)
+    # 쿼리/CSV 내 이름 (한국어) - 구분자: = : , 만 허용 (공백·따옴표만은 오탐 방지)
     "NAME_IN_QUERY": (
-        r"(?:name|이름|성명|고객명|cust_name|customer_name)\s*[=:'\"\s,]+([가-힣]{2,4})",
+        r"(?:name|이름|성명|고객명|사용자명|담당자명?|접속자명?|수검자명?|"
+        r"cust_name|customer_name|user_name|username|realname)\s*[=:,]\s*['\"]?([가-힣]{2,4})['\"]?",
         "HIGH"
     ),
     # 한국 주소
@@ -50,13 +51,18 @@ PII_PATTERNS: dict[str, tuple[str, str]] = {
         r"[가-힣]{2,6}(?:시|도|군|구)\s*[가-힣]{2,6}(?:동|읍|면|로|길)\s*\d+",
         "MEDIUM"
     ),
-    # 사원번호 (키워드 선행 필수)
-    # 형태: 숫자만(12345678), 영문+숫자(EMP003, K-12345), 영문prefix+숫자(S00123)
+    # 사원번호 (키워드 선행)
     "EMP_ID_IN_QUERY": (
-        r"(?:emp_id|사원번호|사번|employee_id|직원번호|empno|사원\s*id|staff_id|staff_no)"
-        r"\s*[=:\s]\s*['\"]?"
-        r"([A-Za-z]{0,4}[-]?\d{3,10})"
+        r"(?:emp_id|사원번호|사번|employee_id|직원번호|empno|emp_no|"
+        r"사원\s*id|staff_id|staff_no|사원코드|직원코드|empid|user_id|userid)"
+        r"\s*[=:\s,]\s*['\"]?"
+        r"([A-Za-z]{0,3}[-]?\d{4,10})"
         r"['\"]?",
+        "MEDIUM"
+    ),
+    # 독립형 사원번호: 영문1자+숫자6자 (c070901, A123456 등 한국 기업 형식)
+    "EMP_ID_STANDALONE": (
+        r"\b([A-Za-z]\d{6})\b",
         "MEDIUM"
     ),
     # 생년월일
@@ -66,13 +72,14 @@ PII_PATTERNS: dict[str, tuple[str, str]] = {
     ),
     # IP 주소 (IPv4 + IPv6)
     # validate_ip()로 루프백/브로드캐스트 제외
+    # IPv6 비압축: {4,7}로 최소 5그룹 요구 → HH:MM:SS(3그룹) 오탐 방지
     "IP_ADDRESS": (
         r"(?<!\d)"
         r"(?:"
         r"(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)"
         r"(?:\.(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]\d|\d)){3}"
         r"|"
-        r"(?:[0-9a-fA-F]{1,4}:){2,7}[0-9a-fA-F]{1,4}"
+        r"(?:[0-9a-fA-F]{1,4}:){4,7}[0-9a-fA-F]{1,4}"
         r"|"
         r"(?:[0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}"
         r")"
@@ -96,7 +103,12 @@ PII_TRIGGER_KEYWORDS: frozenset = frozenset([
     "email", "passport", "여권", "사원번호", "empno",
     "cust", "member", "회원", "개인", "personal",
     "ip", "addr", "client", "remote", "src_ip", "접속",
-    "사번", "staff", "empno", "emp_id", "employee",
+    "사번", "staff", "emp_id", "emp_no", "employee",
+    # 추가: 연락처·성명·담당자 관련
+    "연락처", "성명", "담당자", "사용자", "접속자", "수검자",
+    "직원", "사원", "userid", "user_id",
+    # 주민번호 로마자 컬럼명 대응 (jumin_no, jumin_id 등)
+    "jumin", "resno", "rno", "주민번호",
 ])
 
 # ─────────────────────────────────────────────

@@ -390,6 +390,7 @@ def _select_key_findings_dict(s: UserSummary) -> list[dict]:
             'exposure_type_kr': exposure_kr,
             'result_rows':   result_rows,
             'effective_exposure': effective,
+            'original_value': (f.details or {}).get('original_value', ''),   # 검출원본값
             'evidence':      (f.evidence or '')[:250],
             'raw_reference': f.raw_reference,
             'summary':       summary,
