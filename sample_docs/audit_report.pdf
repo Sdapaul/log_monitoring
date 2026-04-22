@@ -1,0 +1,51 @@
+%PDF-1.4
+1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj
+2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj
+3 0 obj<</Type/Page/MediaBox[0 0 612 842]/Parent 2 0 R/Contents 4 0 R/Resources<</Font<</F1 <</Type/Font/Subtype/Type1/BaseFont/Courier/Encoding/WinAnsiEncoding>>>>>>>>endobj
+4 0 obj<</Length 1310>>
+stream
+BT
+/F1 10 Tf
+55 760 Td
+13 TL
+(PII Audit Report  2024-03-15  Security Team) Tj T*
+() Tj T*
+(=== Personal Information Access Log ===) Tj T*
+() Tj T*
+(Time: 09:11  User: admin    RRN: 800101-1000008  status=verified) Tj T*
+(Time: 09:12  User: admin    Phone: 010-1234-5678  registered) Tj T*
+(Time: 10:05  User: user01   Card: 4111-1111-1111-1111  payment OK) Tj T*
+(Time: 10:30  User: user01   account_no: 9876543210987  transfer) Tj T*
+(Time: 11:20  User: user02   Email: kim.cs@example.com  queried) Tj T*
+(Time: 22:30  User: user02   RRN: 900315-2100001  AFTER-HOURS) Tj T*
+(Time: 22:45  User: user02   Phone: 010-9876-5432  AFTER-HOURS) Tj T*
+() Tj T*
+(=== SQL Query Log ===) Tj T*
+() Tj T*
+(SELECT name, phone, rrn FROM members WHERE dept=10   Rows_sent: 150) Tj T*
+(SELECT * FROM customers                              Rows_sent: 3200) Tj T*
+(SELECT cust_name, email, account_no FROM accounts WHERE id=500) Tj T*
+(SELECT emp_id, phone FROM employee WHERE jumin=800101-1000008) Tj T*
+() Tj T*
+(=== Employee Records ===) Tj T*
+() Tj T*
+(emp_id=EMP001  name=Hong   phone=010-1234-5678) Tj T*
+(employee_id=A009001  email=lee.yh@test.org) Tj T*
+(Passport: M12345678  verified 2024-03-15) Tj T*
+(birth=1990-01-15  account_no: 1122334455667) Tj T*
+(EMP standalone: c070901  dept=IT  A123456 clearance=1) Tj T*
+ET
+
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000009 00000 n 
+0000000052 00000 n 
+0000000101 00000 n 
+0000000276 00000 n 
+trailer<</Size 5/Root 1 0 R>>
+startxref
+1635
+%%EOF

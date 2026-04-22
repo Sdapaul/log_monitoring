@@ -1,0 +1,840 @@
+2024-03-01 00:28:22.000 UTC [10800] emp007@custdb LOG:  duration: 316.803 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=4490
+2024-03-01 00:28:22.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-01 01:42:12.000 UTC [10777] user201@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=7164,<none>
+2024-03-01 10:14:43.000 UTC [10428] user105@appdb LOG:  duration: 301.121 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-01 13:15:14.000 UTC [10071] user102@appdb LOG:  duration: 53.792 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-01 13:34:07.000 UTC [10232] user202@appdb LOG:  duration: 345.866 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-01 14:18:59.000 UTC [10250] user101@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=1753,<none>
+2024-03-01 16:47:27.000 UTC [10089] user102@appdb LOG:  duration: 195.645 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-01 22:45:14.000 UTC [10097] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-02 05:16:22.000 UTC [10800] emp007@custdb LOG:  duration: 398.931 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=2425
+2024-03-02 05:16:22.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-02 05:34:13.000 UTC [10800] emp007@custdb LOG:  duration: 153.995 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7965
+2024-03-02 05:34:13.000 UTC [10800] emp007@custdb LOG:  rows=4
+2024-03-02 06:21:56.000 UTC [10081] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-02 09:18:31.000 UTC [10305] user201@appdb LOG:  duration: 345.581 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-02 10:08:27.000 UTC [10199] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-02 10:20:57.000 UTC [10391] user203@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=7990,<none>
+2024-03-02 10:38:27.000 UTC [10176] user105@appdb LOG:  duration: 403.421 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-02 12:12:47.000 UTC [10974] user103@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=7625,<none>
+2024-03-02 12:31:24.000 UTC [10900] admin01@custdb LOG:  duration: 256.753 ms  statement: SELECT name, phone, rrn, email, address FROM customers WHERE created_date >= '2024-03-01'
+2024-03-02 12:31:24.000 UTC [10900] admin01@custdb LOG:  rows=2474
+2024-03-02 12:53:26.000 UTC [10199] user202@appdb LOG:  duration: 485.812 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-02 13:12:02.000 UTC [10405] user203@appdb LOG:  duration: 454.142 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-02 14:46:08.000 UTC [10046] user203@appdb LOG:  duration: 168.865 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-02 15:17:12.000 UTC [10495] user201@appdb LOG:  duration: 486.968 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-02 15:46:21.000 UTC [10409] user102@appdb LOG:  duration: 128.296 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-02 17:05:54.000 UTC [10095] user103@appdb LOG:  duration: 305.169 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-02 17:15:58.000 UTC [10434] user203@appdb LOG:  duration: 234.236 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-03 03:08:51.000 UTC [10943] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=4792,<none>
+2024-03-03 09:01:53.000 UTC [10693] emp003@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=5896,<none>
+2024-03-03 09:14:04.000 UTC [10463] user101@appdb LOG:  duration: 441.438 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-03 09:41:49.000 UTC [10295] user101@appdb LOG:  duration: 334.315 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-03 10:53:57.000 UTC [10255] user203@appdb LOG:  duration: 275.116 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-03 12:07:35.000 UTC [10391] user105@appdb LOG:  duration: 311.710 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-03 12:35:38.000 UTC [10900] admin01@custdb LOG:  duration: 435.967 ms  statement: SELECT cust_name, rrn, phone, card_no FROM customers WHERE dept='영업부'
+2024-03-03 12:35:38.000 UTC [10900] admin01@custdb LOG:  rows=719
+2024-03-03 12:41:40.000 UTC [10305] user203@appdb LOG:  duration: 26.905 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-03 12:43:19.000 UTC [10115] user201@appdb LOG:  duration: 76.125 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-03 12:55:06.000 UTC [10194] user105@appdb LOG:  duration: 233.750 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-03 13:22:03.000 UTC [10183] admin01@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=4656,<none>
+2024-03-03 14:01:37.000 UTC [10283] user104@appdb LOG:  duration: 302.325 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-03 15:06:47.000 UTC [10378] user102@appdb LOG:  duration: 416.233 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-03 15:07:29.000 UTC [10900] admin01@custdb LOG:  duration: 342.859 ms  statement: SELECT name, phone, rrn, email, address FROM customers WHERE created_date >= '2024-03-01'
+2024-03-03 15:07:29.000 UTC [10900] admin01@custdb LOG:  rows=3033
+2024-03-03 21:46:58.000 UTC [10995] user203@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=3332,<none>
+2024-03-04 09:36:18.000 UTC [10240] user203@appdb LOG:  duration: 226.448 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-04 09:40:38.000 UTC [10409] user203@appdb LOG:  duration: 364.262 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-04 11:02:02.000 UTC [10155] user202@appdb LOG:  duration: 60.199 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-04 13:27:10.000 UTC [10232] user201@appdb LOG:  duration: 489.839 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-04 13:36:14.000 UTC [10413] user201@appdb LOG:  duration: 433.674 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-04 14:45:05.000 UTC [10258] user203@appdb LOG:  duration: 89.140 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-04 23:17:49.000 UTC [10800] emp007@custdb LOG:  duration: 422.874 ms  statement: SELECT * FROM personal_info WHERE dept_id=9898
+2024-03-04 23:17:49.000 UTC [10800] emp007@custdb LOG:  rows=9
+2024-03-05 00:15:09.000 UTC [10800] emp007@custdb LOG:  duration: 251.245 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=6277
+2024-03-05 00:15:09.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-05 01:52:13.000 UTC [10800] emp007@custdb LOG:  duration: 273.387 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=1972
+2024-03-05 01:52:13.000 UTC [10800] emp007@custdb LOG:  rows=6
+2024-03-05 04:27:11.000 UTC [10800] emp007@custdb LOG:  duration: 285.270 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=8973
+2024-03-05 04:27:11.000 UTC [10800] emp007@custdb LOG:  rows=3
+2024-03-05 09:05:47.000 UTC [10271] user102@appdb LOG:  duration: 193.529 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-05 09:22:34.000 UTC [10173] user201@appdb LOG:  duration: 90.950 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-05 09:22:50.000 UTC [10403] user101@appdb LOG:  duration: 302.431 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-05 12:18:13.000 UTC [10495] user203@appdb LOG:  duration: 297.853 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-05 12:47:35.000 UTC [10275] user105@appdb LOG:  duration: 383.698 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-05 13:39:40.000 UTC [10299] user102@appdb LOG:  duration: 365.432 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-05 14:48:10.000 UTC [10276] user104@appdb LOG:  duration: 471.100 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-05 15:55:53.000 UTC [10900] admin01@custdb LOG:  duration: 280.799 ms  statement: SELECT * FROM personal_info WHERE hire_date >= '2020-01-01'
+2024-03-05 15:55:53.000 UTC [10900] admin01@custdb LOG:  rows=3493
+2024-03-05 16:11:03.000 UTC [10133] user202@appdb LOG:  duration: 168.316 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-05 16:14:54.000 UTC [10055] user104@appdb LOG:  duration: 433.669 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-05 16:35:10.000 UTC [10135] user103@appdb LOG:  duration: 447.721 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-06 05:29:00.000 UTC [10800] emp007@custdb LOG:  duration: 452.765 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=8009
+2024-03-06 05:29:00.000 UTC [10800] emp007@custdb LOG:  rows=3
+2024-03-06 10:33:23.000 UTC [10034] user202@appdb LOG:  duration: 279.619 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-06 11:05:39.000 UTC [10445] user103@appdb LOG:  duration: 318.799 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-06 12:08:50.000 UTC [10276] user202@appdb LOG:  duration: 272.613 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-06 13:03:08.000 UTC [10379] user101@appdb LOG:  duration: 270.216 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-06 14:22:13.000 UTC [10343] user201@appdb LOG:  duration: 360.799 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-06 14:22:24.000 UTC [10233] emp007@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=9336,<none>
+2024-03-06 14:53:59.000 UTC [10288] user103@appdb LOG:  duration: 423.984 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-06 16:29:48.000 UTC [10288] user102@appdb LOG:  duration: 230.797 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-06 16:49:04.000 UTC [10900] admin01@custdb LOG:  duration: 8.368 ms  statement: SELECT name, phone, rrn, email, address FROM customers WHERE created_date >= '2024-03-01'
+2024-03-06 16:49:04.000 UTC [10900] admin01@custdb LOG:  rows=1053
+2024-03-06 17:32:45.000 UTC [10789] user105@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=1480,<none>
+2024-03-06 20:40:06.000 UTC [10548] user202@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=6870,<none>
+2024-03-07 02:48:45.000 UTC [10800] emp007@custdb LOG:  duration: 410.992 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=2025
+2024-03-07 02:48:45.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-07 08:17:39.000 UTC [10202] user104@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=7563,<none>
+2024-03-07 09:59:03.000 UTC [10900] admin01@custdb LOG:  duration: 147.743 ms  statement: SELECT * FROM personal_info WHERE hire_date >= '2020-01-01'
+2024-03-07 09:59:03.000 UTC [10900] admin01@custdb LOG:  rows=4650
+2024-03-07 13:35:08.000 UTC [10474] user101@appdb LOG:  duration: 225.815 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-07 16:25:56.000 UTC [10468] user201@appdb LOG:  duration: 235.246 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-07 17:07:22.000 UTC [10220] user105@appdb LOG:  duration: 146.794 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-07 17:23:39.000 UTC [10387] user101@appdb LOG:  duration: 321.552 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-07 18:52:14.000 UTC [10124] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=1195,<none>
+2024-03-08 00:35:10.000 UTC [10800] emp007@custdb LOG:  duration: 491.573 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=6422
+2024-03-08 00:35:10.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-08 01:51:47.000 UTC [10800] emp007@custdb LOG:  duration: 85.730 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=6744
+2024-03-08 01:51:47.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-08 04:40:11.000 UTC [10800] emp007@custdb LOG:  duration: 15.855 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4053
+2024-03-08 04:40:11.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-08 09:42:12.000 UTC [10204] user104@appdb LOG:  duration: 143.985 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-08 10:09:16.000 UTC [10101] user103@appdb LOG:  duration: 309.256 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-08 11:50:36.000 UTC [10105] user201@appdb LOG:  duration: 425.883 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-08 12:52:58.000 UTC [10235] user203@appdb LOG:  duration: 157.940 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-08 13:07:03.000 UTC [10122] user105@appdb LOG:  duration: 328.912 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-08 13:25:08.000 UTC [10343] user201@appdb LOG:  duration: 154.568 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-08 15:05:23.000 UTC [10114] user201@appdb LOG:  duration: 164.201 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-08 15:37:25.000 UTC [10268] user102@appdb LOG:  duration: 203.991 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-08 15:38:06.000 UTC [10826] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=5984,<none>
+2024-03-08 16:01:23.000 UTC [10283] user103@appdb LOG:  duration: 189.578 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-08 16:39:54.000 UTC [10393] user101@appdb LOG:  duration: 234.524 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-08 16:51:26.000 UTC [10097] user203@appdb LOG:  duration: 50.774 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-08 17:58:34.000 UTC [10025] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-08 23:30:38.000 UTC [10460] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=8635,<none>
+2024-03-09 03:43:17.000 UTC [10946] user101@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=8096,<none>
+2024-03-09 09:03:35.000 UTC [10149] user103@appdb LOG:  duration: 484.229 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-09 09:36:55.000 UTC [10351] user202@appdb LOG:  duration: 499.150 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-09 10:30:01.000 UTC [10383] user202@appdb LOG:  duration: 27.458 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-09 10:51:23.000 UTC [10223] user201@appdb LOG:  duration: 381.550 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-09 10:56:06.000 UTC [10380] user103@appdb LOG:  duration: 80.378 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-09 11:08:34.000 UTC [10128] user101@appdb LOG:  duration: 57.776 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-09 11:13:48.000 UTC [10172] user201@appdb LOG:  duration: 48.489 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-09 11:21:05.000 UTC [10298] user105@appdb LOG:  duration: 73.458 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-09 11:50:44.000 UTC [10055] user104@appdb LOG:  duration: 447.139 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-09 12:53:40.000 UTC [10141] user203@appdb LOG:  duration: 249.741 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-09 13:35:00.000 UTC [10264] user201@appdb LOG:  duration: 44.347 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-09 15:21:59.000 UTC [10403] user102@appdb LOG:  duration: 137.940 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-09 16:04:45.000 UTC [10146] user104@appdb LOG:  duration: 140.443 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-09 16:42:27.000 UTC [10248] user102@appdb LOG:  duration: 227.524 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-09 16:57:32.000 UTC [10075] user103@appdb LOG:  duration: 47.327 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-10 00:55:59.000 UTC [10800] emp007@custdb LOG:  duration: 129.184 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=5489
+2024-03-10 00:55:59.000 UTC [10800] emp007@custdb LOG:  rows=6
+2024-03-10 03:35:36.000 UTC [10800] emp007@custdb LOG:  duration: 404.451 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=3139
+2024-03-10 03:35:36.000 UTC [10800] emp007@custdb LOG:  rows=8
+2024-03-10 09:39:47.000 UTC [10050] user202@appdb LOG:  duration: 321.316 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-10 11:10:20.000 UTC [10478] user103@appdb LOG:  duration: 116.454 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-10 11:28:53.000 UTC [10278] user201@appdb LOG:  duration: 155.726 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-10 12:49:08.000 UTC [10391] user104@appdb LOG:  duration: 149.435 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-10 13:53:37.000 UTC [10296] user101@appdb LOG:  duration: 251.986 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-10 14:23:45.000 UTC [10924] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=8265,<none>
+2024-03-10 15:44:46.000 UTC [10401] user203@appdb LOG:  duration: 339.835 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-10 16:23:06.000 UTC [10164] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-10 16:57:53.000 UTC [10099] user104@appdb LOG:  duration: 348.684 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-10 17:47:55.000 UTC [10298] user201@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=5979,<none>
+2024-03-10 20:10:38.000 UTC [10139] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=2785,<none>
+2024-03-10 23:04:07.000 UTC [10542] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=4902,<none>
+2024-03-10 23:11:23.000 UTC [10800] emp007@custdb LOG:  duration: 215.710 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=3316
+2024-03-10 23:11:23.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-11 10:09:44.000 UTC [10930] user201@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=4066,<none>
+2024-03-11 10:31:02.000 UTC [10855] user101@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=6370,<none>
+2024-03-11 10:47:34.000 UTC [10486] user104@appdb LOG:  duration: 95.296 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-11 11:23:19.000 UTC [10369] user203@appdb LOG:  duration: 398.681 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-11 11:31:44.000 UTC [10254] user202@appdb LOG:  duration: 474.916 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-11 12:53:59.000 UTC [10044] user105@appdb LOG:  duration: 452.561 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-11 13:15:07.000 UTC [10013] user202@appdb LOG:  duration: 96.611 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-11 14:48:56.000 UTC [10194] user203@appdb LOG:  duration: 386.951 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-11 15:41:05.000 UTC [10436] user105@appdb LOG:  duration: 437.790 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-11 15:44:31.000 UTC [10147] user103@appdb LOG:  duration: 484.510 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-11 16:12:14.000 UTC [10070] user104@appdb LOG:  duration: 40.402 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-11 16:25:26.000 UTC [10373] user202@appdb LOG:  duration: 161.537 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-11 22:55:49.000 UTC [10800] emp007@custdb LOG:  duration: 436.164 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=2526
+2024-03-11 22:55:49.000 UTC [10800] emp007@custdb LOG:  rows=6
+2024-03-12 00:03:25.000 UTC [10800] emp007@custdb LOG:  duration: 336.193 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=6005
+2024-03-12 00:03:25.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-12 07:27:43.000 UTC [10554] user101@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=6675,<none>
+2024-03-12 09:11:55.000 UTC [10073] user201@appdb LOG:  duration: 337.510 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-12 10:22:15.000 UTC [10375] user101@appdb LOG:  duration: 322.206 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-12 14:38:16.000 UTC [10413] user102@appdb LOG:  duration: 374.570 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-12 15:04:42.000 UTC [10471] user104@appdb LOG:  duration: 320.421 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-12 15:26:29.000 UTC [10442] user202@appdb LOG:  duration: 28.789 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-12 15:36:02.000 UTC [10309] user201@appdb LOG:  duration: 348.560 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-12 16:17:19.000 UTC [10128] user201@appdb LOG:  duration: 62.838 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-12 16:48:04.000 UTC [10293] user201@appdb LOG:  duration: 272.475 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-12 16:57:48.000 UTC [10068] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-12 17:18:04.000 UTC [10197] user104@appdb LOG:  duration: 231.882 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-12 17:51:47.000 UTC [10347] user202@appdb LOG:  duration: 488.131 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-12 21:35:36.000 UTC [10154] emp003@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=1104,<none>
+2024-03-12 22:31:08.000 UTC [10800] emp007@custdb LOG:  duration: 259.768 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4196
+2024-03-12 22:31:08.000 UTC [10800] emp007@custdb LOG:  rows=9
+2024-03-13 00:46:27.000 UTC [10168] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-13 01:11:45.000 UTC [10991] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=6828,<none>
+2024-03-13 01:14:51.000 UTC [10426] user201@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=6241,<none>
+2024-03-13 10:56:36.000 UTC [10126] user104@appdb LOG:  duration: 305.140 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-13 11:31:02.000 UTC [10064] user202@appdb LOG:  duration: 495.704 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-13 11:48:23.000 UTC [10263] user201@appdb LOG:  duration: 55.426 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-13 12:04:37.000 UTC [10353] user202@appdb LOG:  duration: 125.204 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-13 12:58:38.000 UTC [10260] user103@appdb LOG:  duration: 451.239 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-13 13:32:52.000 UTC [10939] emp007@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=2228,<none>
+2024-03-13 14:27:20.000 UTC [10900] admin01@custdb LOG:  duration: 142.760 ms  statement: SELECT * FROM members WHERE status='active'
+2024-03-13 14:27:20.000 UTC [10900] admin01@custdb LOG:  rows=2529
+2024-03-13 14:28:57.000 UTC [10264] user105@appdb LOG:  duration: 62.353 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-13 15:38:29.000 UTC [10270] user102@appdb LOG:  duration: 498.666 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-13 16:02:40.000 UTC [10198] user101@appdb LOG:  duration: 130.865 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-14 03:04:49.000 UTC [10046] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-14 04:52:49.000 UTC [10536] user202@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=2046,<none>
+2024-03-14 09:00:00.000 UTC [10700] emp003@custdb LOG:  duration: 366.441 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=1742
+2024-03-14 09:00:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:00:20.000 UTC [10700] emp003@custdb LOG:  duration: 77.720 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=8761
+2024-03-14 09:00:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:00:40.000 UTC [10700] emp003@custdb LOG:  duration: 477.727 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9446
+2024-03-14 09:00:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:01:00.000 UTC [10700] emp003@custdb LOG:  duration: 316.857 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=6218
+2024-03-14 09:01:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:01:20.000 UTC [10700] emp003@custdb LOG:  duration: 260.948 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=5902
+2024-03-14 09:01:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:01:40.000 UTC [10700] emp003@custdb LOG:  duration: 363.676 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=9351
+2024-03-14 09:01:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:02:00.000 UTC [10700] emp003@custdb LOG:  duration: 189.439 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=5911
+2024-03-14 09:02:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:02:20.000 UTC [10700] emp003@custdb LOG:  duration: 158.915 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=2795
+2024-03-14 09:02:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:02:40.000 UTC [10700] emp003@custdb LOG:  duration: 136.771 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=1436
+2024-03-14 09:02:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:03:00.000 UTC [10700] emp003@custdb LOG:  duration: 246.274 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=4728
+2024-03-14 09:03:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:03:20.000 UTC [10700] emp003@custdb LOG:  duration: 76.941 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=9589
+2024-03-14 09:03:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:03:40.000 UTC [10700] emp003@custdb LOG:  duration: 486.817 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=4968
+2024-03-14 09:03:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:04:00.000 UTC [10700] emp003@custdb LOG:  duration: 226.421 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=2800
+2024-03-14 09:04:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:04:20.000 UTC [10700] emp003@custdb LOG:  duration: 354.308 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=7861
+2024-03-14 09:04:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:04:40.000 UTC [10700] emp003@custdb LOG:  duration: 472.582 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=7723
+2024-03-14 09:04:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:05:00.000 UTC [10700] emp003@custdb LOG:  duration: 107.674 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=2020
+2024-03-14 09:05:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:05:20.000 UTC [10700] emp003@custdb LOG:  duration: 193.421 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6325
+2024-03-14 09:05:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:05:40.000 UTC [10700] emp003@custdb LOG:  duration: 176.659 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=3837
+2024-03-14 09:05:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:06:00.000 UTC [10700] emp003@custdb LOG:  duration: 248.296 ms  statement: SELECT * FROM personal_info WHERE dept_id=6804
+2024-03-14 09:06:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:06:20.000 UTC [10700] emp003@custdb LOG:  duration: 153.330 ms  statement: SELECT * FROM personal_info WHERE dept_id=5038
+2024-03-14 09:06:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:06:40.000 UTC [10700] emp003@custdb LOG:  duration: 354.821 ms  statement: SELECT * FROM personal_info WHERE dept_id=5876
+2024-03-14 09:06:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:07:00.000 UTC [10700] emp003@custdb LOG:  duration: 179.673 ms  statement: SELECT * FROM personal_info WHERE dept_id=9011
+2024-03-14 09:07:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:07:20.000 UTC [10700] emp003@custdb LOG:  duration: 294.792 ms  statement: SELECT * FROM personal_info WHERE dept_id=5480
+2024-03-14 09:07:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:07:40.000 UTC [10700] emp003@custdb LOG:  duration: 420.453 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9899
+2024-03-14 09:07:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:08:00.000 UTC [10700] emp003@custdb LOG:  duration: 148.831 ms  statement: SELECT * FROM personal_info WHERE dept_id=3399
+2024-03-14 09:08:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:08:20.000 UTC [10700] emp003@custdb LOG:  duration: 336.362 ms  statement: SELECT * FROM personal_info WHERE dept_id=2294
+2024-03-14 09:08:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:08:40.000 UTC [10700] emp003@custdb LOG:  duration: 424.651 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=8849
+2024-03-14 09:08:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:09:00.000 UTC [10700] emp003@custdb LOG:  duration: 71.211 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=5442
+2024-03-14 09:09:00.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:09:20.000 UTC [10700] emp003@custdb LOG:  duration: 343.643 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=4920
+2024-03-14 09:09:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:09:40.000 UTC [10700] emp003@custdb LOG:  duration: 52.523 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=4697
+2024-03-14 09:09:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:10:00.000 UTC [10700] emp003@custdb LOG:  duration: 349.889 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6411
+2024-03-14 09:10:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:10:20.000 UTC [10700] emp003@custdb LOG:  duration: 476.261 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=3252
+2024-03-14 09:10:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:10:40.000 UTC [10700] emp003@custdb LOG:  duration: 334.304 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7666
+2024-03-14 09:10:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:11:00.000 UTC [10700] emp003@custdb LOG:  duration: 331.160 ms  statement: SELECT * FROM personal_info WHERE dept_id=5706
+2024-03-14 09:11:00.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:11:20.000 UTC [10700] emp003@custdb LOG:  duration: 274.856 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=2465
+2024-03-14 09:11:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:11:40.000 UTC [10700] emp003@custdb LOG:  duration: 452.957 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=1611
+2024-03-14 09:11:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:12:00.000 UTC [10700] emp003@custdb LOG:  duration: 404.607 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=3880
+2024-03-14 09:12:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:12:20.000 UTC [10700] emp003@custdb LOG:  duration: 5.405 ms  statement: SELECT * FROM personal_info WHERE dept_id=4052
+2024-03-14 09:12:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:12:40.000 UTC [10700] emp003@custdb LOG:  duration: 233.756 ms  statement: SELECT * FROM personal_info WHERE dept_id=2758
+2024-03-14 09:12:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:13:00.000 UTC [10700] emp003@custdb LOG:  duration: 456.237 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=9901
+2024-03-14 09:13:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:13:20.000 UTC [10700] emp003@custdb LOG:  duration: 99.928 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9261
+2024-03-14 09:13:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:13:40.000 UTC [10700] emp003@custdb LOG:  duration: 375.569 ms  statement: SELECT * FROM personal_info WHERE dept_id=2845
+2024-03-14 09:13:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:14:00.000 UTC [10700] emp003@custdb LOG:  duration: 378.445 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=5215
+2024-03-14 09:14:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:14:20.000 UTC [10700] emp003@custdb LOG:  duration: 90.725 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=5833
+2024-03-14 09:14:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:14:40.000 UTC [10700] emp003@custdb LOG:  duration: 168.188 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7643
+2024-03-14 09:14:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:15:00.000 UTC [10700] emp003@custdb LOG:  duration: 72.588 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7567
+2024-03-14 09:15:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:15:20.000 UTC [10700] emp003@custdb LOG:  duration: 134.492 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=6301
+2024-03-14 09:15:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:15:40.000 UTC [10700] emp003@custdb LOG:  duration: 489.437 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4858
+2024-03-14 09:15:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:16:00.000 UTC [10700] emp003@custdb LOG:  duration: 6.367 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=5947
+2024-03-14 09:16:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:16:20.000 UTC [10700] emp003@custdb LOG:  duration: 342.221 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=6890
+2024-03-14 09:16:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:16:40.000 UTC [10700] emp003@custdb LOG:  duration: 208.802 ms  statement: SELECT * FROM personal_info WHERE dept_id=8625
+2024-03-14 09:16:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:17:00.000 UTC [10700] emp003@custdb LOG:  duration: 328.402 ms  statement: SELECT * FROM personal_info WHERE dept_id=9233
+2024-03-14 09:17:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:17:20.000 UTC [10700] emp003@custdb LOG:  duration: 113.236 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=7021
+2024-03-14 09:17:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:17:40.000 UTC [10700] emp003@custdb LOG:  duration: 383.720 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=8834
+2024-03-14 09:17:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:18:00.000 UTC [10700] emp003@custdb LOG:  duration: 468.582 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7121
+2024-03-14 09:18:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:18:20.000 UTC [10700] emp003@custdb LOG:  duration: 349.872 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9806
+2024-03-14 09:18:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:18:40.000 UTC [10700] emp003@custdb LOG:  duration: 271.820 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=2341
+2024-03-14 09:18:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:19:00.000 UTC [10700] emp003@custdb LOG:  duration: 58.163 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=6927
+2024-03-14 09:19:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:19:20.000 UTC [10700] emp003@custdb LOG:  duration: 294.649 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=9972
+2024-03-14 09:19:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:19:40.000 UTC [10700] emp003@custdb LOG:  duration: 438.632 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=3455
+2024-03-14 09:19:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:20:00.000 UTC [10700] emp003@custdb LOG:  duration: 368.697 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=8239
+2024-03-14 09:20:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:20:20.000 UTC [10700] emp003@custdb LOG:  duration: 229.928 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=9008
+2024-03-14 09:20:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:20:40.000 UTC [10700] emp003@custdb LOG:  duration: 263.525 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=1911
+2024-03-14 09:20:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:21:00.000 UTC [10700] emp003@custdb LOG:  duration: 287.573 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=8484
+2024-03-14 09:21:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:21:20.000 UTC [10700] emp003@custdb LOG:  duration: 131.936 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=6049
+2024-03-14 09:21:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:21:40.000 UTC [10700] emp003@custdb LOG:  duration: 38.146 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=1049
+2024-03-14 09:21:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:22:00.000 UTC [10700] emp003@custdb LOG:  duration: 278.161 ms  statement: SELECT * FROM personal_info WHERE dept_id=7941
+2024-03-14 09:22:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:22:20.000 UTC [10700] emp003@custdb LOG:  duration: 147.518 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=2130
+2024-03-14 09:22:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:22:40.000 UTC [10700] emp003@custdb LOG:  duration: 192.491 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=3948
+2024-03-14 09:22:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:23:00.000 UTC [10700] emp003@custdb LOG:  duration: 42.799 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=8348
+2024-03-14 09:23:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:23:20.000 UTC [10700] emp003@custdb LOG:  duration: 61.282 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9835
+2024-03-14 09:23:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:23:40.000 UTC [10700] emp003@custdb LOG:  duration: 66.845 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9802
+2024-03-14 09:23:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:24:00.000 UTC [10700] emp003@custdb LOG:  duration: 153.574 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=4648
+2024-03-14 09:24:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:24:20.000 UTC [10700] emp003@custdb LOG:  duration: 195.943 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9920
+2024-03-14 09:24:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:24:40.000 UTC [10700] emp003@custdb LOG:  duration: 178.258 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=4762
+2024-03-14 09:24:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:25:00.000 UTC [10700] emp003@custdb LOG:  duration: 17.928 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=5516
+2024-03-14 09:25:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:25:20.000 UTC [10700] emp003@custdb LOG:  duration: 124.311 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=7868
+2024-03-14 09:25:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:25:40.000 UTC [10700] emp003@custdb LOG:  duration: 18.557 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=2102
+2024-03-14 09:25:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:26:00.000 UTC [10700] emp003@custdb LOG:  duration: 206.549 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=1797
+2024-03-14 09:26:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:26:20.000 UTC [10700] emp003@custdb LOG:  duration: 387.984 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=4839
+2024-03-14 09:26:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:26:40.000 UTC [10700] emp003@custdb LOG:  duration: 149.339 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=1924
+2024-03-14 09:26:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:27:00.000 UTC [10700] emp003@custdb LOG:  duration: 396.788 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=6224
+2024-03-14 09:27:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:27:20.000 UTC [10700] emp003@custdb LOG:  duration: 449.246 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=6253
+2024-03-14 09:27:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:27:40.000 UTC [10700] emp003@custdb LOG:  duration: 154.381 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9540
+2024-03-14 09:27:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:28:00.000 UTC [10700] emp003@custdb LOG:  duration: 451.852 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=1998
+2024-03-14 09:28:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:28:20.000 UTC [10700] emp003@custdb LOG:  duration: 254.148 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=3869
+2024-03-14 09:28:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:28:40.000 UTC [10700] emp003@custdb LOG:  duration: 164.813 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6642
+2024-03-14 09:28:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:29:00.000 UTC [10700] emp003@custdb LOG:  duration: 154.485 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7821
+2024-03-14 09:29:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:29:20.000 UTC [10700] emp003@custdb LOG:  duration: 124.969 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=4012
+2024-03-14 09:29:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:29:40.000 UTC [10700] emp003@custdb LOG:  duration: 413.574 ms  statement: SELECT * FROM personal_info WHERE dept_id=4692
+2024-03-14 09:29:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:29:58.000 UTC [10039] user101@appdb LOG:  duration: 295.539 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-14 09:30:00.000 UTC [10700] emp003@custdb LOG:  duration: 496.526 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=1944
+2024-03-14 09:30:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:30:20.000 UTC [10700] emp003@custdb LOG:  duration: 125.361 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9683
+2024-03-14 09:30:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:30:40.000 UTC [10700] emp003@custdb LOG:  duration: 473.560 ms  statement: SELECT * FROM personal_info WHERE dept_id=4331
+2024-03-14 09:30:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:31:00.000 UTC [10700] emp003@custdb LOG:  duration: 371.949 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7079
+2024-03-14 09:31:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:31:20.000 UTC [10700] emp003@custdb LOG:  duration: 194.789 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=4120
+2024-03-14 09:31:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:31:40.000 UTC [10700] emp003@custdb LOG:  duration: 412.879 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=1647
+2024-03-14 09:31:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:32:00.000 UTC [10700] emp003@custdb LOG:  duration: 446.440 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4555
+2024-03-14 09:32:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:32:20.000 UTC [10700] emp003@custdb LOG:  duration: 480.294 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=5967
+2024-03-14 09:32:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:32:40.000 UTC [10700] emp003@custdb LOG:  duration: 357.718 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=2922
+2024-03-14 09:32:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:33:00.000 UTC [10700] emp003@custdb LOG:  duration: 283.429 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4350
+2024-03-14 09:33:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:33:20.000 UTC [10700] emp003@custdb LOG:  duration: 274.764 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=5637
+2024-03-14 09:33:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:33:40.000 UTC [10700] emp003@custdb LOG:  duration: 185.625 ms  statement: SELECT * FROM personal_info WHERE dept_id=6886
+2024-03-14 09:33:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:34:00.000 UTC [10700] emp003@custdb LOG:  duration: 412.839 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9147
+2024-03-14 09:34:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:34:20.000 UTC [10700] emp003@custdb LOG:  duration: 190.420 ms  statement: SELECT * FROM personal_info WHERE dept_id=8692
+2024-03-14 09:34:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:34:40.000 UTC [10700] emp003@custdb LOG:  duration: 443.326 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7781
+2024-03-14 09:34:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:35:00.000 UTC [10700] emp003@custdb LOG:  duration: 284.698 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=3390
+2024-03-14 09:35:00.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:35:20.000 UTC [10700] emp003@custdb LOG:  duration: 101.437 ms  statement: SELECT * FROM personal_info WHERE dept_id=7841
+2024-03-14 09:35:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:35:40.000 UTC [10700] emp003@custdb LOG:  duration: 427.351 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4768
+2024-03-14 09:35:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:36:00.000 UTC [10700] emp003@custdb LOG:  duration: 132.881 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=9180
+2024-03-14 09:36:00.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:36:20.000 UTC [10700] emp003@custdb LOG:  duration: 87.850 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9005
+2024-03-14 09:36:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:36:40.000 UTC [10700] emp003@custdb LOG:  duration: 369.659 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=6770
+2024-03-14 09:36:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:37:00.000 UTC [10700] emp003@custdb LOG:  duration: 329.160 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9000
+2024-03-14 09:37:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:37:20.000 UTC [10700] emp003@custdb LOG:  duration: 484.937 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=9584
+2024-03-14 09:37:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:37:40.000 UTC [10700] emp003@custdb LOG:  duration: 71.962 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=1794
+2024-03-14 09:37:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:38:00.000 UTC [10700] emp003@custdb LOG:  duration: 5.323 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=4791
+2024-03-14 09:38:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:38:20.000 UTC [10700] emp003@custdb LOG:  duration: 31.732 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9285
+2024-03-14 09:38:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:38:40.000 UTC [10700] emp003@custdb LOG:  duration: 4.644 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=8916
+2024-03-14 09:38:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:39:00.000 UTC [10700] emp003@custdb LOG:  duration: 272.839 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7739
+2024-03-14 09:39:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:39:20.000 UTC [10700] emp003@custdb LOG:  duration: 9.614 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=5501
+2024-03-14 09:39:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:39:40.000 UTC [10700] emp003@custdb LOG:  duration: 471.198 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=8054
+2024-03-14 09:39:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:40:00.000 UTC [10700] emp003@custdb LOG:  duration: 99.734 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9591
+2024-03-14 09:40:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:40:20.000 UTC [10700] emp003@custdb LOG:  duration: 137.914 ms  statement: SELECT * FROM personal_info WHERE dept_id=9625
+2024-03-14 09:40:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:40:40.000 UTC [10700] emp003@custdb LOG:  duration: 492.515 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7502
+2024-03-14 09:40:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:41:00.000 UTC [10700] emp003@custdb LOG:  duration: 357.331 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=8520
+2024-03-14 09:41:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:41:20.000 UTC [10700] emp003@custdb LOG:  duration: 48.515 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=5914
+2024-03-14 09:41:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:41:40.000 UTC [10700] emp003@custdb LOG:  duration: 244.157 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7213
+2024-03-14 09:41:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:42:00.000 UTC [10700] emp003@custdb LOG:  duration: 256.965 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=1154
+2024-03-14 09:42:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:42:20.000 UTC [10700] emp003@custdb LOG:  duration: 440.197 ms  statement: SELECT * FROM personal_info WHERE dept_id=8109
+2024-03-14 09:42:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:42:40.000 UTC [10700] emp003@custdb LOG:  duration: 109.988 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=9653
+2024-03-14 09:42:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:43:00.000 UTC [10700] emp003@custdb LOG:  duration: 474.176 ms  statement: SELECT * FROM personal_info WHERE dept_id=8790
+2024-03-14 09:43:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:43:20.000 UTC [10700] emp003@custdb LOG:  duration: 337.133 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=5593
+2024-03-14 09:43:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:43:40.000 UTC [10700] emp003@custdb LOG:  duration: 493.312 ms  statement: SELECT * FROM personal_info WHERE dept_id=3938
+2024-03-14 09:43:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:44:00.000 UTC [10700] emp003@custdb LOG:  duration: 154.266 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=3362
+2024-03-14 09:44:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:44:20.000 UTC [10700] emp003@custdb LOG:  duration: 347.653 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=4939
+2024-03-14 09:44:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:44:40.000 UTC [10700] emp003@custdb LOG:  duration: 405.805 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6435
+2024-03-14 09:44:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:45:00.000 UTC [10700] emp003@custdb LOG:  duration: 28.200 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=2284
+2024-03-14 09:45:00.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:45:20.000 UTC [10700] emp003@custdb LOG:  duration: 175.719 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=8161
+2024-03-14 09:45:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:45:40.000 UTC [10700] emp003@custdb LOG:  duration: 325.379 ms  statement: SELECT * FROM personal_info WHERE dept_id=7499
+2024-03-14 09:45:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:46:00.000 UTC [10700] emp003@custdb LOG:  duration: 183.666 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=8381
+2024-03-14 09:46:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:46:20.000 UTC [10700] emp003@custdb LOG:  duration: 349.699 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7150
+2024-03-14 09:46:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:46:40.000 UTC [10700] emp003@custdb LOG:  duration: 152.917 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7227
+2024-03-14 09:46:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:47:00.000 UTC [10700] emp003@custdb LOG:  duration: 138.257 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=5037
+2024-03-14 09:47:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:47:20.000 UTC [10700] emp003@custdb LOG:  duration: 163.469 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=7225
+2024-03-14 09:47:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:47:40.000 UTC [10700] emp003@custdb LOG:  duration: 483.415 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=2745
+2024-03-14 09:47:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:48:00.000 UTC [10700] emp003@custdb LOG:  duration: 53.235 ms  statement: SELECT * FROM personal_info WHERE dept_id=8286
+2024-03-14 09:48:00.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:48:20.000 UTC [10700] emp003@custdb LOG:  duration: 230.670 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=2430
+2024-03-14 09:48:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:48:40.000 UTC [10700] emp003@custdb LOG:  duration: 14.191 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=9395
+2024-03-14 09:48:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:49:00.000 UTC [10700] emp003@custdb LOG:  duration: 306.712 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=6798
+2024-03-14 09:49:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:49:20.000 UTC [10700] emp003@custdb LOG:  duration: 150.523 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6315
+2024-03-14 09:49:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:49:40.000 UTC [10700] emp003@custdb LOG:  duration: 464.348 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7353
+2024-03-14 09:49:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:50:00.000 UTC [10700] emp003@custdb LOG:  duration: 87.242 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9537
+2024-03-14 09:50:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:50:20.000 UTC [10700] emp003@custdb LOG:  duration: 253.249 ms  statement: SELECT * FROM personal_info WHERE dept_id=5405
+2024-03-14 09:50:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:50:40.000 UTC [10700] emp003@custdb LOG:  duration: 142.531 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=2036
+2024-03-14 09:50:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:51:00.000 UTC [10700] emp003@custdb LOG:  duration: 185.357 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=5911
+2024-03-14 09:51:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:51:20.000 UTC [10700] emp003@custdb LOG:  duration: 316.300 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=5040
+2024-03-14 09:51:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:51:40.000 UTC [10700] emp003@custdb LOG:  duration: 156.106 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=8501
+2024-03-14 09:51:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:52:00.000 UTC [10700] emp003@custdb LOG:  duration: 195.923 ms  statement: SELECT * FROM personal_info WHERE dept_id=7483
+2024-03-14 09:52:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:52:20.000 UTC [10700] emp003@custdb LOG:  duration: 221.935 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6399
+2024-03-14 09:52:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:52:40.000 UTC [10700] emp003@custdb LOG:  duration: 309.811 ms  statement: SELECT * FROM personal_info WHERE dept_id=3230
+2024-03-14 09:52:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:53:00.000 UTC [10700] emp003@custdb LOG:  duration: 91.507 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4290
+2024-03-14 09:53:00.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:53:20.000 UTC [10700] emp003@custdb LOG:  duration: 496.689 ms  statement: SELECT * FROM personal_info WHERE dept_id=6228
+2024-03-14 09:53:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:53:40.000 UTC [10700] emp003@custdb LOG:  duration: 144.936 ms  statement: SELECT * FROM personal_info WHERE dept_id=4971
+2024-03-14 09:53:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:54:00.000 UTC [10700] emp003@custdb LOG:  duration: 478.677 ms  statement: SELECT * FROM personal_info WHERE dept_id=7437
+2024-03-14 09:54:00.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:54:20.000 UTC [10700] emp003@custdb LOG:  duration: 93.798 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=4273
+2024-03-14 09:54:20.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:54:40.000 UTC [10700] emp003@custdb LOG:  duration: 225.916 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=1440
+2024-03-14 09:54:40.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:55:00.000 UTC [10700] emp003@custdb LOG:  duration: 345.611 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=5773
+2024-03-14 09:55:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:55:20.000 UTC [10700] emp003@custdb LOG:  duration: 130.774 ms  statement: SELECT * FROM personal_info WHERE dept_id=3280
+2024-03-14 09:55:20.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:55:40.000 UTC [10700] emp003@custdb LOG:  duration: 38.559 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=3525
+2024-03-14 09:55:40.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:56:00.000 UTC [10700] emp003@custdb LOG:  duration: 274.618 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=8851
+2024-03-14 09:56:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:56:20.000 UTC [10700] emp003@custdb LOG:  duration: 405.468 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=7853
+2024-03-14 09:56:20.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:56:40.000 UTC [10700] emp003@custdb LOG:  duration: 56.887 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=9796
+2024-03-14 09:56:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:57:00.000 UTC [10700] emp003@custdb LOG:  duration: 332.727 ms  statement: SELECT * FROM personal_info WHERE dept_id=5067
+2024-03-14 09:57:00.000 UTC [10700] emp003@custdb LOG:  rows=2
+2024-03-14 09:57:20.000 UTC [10700] emp003@custdb LOG:  duration: 496.870 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=1725
+2024-03-14 09:57:20.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:57:40.000 UTC [10700] emp003@custdb LOG:  duration: 6.200 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6432
+2024-03-14 09:57:40.000 UTC [10700] emp003@custdb LOG:  rows=1
+2024-03-14 09:58:00.000 UTC [10700] emp003@custdb LOG:  duration: 383.631 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=5239
+2024-03-14 09:58:00.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 09:58:20.000 UTC [10700] emp003@custdb LOG:  duration: 201.574 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4621
+2024-03-14 09:58:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:58:40.000 UTC [10700] emp003@custdb LOG:  duration: 13.594 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=9199
+2024-03-14 09:58:40.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:59:00.000 UTC [10700] emp003@custdb LOG:  duration: 472.187 ms  statement: SELECT * FROM personal_info WHERE dept_id=2712
+2024-03-14 09:59:00.000 UTC [10700] emp003@custdb LOG:  rows=4
+2024-03-14 09:59:20.000 UTC [10700] emp003@custdb LOG:  duration: 160.451 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=2901
+2024-03-14 09:59:20.000 UTC [10700] emp003@custdb LOG:  rows=3
+2024-03-14 09:59:40.000 UTC [10700] emp003@custdb LOG:  duration: 248.456 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=8460
+2024-03-14 09:59:40.000 UTC [10700] emp003@custdb LOG:  rows=5
+2024-03-14 10:48:40.000 UTC [10360] user102@appdb LOG:  duration: 228.270 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-14 11:02:19.000 UTC [10186] user103@appdb LOG:  duration: 461.466 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-14 11:15:33.000 UTC [10210] user201@appdb LOG:  duration: 350.911 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-14 13:57:45.000 UTC [10392] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=3248,<none>
+2024-03-14 14:29:28.000 UTC [10226] user104@appdb LOG:  duration: 110.623 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-14 15:18:37.000 UTC [10014] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-14 16:44:38.000 UTC [10240] user101@appdb LOG:  duration: 17.337 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-14 17:20:59.000 UTC [10133] user102@appdb LOG:  duration: 343.833 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-15 01:05:57.000 UTC [10800] emp007@custdb LOG:  duration: 302.847 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=2646
+2024-03-15 01:05:57.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-15 03:49:37.000 UTC [10267] user104@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=6161,<none>
+2024-03-15 09:03:23.000 UTC [10425] user203@appdb LOG:  duration: 40.760 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-15 09:05:18.000 UTC [10113] user203@appdb LOG:  duration: 355.349 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-15 10:17:28.000 UTC [10126] user104@appdb LOG:  duration: 50.151 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-15 10:20:16.000 UTC [10165] user101@appdb LOG:  duration: 497.891 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-15 10:29:44.000 UTC [10155] user105@appdb LOG:  duration: 207.378 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-15 10:38:02.000 UTC [10455] user203@appdb LOG:  duration: 377.430 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-15 11:57:45.000 UTC [10227] user102@appdb LOG:  duration: 415.798 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-15 12:20:38.000 UTC [10243] user101@appdb LOG:  duration: 78.163 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-15 13:49:24.000 UTC [10257] user203@appdb LOG:  duration: 215.265 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-15 14:55:12.000 UTC [10357] user202@appdb LOG:  duration: 293.492 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-15 15:10:44.000 UTC [10227] user105@appdb LOG:  duration: 229.143 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-15 16:43:33.000 UTC [10176] user102@appdb LOG:  duration: 450.948 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-15 17:06:03.000 UTC [10333] user102@appdb LOG:  duration: 429.115 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-15 17:30:22.000 UTC [10170] user103@appdb LOG:  duration: 391.656 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-15 23:12:16.000 UTC [10474] user203@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=5341,<none>
+2024-03-16 02:08:11.000 UTC [10800] emp007@custdb LOG:  duration: 28.986 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=6154
+2024-03-16 02:08:11.000 UTC [10800] emp007@custdb LOG:  rows=10
+2024-03-16 04:43:31.000 UTC [10800] emp007@custdb LOG:  duration: 86.184 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7809
+2024-03-16 04:43:31.000 UTC [10800] emp007@custdb LOG:  rows=8
+2024-03-16 09:07:59.000 UTC [10185] user201@appdb LOG:  duration: 123.159 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-16 09:39:56.000 UTC [10482] user104@appdb LOG:  duration: 168.724 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-16 10:33:50.000 UTC [10463] user201@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=5455,<none>
+2024-03-16 10:36:40.000 UTC [10351] user202@appdb LOG:  duration: 78.252 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-16 11:14:29.000 UTC [10326] user104@appdb LOG:  duration: 236.361 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-16 12:17:27.000 UTC [10248] user104@appdb LOG:  duration: 200.444 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-16 12:51:51.000 UTC [10350] user105@appdb LOG:  duration: 153.564 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-16 14:26:21.000 UTC [10164] user102@appdb LOG:  duration: 54.978 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-16 14:41:46.000 UTC [10099] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-16 16:04:57.000 UTC [10041] user102@appdb LOG:  duration: 312.251 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-16 16:49:23.000 UTC [10262] user102@appdb LOG:  duration: 56.562 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-16 17:29:31.000 UTC [10450] user103@appdb LOG:  duration: 255.123 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-16 17:48:15.000 UTC [10353] user202@appdb LOG:  duration: 331.828 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-16 21:19:59.000 UTC [10088] user105@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=8483,<none>
+2024-03-16 23:14:24.000 UTC [10800] emp007@custdb LOG:  duration: 161.476 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=2463
+2024-03-16 23:14:24.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-16 23:28:46.000 UTC [10800] emp007@custdb LOG:  duration: 154.145 ms  statement: SELECT * FROM personal_info WHERE dept_id=8412
+2024-03-16 23:28:46.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-17 02:17:01.000 UTC [10125] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=1699,<none>
+2024-03-17 05:00:00.000 UTC [10800] emp007@custdb LOG:  duration: 356.235 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=6629
+2024-03-17 05:00:00.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-17 11:32:58.000 UTC [10054] user105@appdb LOG:  duration: 153.961 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-17 12:17:42.000 UTC [10248] user102@appdb LOG:  duration: 277.235 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-17 12:51:09.000 UTC [10900] admin01@custdb LOG:  duration: 301.749 ms  statement: SELECT cust_name, rrn, phone, card_no FROM customers WHERE dept='영업부'
+2024-03-17 12:51:09.000 UTC [10900] admin01@custdb LOG:  rows=3700
+2024-03-17 13:02:14.000 UTC [10202] user203@appdb LOG:  duration: 29.107 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-17 13:08:59.000 UTC [10178] user104@appdb LOG:  duration: 451.350 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-17 13:26:53.000 UTC [10247] user105@appdb LOG:  duration: 125.567 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-17 16:16:57.000 UTC [10464] user105@appdb LOG:  duration: 48.749 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-17 17:12:57.000 UTC [10397] user102@appdb LOG:  duration: 180.844 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-17 17:53:42.000 UTC [10412] user104@appdb LOG:  duration: 37.506 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-17 17:53:47.000 UTC [10452] user102@appdb LOG:  duration: 20.777 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-17 23:08:48.000 UTC [10800] emp007@custdb LOG:  duration: 444.771 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=7743
+2024-03-17 23:08:48.000 UTC [10800] emp007@custdb LOG:  rows=5
+2024-03-18 00:23:20.000 UTC [10800] emp007@custdb LOG:  duration: 135.786 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4228
+2024-03-18 00:23:20.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-18 02:10:49.000 UTC [10800] emp007@custdb LOG:  duration: 282.623 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=8492
+2024-03-18 02:10:49.000 UTC [10800] emp007@custdb LOG:  rows=8
+2024-03-18 08:26:22.000 UTC [10196] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-18 09:35:26.000 UTC [10047] user105@appdb LOG:  duration: 431.216 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-18 09:54:06.000 UTC [10220] user105@appdb LOG:  duration: 452.370 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-18 10:23:45.000 UTC [10122] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-18 10:45:54.000 UTC [10264] user201@appdb LOG:  duration: 146.185 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-18 11:12:26.000 UTC [10340] user105@appdb LOG:  duration: 347.866 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-18 11:34:29.000 UTC [10056] emp003@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=9185,<none>
+2024-03-18 12:45:41.000 UTC [10359] user101@appdb LOG:  duration: 215.325 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-18 13:20:06.000 UTC [10040] user103@appdb LOG:  duration: 339.402 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-18 16:08:27.000 UTC [10093] user104@appdb LOG:  duration: 237.355 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-18 17:39:09.000 UTC [10900] admin01@custdb LOG:  duration: 159.180 ms  statement: SELECT cust_name, rrn, phone, card_no FROM customers WHERE dept='영업부'
+2024-03-18 17:39:09.000 UTC [10900] admin01@custdb LOG:  rows=1184
+2024-03-18 20:23:14.000 UTC [10161] user103@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=5179,<none>
+2024-03-19 01:59:04.000 UTC [10469] user202@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=2391,<none>
+2024-03-19 02:40:26.000 UTC [10800] emp007@custdb LOG:  duration: 325.913 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=7146
+2024-03-19 02:40:26.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-19 09:48:48.000 UTC [10089] user105@appdb LOG:  duration: 266.767 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-19 11:56:26.000 UTC [10335] user202@appdb LOG:  duration: 427.601 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-19 12:29:44.000 UTC [10131] user102@appdb LOG:  duration: 86.720 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-19 12:45:04.000 UTC [10023] user201@appdb LOG:  duration: 117.891 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-19 12:52:55.000 UTC [10119] user104@appdb LOG:  duration: 397.251 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-19 13:51:55.000 UTC [10003] user203@appdb LOG:  duration: 358.532 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-19 14:12:12.000 UTC [10942] user201@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=3458,<none>
+2024-03-19 14:36:18.000 UTC [10358] user202@appdb LOG:  duration: 12.949 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-19 15:02:01.000 UTC [10047] user102@appdb LOG:  duration: 120.617 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-19 15:52:40.000 UTC [10481] user105@appdb LOG:  duration: 56.791 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-19 17:35:21.000 UTC [10343] user101@appdb LOG:  duration: 211.462 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-19 22:50:48.000 UTC [10800] emp007@custdb LOG:  duration: 141.330 ms  statement: SELECT * FROM personal_info WHERE dept_id=4613
+2024-03-19 22:50:48.000 UTC [10800] emp007@custdb LOG:  rows=1
+2024-03-19 23:22:22.000 UTC [10800] emp007@custdb LOG:  duration: 417.789 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=8501
+2024-03-19 23:22:22.000 UTC [10800] emp007@custdb LOG:  rows=3
+2024-03-20 00:20:45.000 UTC [10800] emp007@custdb LOG:  duration: 137.978 ms  statement: SELECT * FROM personal_info WHERE dept_id=5794
+2024-03-20 00:20:45.000 UTC [10800] emp007@custdb LOG:  rows=10
+2024-03-20 01:28:37.000 UTC [10800] emp007@custdb LOG:  duration: 361.319 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=8037
+2024-03-20 01:28:37.000 UTC [10800] emp007@custdb LOG:  rows=1
+2024-03-20 09:31:56.000 UTC [10321] user202@appdb LOG:  duration: 149.757 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-20 10:04:19.000 UTC [10203] user103@appdb LOG:  duration: 369.590 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-20 10:15:40.000 UTC [10350] user101@appdb LOG:  duration: 117.864 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-20 10:33:56.000 UTC [10900] admin01@custdb LOG:  duration: 479.424 ms  statement: SELECT name, phone, rrn, email, address FROM customers WHERE created_date >= '2024-03-01'
+2024-03-20 10:33:56.000 UTC [10900] admin01@custdb LOG:  rows=3458
+2024-03-20 11:06:40.000 UTC [10070] user101@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=8620,<none>
+2024-03-20 11:20:55.000 UTC [10367] user201@appdb LOG:  duration: 376.981 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-20 11:34:46.000 UTC [10125] user102@appdb LOG:  duration: 237.488 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-20 11:59:59.000 UTC [10121] user202@appdb LOG:  duration: 500.919 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-20 12:45:21.000 UTC [10104] user105@appdb LOG:  duration: 325.973 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-20 13:01:11.000 UTC [10139] user101@appdb LOG:  duration: 391.416 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-20 13:25:35.000 UTC [10426] user103@appdb LOG:  duration: 156.393 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-20 13:44:58.000 UTC [10251] user104@appdb LOG:  duration: 63.238 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-20 13:48:47.000 UTC [10401] user203@appdb LOG:  duration: 120.646 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-20 15:17:40.000 UTC [10405] user201@appdb LOG:  duration: 39.787 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-20 17:05:32.000 UTC [10328] user105@appdb LOG:  duration: 304.694 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-20 17:07:24.000 UTC [10460] user202@appdb LOG:  duration: 98.360 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-20 17:18:29.000 UTC [10258] user202@appdb LOG:  duration: 221.201 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-20 17:24:29.000 UTC [10297] user102@appdb LOG:  duration: 489.910 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-20 17:49:30.000 UTC [10238] user105@appdb LOG:  duration: 423.848 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-21 00:00:20.000 UTC [10903] user203@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=8848,<none>
+2024-03-21 09:03:30.000 UTC [10433] user203@appdb LOG:  duration: 219.802 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-21 10:40:52.000 UTC [10237] user104@appdb LOG:  duration: 155.764 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-21 10:49:41.000 UTC [10020] user104@appdb LOG:  duration: 487.353 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-21 10:57:40.000 UTC [10330] user103@appdb LOG:  duration: 159.907 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-21 12:39:16.000 UTC [10347] user104@appdb LOG:  duration: 393.775 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-21 14:52:08.000 UTC [10343] user202@appdb LOG:  duration: 425.856 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-21 15:32:23.000 UTC [10009] user102@appdb LOG:  duration: 159.284 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-22 10:10:15.000 UTC [10088] user105@appdb LOG:  duration: 39.260 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-22 10:43:56.000 UTC [10274] user101@appdb LOG:  duration: 394.756 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-22 11:07:00.000 UTC [10900] admin01@custdb LOG:  duration: 84.608 ms  statement: SELECT * FROM members WHERE status='active'
+2024-03-22 11:07:00.000 UTC [10900] admin01@custdb LOG:  rows=592
+2024-03-22 12:42:06.000 UTC [10181] user104@appdb LOG:  duration: 453.995 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-22 13:13:33.000 UTC [10900] admin01@custdb LOG:  duration: 152.761 ms  statement: SELECT * FROM members WHERE status='active'
+2024-03-22 13:13:33.000 UTC [10900] admin01@custdb LOG:  rows=3709
+2024-03-22 13:23:09.000 UTC [10351] user201@appdb LOG:  duration: 35.193 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-22 14:04:32.000 UTC [10331] user202@appdb LOG:  duration: 7.969 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-22 14:30:35.000 UTC [10271] user105@appdb LOG:  duration: 218.863 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-22 14:45:04.000 UTC [10281] user201@appdb LOG:  duration: 149.407 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-22 15:38:27.000 UTC [10904] user105@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=3435,<none>
+2024-03-22 17:19:59.000 UTC [10339] user101@appdb LOG:  duration: 481.999 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-22 17:35:38.000 UTC [10162] user203@appdb LOG:  duration: 314.934 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-23 02:58:39.000 UTC [10800] emp007@custdb LOG:  duration: 61.344 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=2388
+2024-03-23 02:58:39.000 UTC [10800] emp007@custdb LOG:  rows=6
+2024-03-23 09:10:28.000 UTC [10212] user102@appdb LOG:  duration: 238.308 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-23 11:18:27.000 UTC [10000] user104@appdb LOG:  duration: 181.346 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-23 11:27:11.000 UTC [10375] user203@appdb LOG:  duration: 495.766 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-23 11:50:23.000 UTC [10260] user103@appdb LOG:  duration: 63.305 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-23 12:04:26.000 UTC [10208] user103@appdb LOG:  duration: 278.577 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-23 12:30:49.000 UTC [10377] user104@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=9083,<none>
+2024-03-23 13:44:55.000 UTC [10232] user105@appdb LOG:  duration: 352.339 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-23 15:00:33.000 UTC [10473] user101@appdb LOG:  duration: 352.836 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-23 15:18:07.000 UTC [10207] user202@appdb LOG:  duration: 495.432 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-23 15:31:25.000 UTC [10124] user104@appdb LOG:  duration: 336.804 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-23 16:28:33.000 UTC [10267] user104@appdb LOG:  duration: 82.472 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-23 16:40:11.000 UTC [10415] user203@appdb LOG:  duration: 33.833 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-23 17:49:26.000 UTC [10900] admin01@custdb LOG:  duration: 43.755 ms  statement: SELECT * FROM personal_info WHERE hire_date >= '2020-01-01'
+2024-03-23 17:49:26.000 UTC [10900] admin01@custdb LOG:  rows=3795
+2024-03-23 21:33:07.000 UTC [10135] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-23 23:00:13.000 UTC [10800] emp007@custdb LOG:  duration: 304.331 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=8812
+2024-03-23 23:00:13.000 UTC [10800] emp007@custdb LOG:  rows=3
+2024-03-24 11:26:55.000 UTC [10335] user101@appdb LOG:  duration: 39.580 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-24 11:53:29.000 UTC [10470] user202@appdb LOG:  duration: 319.646 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-24 12:41:33.000 UTC [10088] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-24 13:32:19.000 UTC [10341] user102@appdb LOG:  duration: 168.512 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-24 14:03:03.000 UTC [10299] user101@appdb LOG:  duration: 258.973 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-24 14:14:21.000 UTC [10398] user105@appdb LOG:  duration: 40.622 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-24 14:51:07.000 UTC [10239] user105@appdb LOG:  duration: 73.872 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-24 16:02:26.000 UTC [10186] user103@appdb LOG:  duration: 369.343 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-24 16:17:46.000 UTC [10301] user104@appdb LOG:  duration: 306.389 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-24 16:35:45.000 UTC [10218] user103@appdb LOG:  duration: 5.214 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-25 10:19:44.000 UTC [10900] admin01@custdb LOG:  duration: 30.350 ms  statement: SELECT * FROM personal_info WHERE hire_date >= '2020-01-01'
+2024-03-25 10:19:44.000 UTC [10900] admin01@custdb LOG:  rows=2454
+2024-03-25 11:12:38.000 UTC [10260] user201@appdb LOG:  duration: 257.141 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-25 11:19:06.000 UTC [10296] user102@appdb LOG:  duration: 476.419 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-25 11:27:32.000 UTC [10466] user103@appdb LOG:  duration: 426.227 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-25 12:18:22.000 UTC [10441] user101@appdb LOG:  duration: 444.771 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-25 12:51:57.000 UTC [10136] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, phone, rrn FROM customers WHERE cust_id=7461,<none>
+2024-03-25 15:23:02.000 UTC [10205] user201@appdb LOG:  duration: 292.675 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-25 15:52:36.000 UTC [10037] user202@appdb LOG:  duration: 498.424 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-25 16:28:39.000 UTC [10002] user103@appdb LOG:  duration: 10.362 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-25 16:36:39.000 UTC [10342] user104@appdb LOG:  duration: 173.129 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-25 17:24:28.000 UTC [10465] user104@appdb LOG:  duration: 153.980 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-26 04:13:27.000 UTC [10800] emp007@custdb LOG:  duration: 166.948 ms  statement: SELECT name, birthday, phone FROM customers WHERE branch_id=4470
+2024-03-26 04:13:27.000 UTC [10800] emp007@custdb LOG:  rows=5
+2024-03-26 10:46:27.000 UTC [10040] user105@appdb LOG:  duration: 309.942 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-26 11:08:02.000 UTC [10146] user201@appdb LOG:  duration: 357.951 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-26 11:42:05.000 UTC [10145] user203@appdb LOG:  duration: 340.748 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-26 11:55:16.000 UTC [10026] user104@appdb LOG:  duration: 247.995 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-26 12:27:07.000 UTC [10278] user105@appdb LOG:  duration: 332.252 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-26 12:37:04.000 UTC [10063] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-26 13:37:03.000 UTC [10180] user105@appdb LOG:  duration: 38.417 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-26 14:04:21.000 UTC [10048] user101@appdb LOG:  duration: 348.495 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-26 14:25:17.000 UTC [10033] user101@appdb LOG:  duration: 468.680 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-26 16:53:44.000 UTC [10470] user103@appdb LOG:  duration: 46.547 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-26 23:01:54.000 UTC [10800] emp007@custdb LOG:  duration: 477.858 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=6620
+2024-03-26 23:01:54.000 UTC [10800] emp007@custdb LOG:  rows=3
+2024-03-27 09:39:09.000 UTC [10122] user104@appdb LOG:  duration: 243.785 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-27 10:08:06.000 UTC [10201] user105@appdb LOG:  duration: 407.447 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-27 10:24:33.000 UTC [10200] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-27 11:04:03.000 UTC [10084] user105@appdb LOG:  duration: 305.866 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-27 11:16:58.000 UTC [10422] user105@appdb LOG:  duration: 496.925 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-27 11:35:46.000 UTC [10311] user104@appdb LOG:  duration: 217.213 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-27 12:18:14.000 UTC [10184] user102@appdb LOG:  duration: 155.114 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-27 13:02:00.000 UTC [10170] user202@appdb LOG:  duration: 327.368 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-27 13:49:51.000 UTC [10117] user203@appdb LOG:  duration: 411.460 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-27 14:59:36.000 UTC [10369] user103@appdb LOG:  duration: 98.881 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-27 16:06:27.000 UTC [10491] user202@appdb LOG:  duration: 326.948 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-27 16:56:14.000 UTC [10255] emp003@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=2551,<none>
+2024-03-27 17:28:57.000 UTC [10081] user202@appdb LOG:  duration: 442.586 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-27 20:08:02.000 UTC [10822] user101@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=7870,<none>
+2024-03-28 05:33:40.000 UTC [10800] emp007@custdb LOG:  duration: 313.501 ms  statement: SELECT account_no, card_no, name FROM accounts WHERE user_id=6134
+2024-03-28 05:33:40.000 UTC [10800] emp007@custdb LOG:  rows=7
+2024-03-28 09:18:38.000 UTC [10159] user202@appdb LOG:  duration: 54.691 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-28 10:09:40.000 UTC [10081] user101@appdb LOG:  duration: 217.710 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-28 10:16:12.000 UTC [10325] user105@appdb LOG:  duration: 141.228 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-28 10:50:36.000 UTC [10400] user105@appdb LOG:  duration: 178.645 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-28 10:55:54.000 UTC [10225] user201@appdb LOG:  duration: 270.567 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-28 11:01:52.000 UTC [10128] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-28 13:12:24.000 UTC [10436] user203@appdb LOG:  duration: 55.342 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-28 13:33:32.000 UTC [10063] emp007@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT cust_name, email, address FROM members WHERE member_id=8126,<none>
+2024-03-28 14:06:43.000 UTC [10188] user104@appdb LOG:  duration: 462.760 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-28 14:09:28.000 UTC [10034] user201@appdb LOG:  duration: 227.746 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-28 14:11:31.000 UTC [10108] user203@appdb LOG:  duration: 409.364 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-28 15:02:20.000 UTC [10381] user104@appdb LOG:  duration: 362.930 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-28 15:30:00.000 UTC [10482] user101@appdb LOG:  duration: 153.871 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-28 15:34:47.000 UTC [10376] user202@appdb LOG:  duration: 410.717 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-28 15:54:51.000 UTC [10285] user104@appdb LOG:  duration: 47.909 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-28 16:02:08.000 UTC [10034] user103@appdb LOG:  duration: 399.760 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-28 17:46:55.000 UTC [10110] user102@appdb LOG:  duration: 232.333 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-28 17:52:00.000 UTC [10336] user202@appdb LOG:  duration: 237.523 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-28 17:53:15.000 UTC [10381] user102@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=2956,<none>
+2024-03-29 02:08:24.000 UTC [10800] emp007@custdb LOG:  duration: 272.676 ms  statement: SELECT cust_name, email, address FROM members WHERE member_id=3181
+2024-03-29 02:08:24.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-29 08:23:47.000 UTC [10059] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-29 09:02:20.000 UTC [10407] user105@appdb LOG:  duration: 151.467 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-29 09:09:10.000 UTC [10386] user102@appdb LOG:  duration: 26.790 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-29 09:10:24.000 UTC [10001] user202@appdb LOG:  duration: 136.902 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-29 10:05:46.000 UTC [10248] user104@appdb LOG:  duration: 390.645 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-29 10:49:27.000 UTC [10112] user101@appdb LOG:  duration: 412.812 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-29 11:38:24.000 UTC [10078] user201@appdb LOG:  duration: 93.951 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-29 14:59:01.000 UTC [10212] user203@appdb LOG:  duration: 203.614 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-29 15:01:11.000 UTC [10377] user103@appdb LOG:  duration: 401.521 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-29 15:23:14.000 UTC [10070] user202@appdb LOG:  duration: 253.193 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-29 16:57:18.000 UTC [10346] user101@appdb LOG:  duration: 81.175 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-29 17:05:08.000 UTC [10077] user201@appdb LOG:  duration: 197.810 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-29 17:08:24.000 UTC [10232] user104@appdb LOG:  duration: 344.860 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-29 22:02:06.000 UTC [10800] emp007@custdb LOG:  duration: 476.978 ms  statement: SELECT name, phone, rrn FROM customers WHERE cust_id=8529
+2024-03-29 22:02:06.000 UTC [10800] emp007@custdb LOG:  rows=2
+2024-03-29 23:25:32.000 UTC [10800] emp007@custdb LOG:  duration: 487.599 ms  statement: SELECT * FROM personal_info WHERE dept_id=5558
+2024-03-29 23:25:32.000 UTC [10800] emp007@custdb LOG:  rows=8
+2024-03-29 23:41:27.000 UTC [10056] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-30 10:00:29.000 UTC [10318] user201@appdb LOG:  duration: 52.175 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-30 12:10:26.000 UTC [10248] user102@appdb LOG:  duration: 110.985 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-30 13:11:37.000 UTC [10223] user203@appdb LOG:  duration: 417.603 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-30 13:24:26.000 UTC [10396] user201@appdb LOG:  duration: 348.712 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-30 13:32:25.000 UTC [10417] user201@appdb LOG:  duration: 243.359 ms  statement: INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+2024-03-30 15:05:35.000 UTC [10150] user102@appdb LOG:  duration: 317.982 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-30 15:37:36.000 UTC [10339] user101@appdb LOG:  duration: 43.758 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-30 17:07:16.000 UTC [10396] user202@appdb LOG:  duration: 361.556 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-30 17:14:43.000 UTC [10166] user105@appdb LOG:  duration: 118.941 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-31 01:23:34.000 UTC [10631] emp007@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT * FROM personal_info WHERE dept_id=5026,<none>
+2024-03-31 09:07:56.000 UTC [10496] user201@appdb LOG:  duration: 92.694 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-31 09:16:55.000 UTC [10244] user103@appdb LOG:  duration: 421.166 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-31 09:46:50.000 UTC [10465] user104@appdb LOG:  duration: 267.408 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-31 10:41:53.000 UTC [10078] user203@appdb LOG:  duration: 478.833 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-31 11:07:43.000 UTC [10078] emp007@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT name, birthday, phone FROM customers WHERE branch_id=9128,<none>
+2024-03-31 11:34:02.000 UTC [10427] user102@appdb LOG:  duration: 299.665 ms  statement: UPDATE orders SET status='shipped' WHERE order_id=12345
+2024-03-31 12:59:34.000 UTC [10386] user202@appdb LOG:  duration: 354.305 ms  statement: SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+2024-03-31 13:02:44.000 UTC [10189] user202@appdb LOG:  duration: 228.555 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-31 13:22:41.000 UTC [10260] user102@appdb LOG:  duration: 348.963 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-31 14:20:59.000 UTC [10960] admin01@custdb LOG:  AUDIT: SESSION,1,1,READ,SELECT,,SELECT account_no, card_no, name FROM accounts WHERE user_id=2376,<none>
+2024-03-31 14:33:33.000 UTC [10900] admin01@custdb LOG:  duration: 191.229 ms  statement: SELECT cust_name, rrn, phone, card_no FROM customers WHERE dept='영업부'
+2024-03-31 14:33:33.000 UTC [10900] admin01@custdb LOG:  rows=1867
+2024-03-31 14:37:19.000 UTC [10327] user203@appdb LOG:  duration: 354.356 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-31 14:40:45.000 UTC [10454] user202@appdb LOG:  duration: 447.654 ms  statement: SELECT product_name, price FROM products WHERE category='electronics'
+2024-03-31 14:52:55.000 UTC [10139] postgres@appdb ERROR:  relation "unknown_table" does not exist
+2024-03-31 15:08:38.000 UTC [10362] user105@appdb LOG:  duration: 159.672 ms  statement: SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+2024-03-31 15:32:29.000 UTC [10494] user102@appdb LOG:  duration: 111.697 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status
+2024-03-31 15:55:39.000 UTC [10214] user105@appdb LOG:  duration: 493.986 ms  statement: SELECT COUNT(*) FROM orders GROUP BY status

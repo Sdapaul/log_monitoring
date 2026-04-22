@@ -1,0 +1,6300 @@
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85534_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 901619
+ENTRYID          : 1
+STATEMENT        : 2596
+TIMESTAMP        : Thu Mar 21 09:00:28 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 29
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_45561_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 795186
+ENTRYID          : 1
+STATEMENT        : 5902
+TIMESTAMP        : Sat Mar 02 16:41:00 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 87
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL, ADDRESS FROM CUSTOMERS WHERE CREATED_DATE >= '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 7367
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_77193_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 141094
+ENTRYID          : 1
+STATEMENT        : 9377
+TIMESTAMP        : Thu Mar 21 10:16:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 83
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=31119
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_94848_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 722615
+ENTRYID          : 1
+STATEMENT        : 9979
+TIMESTAMP        : Tue Mar 19 10:00:32 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 50
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 8
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_77357_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 186345
+ENTRYID          : 1
+STATEMENT        : 1573
+TIMESTAMP        : Sat Mar 16 09:18:57 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 27
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25826_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 993590
+ENTRYID          : 1
+STATEMENT        : 6438
+TIMESTAMP        : Wed Mar 27 15:06:16 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 28
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_52395_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 737967
+ENTRYID          : 1
+STATEMENT        : 3944
+TIMESTAMP        : Mon Mar 11 03:26:48 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 95
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=93000
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_99727_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 841122
+ENTRYID          : 1
+STATEMENT        : 853
+TIMESTAMP        : Thu Mar 21 10:29:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 92
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=82165
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_35698_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 252928
+ENTRYID          : 1
+STATEMENT        : 2451
+TIMESTAMP        : Thu Mar 21 10:50:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 51
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=82789
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_21830_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 158896
+ENTRYID          : 1
+STATEMENT        : 3812
+TIMESTAMP        : Wed Mar 27 16:34:19 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 65
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_44400_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 748127
+ENTRYID          : 1
+STATEMENT        : 2545
+TIMESTAMP        : Thu Mar 21 11:00:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 16
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=78679
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_31094_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 400538
+ENTRYID          : 1
+STATEMENT        : 4106
+TIMESTAMP        : Wed Mar 13 11:03:42 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 28
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_29750_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 115440
+ENTRYID          : 1
+STATEMENT        : 8087
+TIMESTAMP        : Thu Mar 21 11:11:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 14
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=11075
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_88146_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 262520
+ENTRYID          : 1
+STATEMENT        : 6085
+TIMESTAMP        : Wed Mar 13 01:00:02 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 91
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=86162
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_79964_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 424703
+ENTRYID          : 1
+STATEMENT        : 5689
+TIMESTAMP        : Thu Mar 21 11:03:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 84
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=78610
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_97590_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 119281
+ENTRYID          : 1
+STATEMENT        : 6171
+TIMESTAMP        : Mon Mar 18 17:48:16 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 91
+ACTION           : SELECT * FROM PERSONAL_INFO WHERE HIRE_DATE >= '2020-01-01'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 3315
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_80597_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 305973
+ENTRYID          : 1
+STATEMENT        : 4313
+TIMESTAMP        : Thu Mar 21 10:04:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 20
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=20744
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_30636_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 191061
+ENTRYID          : 1
+STATEMENT        : 4521
+TIMESTAMP        : Thu Mar 21 10:34:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 3
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=41359
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_65278_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 780364
+ENTRYID          : 1
+STATEMENT        : 2733
+TIMESTAMP        : Wed Mar 13 16:17:53 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 91
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_16000_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 272129
+ENTRYID          : 1
+STATEMENT        : 8068
+TIMESTAMP        : Wed Mar 27 13:35:33 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 92
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_76952_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 377370
+ENTRYID          : 1
+STATEMENT        : 2748
+TIMESTAMP        : Thu Mar 21 10:19:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 87
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=33839
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91300_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 254610
+ENTRYID          : 1
+STATEMENT        : 1971
+TIMESTAMP        : Wed Mar 13 09:32:36 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 76
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_78982_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 482614
+ENTRYID          : 1
+STATEMENT        : 1189
+TIMESTAMP        : Sat Mar 02 09:09:37 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 21
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96099_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 942960
+ENTRYID          : 1
+STATEMENT        : 8490
+TIMESTAMP        : Thu Mar 21 10:32:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 28
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=67536
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_84403_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 690984
+ENTRYID          : 1
+STATEMENT        : 2329
+TIMESTAMP        : Tue Mar 26 14:58:37 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 93
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_66418_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 936726
+ENTRYID          : 1
+STATEMENT        : 4800
+TIMESTAMP        : Thu Mar 21 11:06:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 101
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=49270
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_31706_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 341162
+ENTRYID          : 1
+STATEMENT        : 1264
+TIMESTAMP        : Thu Mar 21 10:13:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 59
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=75776
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_16626_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 477880
+ENTRYID          : 1
+STATEMENT        : 3263
+TIMESTAMP        : Fri Mar 29 12:53:03 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 7
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_54921_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 291752
+ENTRYID          : 1
+STATEMENT        : 1866
+TIMESTAMP        : Tue Mar 12 16:39:17 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 14
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_57774_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 946934
+ENTRYID          : 1
+STATEMENT        : 5183
+TIMESTAMP        : Thu Mar 21 10:02:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 75
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=29974
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_75774_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 555596
+ENTRYID          : 1
+STATEMENT        : 2137
+TIMESTAMP        : Sat Mar 16 22:35:25 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 54
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=44413
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_51405_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 528705
+ENTRYID          : 1
+STATEMENT        : 5936
+TIMESTAMP        : Thu Mar 21 10:25:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 29
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=59155
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_60972_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 349136
+ENTRYID          : 1
+STATEMENT        : 8371
+TIMESTAMP        : Wed Mar 20 17:55:14 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 85
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 8
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_30789_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 759726
+ENTRYID          : 1
+STATEMENT        : 692
+TIMESTAMP        : Sun Mar 17 01:30:24 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 44
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=99318
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_19882_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 119535
+ENTRYID          : 1
+STATEMENT        : 8310
+TIMESTAMP        : Thu Mar 21 10:05:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 96
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=92132
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_87292_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 629146
+ENTRYID          : 1
+STATEMENT        : 2769
+TIMESTAMP        : Fri Mar 08 12:46:08 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 96
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_21406_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 506951
+ENTRYID          : 1
+STATEMENT        : 9116
+TIMESTAMP        : Wed Mar 27 11:53:38 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 43
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_43791_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 298202
+ENTRYID          : 1
+STATEMENT        : 90
+TIMESTAMP        : Thu Mar 21 10:24:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 55
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=88419
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_39912_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 428709
+ENTRYID          : 1
+STATEMENT        : 5192
+TIMESTAMP        : Thu Mar 21 10:56:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 46
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=20369
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_77013_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 683347
+ENTRYID          : 1
+STATEMENT        : 9350
+TIMESTAMP        : Fri Mar 08 01:54:20 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 73
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=12844
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_19725_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 458411
+ENTRYID          : 1
+STATEMENT        : 2788
+TIMESTAMP        : Tue Mar 26 09:18:01 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 36
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_75382_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 104548
+ENTRYID          : 1
+STATEMENT        : 8690
+TIMESTAMP        : Mon Mar 25 16:29:42 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 67
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_59514_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 475565
+ENTRYID          : 1
+STATEMENT        : 2208
+TIMESTAMP        : Mon Mar 18 03:51:57 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 5
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=67503
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_74478_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 892170
+ENTRYID          : 1
+STATEMENT        : 7817
+TIMESTAMP        : Thu Mar 21 11:05:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 4
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=71498
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91675_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 150947
+ENTRYID          : 1
+STATEMENT        : 9731
+TIMESTAMP        : Tue Mar 12 09:24:56 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 35
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 8
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_45382_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 943146
+ENTRYID          : 1
+STATEMENT        : 3864
+TIMESTAMP        : Thu Mar 21 10:49:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 15
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=99916
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96006_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 646313
+ENTRYID          : 1
+STATEMENT        : 4694
+TIMESTAMP        : Thu Mar 21 10:31:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=60374
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91290_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 350385
+ENTRYID          : 1
+STATEMENT        : 5255
+TIMESTAMP        : Wed Mar 13 00:56:01 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 102
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=91229
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_60206_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 786594
+ENTRYID          : 1
+STATEMENT        : 7956
+TIMESTAMP        : Tue Mar 26 13:55:34 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 55
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_58799_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 482812
+ENTRYID          : 1
+STATEMENT        : 6564
+TIMESTAMP        : Thu Mar 21 10:48:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 92
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=37594
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96972_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 474175
+ENTRYID          : 1
+STATEMENT        : 5329
+TIMESTAMP        : Thu Mar 21 11:01:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 7
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=32361
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_57020_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 912402
+ENTRYID          : 1
+STATEMENT        : 5005
+TIMESTAMP        : Thu Mar 21 10:03:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 60
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=72908
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_27329_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 213844
+ENTRYID          : 1
+STATEMENT        : 272
+TIMESTAMP        : Thu Mar 21 10:20:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 52
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=40122
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_33081_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 348041
+ENTRYID          : 1
+STATEMENT        : 9708
+TIMESTAMP        : Mon Mar 25 12:36:54 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 48
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_57600_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 884225
+ENTRYID          : 1
+STATEMENT        : 9617
+TIMESTAMP        : Thu Mar 21 10:57:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 102
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=45553
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_59424_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 690525
+ENTRYID          : 1
+STATEMENT        : 7924
+TIMESTAMP        : Thu Mar 21 10:38:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 59
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=42786
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_83446_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 684572
+ENTRYID          : 1
+STATEMENT        : 4223
+TIMESTAMP        : Thu Mar 21 10:53:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 49
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=44048
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_16094_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 764000
+ENTRYID          : 1
+STATEMENT        : 9648
+TIMESTAMP        : Fri Mar 15 12:45:21 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 99
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_13455_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 908382
+ENTRYID          : 1
+STATEMENT        : 6505
+TIMESTAMP        : Thu Mar 21 10:59:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 9
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=72021
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_40783_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 871153
+ENTRYID          : 1
+STATEMENT        : 3966
+TIMESTAMP        : Thu Mar 21 10:42:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 28
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=75404
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_23133_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 210766
+ENTRYID          : 1
+STATEMENT        : 9220
+TIMESTAMP        : Mon Mar 04 15:09:09 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 78
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_67292_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 513927
+ENTRYID          : 1
+STATEMENT        : 4095
+TIMESTAMP        : Thu Mar 21 11:07:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 74
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=34716
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_72463_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 429119
+ENTRYID          : 1
+STATEMENT        : 5793
+TIMESTAMP        : Thu Mar 21 10:41:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 25
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=19965
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_37723_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 257538
+ENTRYID          : 1
+STATEMENT        : 3063
+TIMESTAMP        : Thu Mar 21 10:14:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 38
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=77441
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85007_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 917711
+ENTRYID          : 1
+STATEMENT        : 3512
+TIMESTAMP        : Sun Mar 24 10:18:01 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 9
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_73908_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 448787
+ENTRYID          : 1
+STATEMENT        : 2898
+TIMESTAMP        : Tue Mar 19 16:09:20 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 26
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_14159_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 446290
+ENTRYID          : 1
+STATEMENT        : 1315
+TIMESTAMP        : Thu Mar 21 11:12:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 92
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=58679
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_45283_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 231113
+ENTRYID          : 1
+STATEMENT        : 7184
+TIMESTAMP        : Thu Mar 21 11:11:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 39
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=34371
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_98039_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 170634
+ENTRYID          : 1
+STATEMENT        : 4108
+TIMESTAMP        : Thu Mar 28 17:29:41 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 12
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_69517_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 100754
+ENTRYID          : 1
+STATEMENT        : 8290
+TIMESTAMP        : Sun Mar 03 00:28:18 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 49
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=44517
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_71727_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 612855
+ENTRYID          : 1
+STATEMENT        : 4342
+TIMESTAMP        : Wed Mar 06 13:05:30 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 42
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_34105_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 622998
+ENTRYID          : 1
+STATEMENT        : 6946
+TIMESTAMP        : Thu Mar 21 10:48:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 49
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=90358
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_29808_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 888775
+ENTRYID          : 1
+STATEMENT        : 1585
+TIMESTAMP        : Fri Mar 15 16:16:14 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 75
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_27884_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 265154
+ENTRYID          : 1
+STATEMENT        : 7158
+TIMESTAMP        : Sat Mar 23 15:37:06 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 41
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_22483_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 553873
+ENTRYID          : 1
+STATEMENT        : 4073
+TIMESTAMP        : Sun Mar 31 14:33:33 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 92
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_41082_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 382495
+ENTRYID          : 1
+STATEMENT        : 7723
+TIMESTAMP        : Thu Mar 21 10:47:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 36
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=34530
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_62007_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 481540
+ENTRYID          : 1
+STATEMENT        : 8228
+TIMESTAMP        : Thu Mar 21 10:07:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 14
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=75683
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_77147_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 413433
+ENTRYID          : 1
+STATEMENT        : 8976
+TIMESTAMP        : Sun Mar 10 16:51:08 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 55
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_36181_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 915749
+ENTRYID          : 1
+STATEMENT        : 4309
+TIMESTAMP        : Sun Mar 10 10:50:06 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 28
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85527_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 959324
+ENTRYID          : 1
+STATEMENT        : 1563
+TIMESTAMP        : Sun Mar 24 23:46:20 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 65
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=73246
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_47957_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 215717
+ENTRYID          : 1
+STATEMENT        : 7461
+TIMESTAMP        : Thu Mar 21 11:09:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 20
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=18973
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_18239_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 377198
+ENTRYID          : 1
+STATEMENT        : 6053
+TIMESTAMP        : Thu Mar 21 10:09:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 32
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=38681
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_63031_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 507135
+ENTRYID          : 1
+STATEMENT        : 579
+TIMESTAMP        : Sun Mar 24 09:41:31 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 36
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_17869_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 325933
+ENTRYID          : 1
+STATEMENT        : 4167
+TIMESTAMP        : Thu Mar 21 10:52:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 23
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=22972
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_99551_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 621718
+ENTRYID          : 1
+STATEMENT        : 9036
+TIMESTAMP        : Sun Mar 24 23:42:34 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 70
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=60789
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_92603_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 524094
+ENTRYID          : 1
+STATEMENT        : 7095
+TIMESTAMP        : Tue Mar 19 12:58:16 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 52
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_11673_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 648122
+ENTRYID          : 1
+STATEMENT        : 1745
+TIMESTAMP        : Tue Mar 19 15:43:47 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 39
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_81137_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 830897
+ENTRYID          : 1
+STATEMENT        : 8030
+TIMESTAMP        : Sat Mar 09 22:31:45 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 40
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=67344
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_32942_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 526911
+ENTRYID          : 1
+STATEMENT        : 8295
+TIMESTAMP        : Thu Mar 21 10:36:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 36
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=85354
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_72373_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 744610
+ENTRYID          : 1
+STATEMENT        : 9828
+TIMESTAMP        : Thu Mar 21 10:21:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 25
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=89365
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_86406_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 465004
+ENTRYID          : 1
+STATEMENT        : 5694
+TIMESTAMP        : Thu Mar 21 10:35:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 74
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=47289
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_38830_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 292800
+ENTRYID          : 1
+STATEMENT        : 8530
+TIMESTAMP        : Sat Mar 16 17:22:04 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 43
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 8
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_22873_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 339030
+ENTRYID          : 1
+STATEMENT        : 2202
+TIMESTAMP        : Wed Mar 27 13:19:17 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 92
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_30489_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 659381
+ENTRYID          : 1
+STATEMENT        : 3603
+TIMESTAMP        : Sun Mar 10 16:24:25 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 6
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_94886_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 485604
+ENTRYID          : 1
+STATEMENT        : 9641
+TIMESTAMP        : Sun Mar 24 13:12:39 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 31
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_65492_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 182175
+ENTRYID          : 1
+STATEMENT        : 7134
+TIMESTAMP        : Wed Mar 06 11:13:51 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 19
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_58997_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 263568
+ENTRYID          : 1
+STATEMENT        : 1406
+TIMESTAMP        : Fri Mar 15 09:59:52 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 90
+ACTION           : SELECT * FROM MEMBERS WHERE STATUS='ACTIVE'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 4271
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_51187_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 112960
+ENTRYID          : 1
+STATEMENT        : 8599
+TIMESTAMP        : Fri Mar 29 15:28:02 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 36
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_69759_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 863187
+ENTRYID          : 1
+STATEMENT        : 8525
+TIMESTAMP        : Sun Mar 17 13:10:04 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 41
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_39820_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 680493
+ENTRYID          : 1
+STATEMENT        : 1000
+TIMESTAMP        : Fri Mar 22 14:51:34 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 99
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_84012_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 483405
+ENTRYID          : 1
+STATEMENT        : 4515
+TIMESTAMP        : Thu Mar 21 10:26:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 57
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=44249
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_98345_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 137812
+ENTRYID          : 1
+STATEMENT        : 5894
+TIMESTAMP        : Thu Mar 21 10:33:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 24
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=40365
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_62502_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 924265
+ENTRYID          : 1
+STATEMENT        : 5545
+TIMESTAMP        : Thu Mar 21 10:29:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 68
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=23143
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_16505_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 660957
+ENTRYID          : 1
+STATEMENT        : 363
+TIMESTAMP        : Thu Mar 21 11:10:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 22
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=52027
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_34967_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 436318
+ENTRYID          : 1
+STATEMENT        : 5645
+TIMESTAMP        : Sun Mar 03 10:42:26 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 47
+ACTION           : SELECT * FROM PERSONAL_INFO WHERE HIRE_DATE >= '2020-01-01'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 6984
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96772_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 363871
+ENTRYID          : 1
+STATEMENT        : 1312
+TIMESTAMP        : Thu Mar 21 10:58:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 33
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=26389
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_95403_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 713805
+ENTRYID          : 1
+STATEMENT        : 4156
+TIMESTAMP        : Thu Mar 21 10:26:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 57
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=23970
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_42537_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 386886
+ENTRYID          : 1
+STATEMENT        : 6519
+TIMESTAMP        : Wed Mar 13 14:32:56 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 56
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_24855_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 604906
+ENTRYID          : 1
+STATEMENT        : 7845
+TIMESTAMP        : Thu Mar 21 10:15:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 95
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=64344
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_73373_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 476224
+ENTRYID          : 1
+STATEMENT        : 663
+TIMESTAMP        : Thu Mar 21 10:09:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 21
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=84162
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_40886_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 599397
+ENTRYID          : 1
+STATEMENT        : 4897
+TIMESTAMP        : Wed Mar 27 17:26:34 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 63
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_90431_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 606186
+ENTRYID          : 1
+STATEMENT        : 508
+TIMESTAMP        : Wed Mar 06 10:35:57 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 46
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_27978_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 539170
+ENTRYID          : 1
+STATEMENT        : 1719
+TIMESTAMP        : Fri Mar 22 10:42:33 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 82
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25126_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 897730
+ENTRYID          : 1
+STATEMENT        : 5772
+TIMESTAMP        : Sat Mar 23 11:32:34 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 84
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_62402_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 696707
+ENTRYID          : 1
+STATEMENT        : 3563
+TIMESTAMP        : Fri Mar 29 01:14:16 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 76
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=49361
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_35496_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 576849
+ENTRYID          : 1
+STATEMENT        : 6619
+TIMESTAMP        : Thu Mar 21 10:36:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 80
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=46242
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_53512_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 687360
+ENTRYID          : 1
+STATEMENT        : 9830
+TIMESTAMP        : Thu Mar 21 16:21:23 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 31
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_13238_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 641975
+ENTRYID          : 1
+STATEMENT        : 6144
+TIMESTAMP        : Sat Mar 30 10:24:16 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 95
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_33204_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 719531
+ENTRYID          : 1
+STATEMENT        : 9791
+TIMESTAMP        : Thu Mar 21 11:02:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 72
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=27709
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_36171_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 201698
+ENTRYID          : 1
+STATEMENT        : 422
+TIMESTAMP        : Sun Mar 03 13:52:42 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 79
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_42631_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 503489
+ENTRYID          : 1
+STATEMENT        : 7258
+TIMESTAMP        : Thu Mar 21 11:14:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 101
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=11653
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_37222_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 821634
+ENTRYID          : 1
+STATEMENT        : 7876
+TIMESTAMP        : Tue Mar 12 15:18:10 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 73
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85832_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 282085
+ENTRYID          : 1
+STATEMENT        : 2104
+TIMESTAMP        : Mon Mar 18 15:53:37 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 68
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_90455_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 106945
+ENTRYID          : 1
+STATEMENT        : 8872
+TIMESTAMP        : Thu Mar 21 10:43:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 66
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=98580
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_66369_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 439121
+ENTRYID          : 1
+STATEMENT        : 9438
+TIMESTAMP        : Mon Mar 18 17:15:15 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 102
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL, ADDRESS FROM CUSTOMERS WHERE CREATED_DATE >= '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 5362
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_50838_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 923892
+ENTRYID          : 1
+STATEMENT        : 8166
+TIMESTAMP        : Thu Mar 21 11:12:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 56
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=38467
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_95179_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 780663
+ENTRYID          : 1
+STATEMENT        : 8822
+TIMESTAMP        : Thu Mar 21 10:54:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 76
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=36077
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_97862_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 760093
+ENTRYID          : 1
+STATEMENT        : 3493
+TIMESTAMP        : Sun Mar 31 17:34:00 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 11
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_71171_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 416822
+ENTRYID          : 1
+STATEMENT        : 8531
+TIMESTAMP        : Thu Mar 14 15:54:22 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 35
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_54993_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 827497
+ENTRYID          : 1
+STATEMENT        : 1824
+TIMESTAMP        : Mon Mar 04 09:15:39 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 4
+ACTION           : SELECT * FROM MEMBERS WHERE STATUS='ACTIVE'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 5713
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_73265_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 941235
+ENTRYID          : 1
+STATEMENT        : 9322
+TIMESTAMP        : Tue Mar 05 09:54:10 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 56
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_65249_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 623866
+ENTRYID          : 1
+STATEMENT        : 2204
+TIMESTAMP        : Thu Mar 21 10:50:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 25
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=71995
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_37102_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 643042
+ENTRYID          : 1
+STATEMENT        : 5919
+TIMESTAMP        : Thu Mar 21 10:10:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 88
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=40673
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_78425_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 541119
+ENTRYID          : 1
+STATEMENT        : 6069
+TIMESTAMP        : Thu Mar 21 10:22:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 58
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=98940
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_27125_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 606545
+ENTRYID          : 1
+STATEMENT        : 7998
+TIMESTAMP        : Wed Mar 06 15:49:22 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 6
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_32911_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 579404
+ENTRYID          : 1
+STATEMENT        : 1973
+TIMESTAMP        : Thu Mar 21 10:46:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 90
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=55519
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_39567_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 270557
+ENTRYID          : 1
+STATEMENT        : 7394
+TIMESTAMP        : Mon Mar 04 16:50:55 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 86
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_31930_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 292818
+ENTRYID          : 1
+STATEMENT        : 379
+TIMESTAMP        : Thu Mar 21 10:58:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 55
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=78280
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25890_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 468145
+ENTRYID          : 1
+STATEMENT        : 9922
+TIMESTAMP        : Thu Mar 21 10:53:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 55
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=55107
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_50549_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 340497
+ENTRYID          : 1
+STATEMENT        : 4054
+TIMESTAMP        : Thu Mar 21 11:00:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 52
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=21050
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_49948_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 649855
+ENTRYID          : 1
+STATEMENT        : 675
+TIMESTAMP        : Sat Mar 30 22:40:49 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 9
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=92862
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_31134_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 778700
+ENTRYID          : 1
+STATEMENT        : 6733
+TIMESTAMP        : Thu Mar 21 10:15:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 78
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=72786
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_44159_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 669868
+ENTRYID          : 1
+STATEMENT        : 8843
+TIMESTAMP        : Thu Mar 21 10:06:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 73
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=37886
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_64627_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 565897
+ENTRYID          : 1
+STATEMENT        : 6231
+TIMESTAMP        : Fri Mar 22 10:41:53 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 9
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_80685_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 967719
+ENTRYID          : 1
+STATEMENT        : 20
+TIMESTAMP        : Thu Mar 21 10:22:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 80
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=96427
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_42778_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 956949
+ENTRYID          : 1
+STATEMENT        : 6252
+TIMESTAMP        : Thu Mar 21 11:13:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 27
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=71623
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_73942_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 343977
+ENTRYID          : 1
+STATEMENT        : 5190
+TIMESTAMP        : Sat Mar 02 03:41:09 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 19
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=80300
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_80879_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 134144
+ENTRYID          : 1
+STATEMENT        : 8233
+TIMESTAMP        : Thu Mar 21 10:45:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 64
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=78909
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_29481_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 483588
+ENTRYID          : 1
+STATEMENT        : 6431
+TIMESTAMP        : Thu Mar 21 10:06:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 102
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=71879
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96098_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 360846
+ENTRYID          : 1
+STATEMENT        : 9340
+TIMESTAMP        : Sun Mar 24 01:34:24 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 70
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=34832
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_56179_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 430463
+ENTRYID          : 1
+STATEMENT        : 9013
+TIMESTAMP        : Sun Mar 17 03:42:10 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 59
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=79979
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_30869_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 287847
+ENTRYID          : 1
+STATEMENT        : 9280
+TIMESTAMP        : Thu Mar 21 10:08:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 60
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=77388
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_73191_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 733561
+ENTRYID          : 1
+STATEMENT        : 109
+TIMESTAMP        : Thu Mar 21 10:13:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 65
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=56255
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_31093_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 712353
+ENTRYID          : 1
+STATEMENT        : 4179
+TIMESTAMP        : Wed Mar 13 09:27:17 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 36
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_23829_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 903506
+ENTRYID          : 1
+STATEMENT        : 9447
+TIMESTAMP        : Thu Mar 21 00:35:47 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 98
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=83156
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_50980_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 678944
+ENTRYID          : 1
+STATEMENT        : 882
+TIMESTAMP        : Sat Mar 23 09:59:24 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 56
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_33957_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 882401
+ENTRYID          : 1
+STATEMENT        : 3116
+TIMESTAMP        : Thu Mar 21 10:41:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 37
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=38647
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_55938_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 369125
+ENTRYID          : 1
+STATEMENT        : 1771
+TIMESTAMP        : Fri Mar 15 09:16:13 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 91
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_22616_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 648615
+ENTRYID          : 1
+STATEMENT        : 1093
+TIMESTAMP        : Tue Mar 05 02:20:26 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 17
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=94004
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_94746_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 956429
+ENTRYID          : 1
+STATEMENT        : 1182
+TIMESTAMP        : Wed Mar 27 10:13:34 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 97
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_92616_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 109756
+ENTRYID          : 1
+STATEMENT        : 4934
+TIMESTAMP        : Mon Mar 18 13:30:44 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 29
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_64087_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 777308
+ENTRYID          : 1
+STATEMENT        : 8398
+TIMESTAMP        : Sun Mar 10 12:47:47 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 47
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_39064_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 102303
+ENTRYID          : 1
+STATEMENT        : 5593
+TIMESTAMP        : Sat Mar 23 14:45:28 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 15
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_95950_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 615276
+ENTRYID          : 1
+STATEMENT        : 1311
+TIMESTAMP        : Tue Mar 12 01:38:45 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 29
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=19289
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_36577_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 975498
+ENTRYID          : 1
+STATEMENT        : 4092
+TIMESTAMP        : Thu Mar 21 10:42:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 32
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=44787
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91048_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 166309
+ENTRYID          : 1
+STATEMENT        : 9595
+TIMESTAMP        : Fri Mar 01 15:43:07 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 3
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_27326_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 452497
+ENTRYID          : 1
+STATEMENT        : 1353
+TIMESTAMP        : Fri Mar 15 23:14:27 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 21
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=47982
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96585_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 395198
+ENTRYID          : 1
+STATEMENT        : 4873
+TIMESTAMP        : Thu Mar 14 17:46:59 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 72
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_28004_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 310026
+ENTRYID          : 1
+STATEMENT        : 5615
+TIMESTAMP        : Thu Mar 28 15:33:19 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 9
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_19334_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 595158
+ENTRYID          : 1
+STATEMENT        : 3188
+TIMESTAMP        : Sat Mar 16 09:55:40 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 77
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_52233_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 893612
+ENTRYID          : 1
+STATEMENT        : 8701
+TIMESTAMP        : Fri Mar 01 09:34:12 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 50
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_51383_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 923481
+ENTRYID          : 1
+STATEMENT        : 7973
+TIMESTAMP        : Thu Mar 21 10:51:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 71
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=92660
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_57214_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 940534
+ENTRYID          : 1
+STATEMENT        : 5124
+TIMESTAMP        : Sat Mar 09 16:03:06 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 8
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_27103_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 457311
+ENTRYID          : 1
+STATEMENT        : 2908
+TIMESTAMP        : Fri Mar 01 17:30:00 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_79533_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 597923
+ENTRYID          : 1
+STATEMENT        : 9197
+TIMESTAMP        : Fri Mar 22 14:21:23 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 30
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_93839_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 693022
+ENTRYID          : 1
+STATEMENT        : 1706
+TIMESTAMP        : Thu Mar 28 09:11:38 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_50906_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 235193
+ENTRYID          : 1
+STATEMENT        : 1683
+TIMESTAMP        : Fri Mar 01 09:40:46 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 31
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_95778_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 193637
+ENTRYID          : 1
+STATEMENT        : 3642
+TIMESTAMP        : Sun Mar 24 17:48:58 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 90
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_43081_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 737894
+ENTRYID          : 1
+STATEMENT        : 5005
+TIMESTAMP        : Sat Mar 30 11:41:11 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 4
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_84537_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 130354
+ENTRYID          : 1
+STATEMENT        : 2847
+TIMESTAMP        : Sun Mar 03 13:45:32 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 20
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 8
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_95914_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 345925
+ENTRYID          : 1
+STATEMENT        : 1640
+TIMESTAMP        : Thu Mar 21 10:00:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 88
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=56810
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_51053_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 358133
+ENTRYID          : 1
+STATEMENT        : 3630
+TIMESTAMP        : Thu Mar 21 10:02:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 3
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=66139
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_34507_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 282237
+ENTRYID          : 1
+STATEMENT        : 8419
+TIMESTAMP        : Mon Mar 25 12:18:28 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 90
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_33969_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 901387
+ENTRYID          : 1
+STATEMENT        : 8375
+TIMESTAMP        : Thu Mar 21 10:44:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 65
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=85303
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_98294_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 867115
+ENTRYID          : 1
+STATEMENT        : 6437
+TIMESTAMP        : Mon Mar 11 00:20:32 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 9
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=38940
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_66224_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 340633
+ENTRYID          : 1
+STATEMENT        : 7900
+TIMESTAMP        : Thu Mar 21 10:23:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 70
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=15693
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_20490_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 738613
+ENTRYID          : 1
+STATEMENT        : 619
+TIMESTAMP        : Thu Mar 21 10:31:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 50
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=44483
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_73618_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 300924
+ENTRYID          : 1
+STATEMENT        : 1618
+TIMESTAMP        : Sat Mar 02 00:11:55 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 16
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=14099
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_87371_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 368371
+ENTRYID          : 1
+STATEMENT        : 805
+TIMESTAMP        : Sat Mar 02 04:42:31 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 92
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=78920
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_33038_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 776909
+ENTRYID          : 1
+STATEMENT        : 9939
+TIMESTAMP        : Thu Mar 21 10:04:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 16
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=73828
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_95491_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 699083
+ENTRYID          : 1
+STATEMENT        : 3213
+TIMESTAMP        : Mon Mar 25 11:30:35 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 53
+ACTION           : SELECT * FROM MEMBERS WHERE STATUS='ACTIVE'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 8993
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_35362_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 433222
+ENTRYID          : 1
+STATEMENT        : 7961
+TIMESTAMP        : Thu Mar 21 10:01:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 11
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=47373
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_10946_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 674842
+ENTRYID          : 1
+STATEMENT        : 6122
+TIMESTAMP        : Thu Mar 21 11:06:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 104
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=88250
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_28141_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 377860
+ENTRYID          : 1
+STATEMENT        : 6015
+TIMESTAMP        : Sat Mar 30 00:06:02 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 22
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=70341
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_48086_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 819964
+ENTRYID          : 1
+STATEMENT        : 5658
+TIMESTAMP        : Sat Mar 23 17:40:13 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 29
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91352_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 430738
+ENTRYID          : 1
+STATEMENT        : 8067
+TIMESTAMP        : Thu Mar 21 10:44:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 50
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=15539
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_58524_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 686252
+ENTRYID          : 1
+STATEMENT        : 9092
+TIMESTAMP        : Thu Mar 21 10:27:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 25
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=83080
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_88470_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 681456
+ENTRYID          : 1
+STATEMENT        : 2628
+TIMESTAMP        : Thu Mar 07 00:34:22 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 38
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=52425
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_77699_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 661671
+ENTRYID          : 1
+STATEMENT        : 160
+TIMESTAMP        : Thu Mar 21 10:40:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 48
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=51383
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_26762_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 701344
+ENTRYID          : 1
+STATEMENT        : 9706
+TIMESTAMP        : Thu Mar 21 10:16:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 8
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=12942
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_31611_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 951452
+ENTRYID          : 1
+STATEMENT        : 6610
+TIMESTAMP        : Thu Mar 14 11:21:57 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 48
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_23983_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 225701
+ENTRYID          : 1
+STATEMENT        : 1286
+TIMESTAMP        : Thu Mar 21 10:43:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 22
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=91080
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_39215_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 641455
+ENTRYID          : 1
+STATEMENT        : 6650
+TIMESTAMP        : Thu Mar 21 10:12:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 51
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=77720
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_93574_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 119524
+ENTRYID          : 1
+STATEMENT        : 4645
+TIMESTAMP        : Thu Mar 21 10:17:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 75
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=63143
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_94454_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 342389
+ENTRYID          : 1
+STATEMENT        : 7484
+TIMESTAMP        : Mon Mar 25 17:04:46 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 15
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_88753_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 249644
+ENTRYID          : 1
+STATEMENT        : 9547
+TIMESTAMP        : Thu Mar 21 10:18:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 55
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=32356
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_69297_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 569237
+ENTRYID          : 1
+STATEMENT        : 6506
+TIMESTAMP        : Tue Mar 19 01:24:49 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 49
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=82120
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_67961_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 753453
+ENTRYID          : 1
+STATEMENT        : 2390
+TIMESTAMP        : Wed Mar 20 09:49:19 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : SELECT * FROM MEMBERS WHERE STATUS='ACTIVE'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 6729
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_56769_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 334081
+ENTRYID          : 1
+STATEMENT        : 9650
+TIMESTAMP        : Thu Mar 21 14:11:45 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 91
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_93342_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 691380
+ENTRYID          : 1
+STATEMENT        : 7127
+TIMESTAMP        : Thu Mar 21 11:03:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 98
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=69840
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_89295_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 776913
+ENTRYID          : 1
+STATEMENT        : 1463
+TIMESTAMP        : Sun Mar 24 16:49:52 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 37
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91665_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 716118
+ENTRYID          : 1
+STATEMENT        : 8562
+TIMESTAMP        : Mon Mar 18 14:54:17 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 61
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_22793_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 593649
+ENTRYID          : 1
+STATEMENT        : 2097
+TIMESTAMP        : Thu Mar 28 11:53:42 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 26
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_38885_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 809794
+ENTRYID          : 1
+STATEMENT        : 3768
+TIMESTAMP        : Thu Mar 21 10:39:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 103
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=60157
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_55843_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 460971
+ENTRYID          : 1
+STATEMENT        : 2680
+TIMESTAMP        : Wed Mar 20 16:11:55 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 78
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 8
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_94671_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 508654
+ENTRYID          : 1
+STATEMENT        : 6200
+TIMESTAMP        : Thu Mar 21 11:07:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 97
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=31400
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_61792_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 525146
+ENTRYID          : 1
+STATEMENT        : 9603
+TIMESTAMP        : Thu Mar 21 10:34:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 88
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=62354
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25403_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 197716
+ENTRYID          : 1
+STATEMENT        : 7902
+TIMESTAMP        : Thu Mar 21 10:21:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 67
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=15116
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85584_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 234475
+ENTRYID          : 1
+STATEMENT        : 888
+TIMESTAMP        : Thu Mar 21 10:45:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 31
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=46735
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_18993_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 194545
+ENTRYID          : 1
+STATEMENT        : 9005
+TIMESTAMP        : Thu Mar 21 10:35:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 4
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=36255
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_99899_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 415989
+ENTRYID          : 1
+STATEMENT        : 9938
+TIMESTAMP        : Sat Mar 23 10:22:59 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 16
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91087_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 454861
+ENTRYID          : 1
+STATEMENT        : 984
+TIMESTAMP        : Mon Mar 25 23:15:10 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 90
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=75525
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_84427_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 150026
+ENTRYID          : 1
+STATEMENT        : 6528
+TIMESTAMP        : Thu Mar 21 10:51:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 74
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=49326
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_45235_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 532961
+ENTRYID          : 1
+STATEMENT        : 3081
+TIMESTAMP        : Thu Mar 21 11:09:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 71
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=94994
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_31964_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 771697
+ENTRYID          : 1
+STATEMENT        : 5528
+TIMESTAMP        : Thu Mar 21 10:55:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 21
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=70784
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_36106_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 583220
+ENTRYID          : 1
+STATEMENT        : 1540
+TIMESTAMP        : Thu Mar 21 11:14:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 7
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=42396
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_10235_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 836109
+ENTRYID          : 1
+STATEMENT        : 9386
+TIMESTAMP        : Wed Mar 13 13:46:44 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 19
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_88579_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 635348
+ENTRYID          : 1
+STATEMENT        : 8452
+TIMESTAMP        : Thu Mar 21 10:33:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 7
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=47487
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_45705_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 675191
+ENTRYID          : 1
+STATEMENT        : 7289
+TIMESTAMP        : Thu Mar 21 11:02:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 72
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=72410
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_68963_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 880762
+ENTRYID          : 1
+STATEMENT        : 5484
+TIMESTAMP        : Thu Mar 21 10:52:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 15
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=72460
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_52655_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 479167
+ENTRYID          : 1
+STATEMENT        : 4255
+TIMESTAMP        : Thu Mar 21 10:47:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 15
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=59732
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_26569_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 237654
+ENTRYID          : 1
+STATEMENT        : 8631
+TIMESTAMP        : Thu Mar 21 11:01:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 83
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=47247
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_98063_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 475911
+ENTRYID          : 1
+STATEMENT        : 8312
+TIMESTAMP        : Mon Mar 11 12:43:34 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 103
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_99235_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 827356
+ENTRYID          : 1
+STATEMENT        : 6582
+TIMESTAMP        : Sat Mar 02 11:17:25 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 82
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_32973_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 771394
+ENTRYID          : 1
+STATEMENT        : 8100
+TIMESTAMP        : Thu Mar 21 10:32:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 102
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=88311
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_90482_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 817395
+ENTRYID          : 1
+STATEMENT        : 2718
+TIMESTAMP        : Thu Mar 21 10:08:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 33
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=11388
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_93042_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 969948
+ENTRYID          : 1
+STATEMENT        : 4481
+TIMESTAMP        : Thu Mar 21 10:11:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 69
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=23529
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_17144_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 478356
+ENTRYID          : 1
+STATEMENT        : 63
+TIMESTAMP        : Mon Mar 04 09:25:36 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 65
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_89194_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 749137
+ENTRYID          : 1
+STATEMENT        : 4991
+TIMESTAMP        : Wed Mar 13 15:02:35 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 3
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_77276_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 121026
+ENTRYID          : 1
+STATEMENT        : 146
+TIMESTAMP        : Thu Mar 21 12:43:13 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 86
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_17329_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 908348
+ENTRYID          : 1
+STATEMENT        : 5479
+TIMESTAMP        : Wed Mar 20 02:02:46 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 13
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=85534
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_87028_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 785073
+ENTRYID          : 1
+STATEMENT        : 1276
+TIMESTAMP        : Thu Mar 21 10:12:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 49
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=95678
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_23501_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 200195
+ENTRYID          : 1
+STATEMENT        : 1046
+TIMESTAMP        : Thu Mar 21 10:59:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 53
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=37600
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85513_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 202463
+ENTRYID          : 1
+STATEMENT        : 6972
+TIMESTAMP        : Thu Mar 21 10:23:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 78
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=59969
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_14005_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 353690
+ENTRYID          : 1
+STATEMENT        : 6103
+TIMESTAMP        : Tue Mar 12 16:32:25 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 18
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_80517_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 322167
+ENTRYID          : 1
+STATEMENT        : 3340
+TIMESTAMP        : Sun Mar 10 16:30:01 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 97
+ACTION           : SELECT CUST_NAME, RRN, PHONE, CARD_NO FROM CUSTOMERS WHERE DEPT='영업부'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 4424
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_30410_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 418319
+ENTRYID          : 1
+STATEMENT        : 173
+TIMESTAMP        : Thu Mar 21 11:04:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 36
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=57943
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_17113_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 286638
+ENTRYID          : 1
+STATEMENT        : 4128
+TIMESTAMP        : Fri Mar 01 16:45:21 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 14
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_77698_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 492073
+ENTRYID          : 1
+STATEMENT        : 921
+TIMESTAMP        : Fri Mar 15 12:58:52 2024
+USERID           : USER104
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 97
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_84925_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 524434
+ENTRYID          : 1
+STATEMENT        : 1169
+TIMESTAMP        : Thu Mar 21 10:56:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=65288
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_48141_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 240384
+ENTRYID          : 1
+STATEMENT        : 7614
+TIMESTAMP        : Thu Mar 21 10:07:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 96
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=39269
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_20277_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 499581
+ENTRYID          : 1
+STATEMENT        : 4695
+TIMESTAMP        : Thu Mar 21 10:55:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 60
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=73896
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_17641_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 963652
+ENTRYID          : 1
+STATEMENT        : 4356
+TIMESTAMP        : Fri Mar 15 22:23:35 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 104
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=64519
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85713_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 461083
+ENTRYID          : 1
+STATEMENT        : 6523
+TIMESTAMP        : Thu Mar 21 10:28:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 42
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=73407
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_40801_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 182659
+ENTRYID          : 1
+STATEMENT        : 7522
+TIMESTAMP        : Sat Mar 02 17:14:35 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 51
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_99737_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 385071
+ENTRYID          : 1
+STATEMENT        : 4665
+TIMESTAMP        : Thu Mar 21 11:08:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 91
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=77713
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_22051_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 466375
+ENTRYID          : 1
+STATEMENT        : 3625
+TIMESTAMP        : Tue Mar 26 17:10:26 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 71
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_49562_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 106887
+ENTRYID          : 1
+STATEMENT        : 4921
+TIMESTAMP        : Fri Mar 01 22:18:38 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 20
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=12136
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_41958_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 141814
+ENTRYID          : 1
+STATEMENT        : 5259
+TIMESTAMP        : Mon Mar 04 14:28:15 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : SELECT id, created_at FROM sessions WHERE expires_at < NOW()
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_97690_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 618105
+ENTRYID          : 1
+STATEMENT        : 2444
+TIMESTAMP        : Fri Mar 08 09:00:42 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 17
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_52610_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 805893
+ENTRYID          : 1
+STATEMENT        : 8364
+TIMESTAMP        : Thu Mar 21 10:54:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 48
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=32877
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_40475_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 187889
+ENTRYID          : 1
+STATEMENT        : 4642
+TIMESTAMP        : Thu Mar 21 10:24:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 64
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=27548
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_88188_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 719284
+ENTRYID          : 1
+STATEMENT        : 1128
+TIMESTAMP        : Thu Mar 21 10:19:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 61
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=99861
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_84895_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 237509
+ENTRYID          : 1
+STATEMENT        : 9436
+TIMESTAMP        : Thu Mar 21 10:49:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 26
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=46651
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_52026_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 352593
+ENTRYID          : 1
+STATEMENT        : 5422
+TIMESTAMP        : Thu Mar 28 16:55:10 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 99
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96431_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 420523
+ENTRYID          : 1
+STATEMENT        : 9572
+TIMESTAMP        : Thu Mar 21 10:01:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=69067
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_11103_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 112394
+ENTRYID          : 1
+STATEMENT        : 3453
+TIMESTAMP        : Thu Mar 21 10:46:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 43
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=77922
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_88204_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 513224
+ENTRYID          : 1
+STATEMENT        : 8801
+TIMESTAMP        : Mon Mar 18 17:09:07 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 3
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_61435_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 174852
+ENTRYID          : 1
+STATEMENT        : 8900
+TIMESTAMP        : Thu Mar 21 11:13:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 37
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=29148
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_80504_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 952646
+ENTRYID          : 1
+STATEMENT        : 9420
+TIMESTAMP        : Thu Mar 21 10:37:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 35
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=25336
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_52616_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 390334
+ENTRYID          : 1
+STATEMENT        : 4279
+TIMESTAMP        : Sun Mar 10 10:30:04 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 38
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_96947_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 778636
+ENTRYID          : 1
+STATEMENT        : 2794
+TIMESTAMP        : Sun Mar 24 10:06:54 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 4
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_33644_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 676680
+ENTRYID          : 1
+STATEMENT        : 6580
+TIMESTAMP        : Tue Mar 12 05:44:42 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 24
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=65977
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_36698_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 533301
+ENTRYID          : 1
+STATEMENT        : 9046
+TIMESTAMP        : Thu Mar 21 10:27:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 99
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=99208
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_11526_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 774652
+ENTRYID          : 1
+STATEMENT        : 2572
+TIMESTAMP        : Tue Mar 12 15:09:53 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 81
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_28884_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 412534
+ENTRYID          : 1
+STATEMENT        : 6114
+TIMESTAMP        : Sun Mar 24 15:50:51 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 40
+ACTION           : INSERT INTO audit_log(user_id, action) VALUES('user101', 'login')
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 10
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_84732_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 282294
+ENTRYID          : 1
+STATEMENT        : 6172
+TIMESTAMP        : Thu Mar 21 10:11:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 72
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=44513
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_23272_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 447177
+ENTRYID          : 1
+STATEMENT        : 3368
+TIMESTAMP        : Sun Mar 31 11:38:56 2024
+USERID           : USER202
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 23
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 0
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25239_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 370343
+ENTRYID          : 1
+STATEMENT        : 1107
+TIMESTAMP        : Thu Mar 21 10:39:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 64
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=86916
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_85877_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 524814
+ENTRYID          : 1
+STATEMENT        : 9668
+TIMESTAMP        : Thu Mar 21 10:05:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 77
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=92788
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_45203_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 490532
+ENTRYID          : 1
+STATEMENT        : 332
+TIMESTAMP        : Wed Mar 13 14:44:15 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 98
+ACTION           : SELECT order_id, product_id, qty FROM orders WHERE order_date > '2024-03-01'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 7
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_16086_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 141843
+ENTRYID          : 1
+STATEMENT        : 5310
+TIMESTAMP        : Thu Mar 21 10:10:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 61
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=60868
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_95561_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 990742
+ENTRYID          : 1
+STATEMENT        : 9869
+TIMESTAMP        : Tue Mar 12 04:26:59 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 98
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=25799
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_86099_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 610856
+ENTRYID          : 1
+STATEMENT        : 5421
+TIMESTAMP        : Thu Mar 21 10:00:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 95
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=22871
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_43850_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 288783
+ENTRYID          : 1
+STATEMENT        : 8465
+TIMESTAMP        : Thu Mar 21 10:17:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 24
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=29249
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_67065_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 192422
+ENTRYID          : 1
+STATEMENT        : 1050
+TIMESTAMP        : Thu Mar 21 10:30:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 79
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=29048
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_10693_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 943442
+ENTRYID          : 1
+STATEMENT        : 1493
+TIMESTAMP        : Thu Mar 21 10:30:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 84
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=31068
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_40116_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 568288
+ENTRYID          : 1
+STATEMENT        : 2651
+TIMESTAMP        : Thu Mar 21 10:28:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 18
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=28096
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_36305_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 927524
+ENTRYID          : 1
+STATEMENT        : 4445
+TIMESTAMP        : Tue Mar 19 17:02:16 2024
+USERID           : ADMIN01
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 39
+ACTION           : SELECT * FROM MEMBERS WHERE STATUS='ACTIVE'
+RETURNCODE       : 0
+PRIVILEGE        : SELECT ANY TABLE
+ROWS_PROCESSED   : 1984
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25559_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 621533
+ENTRYID          : 1
+STATEMENT        : 292
+TIMESTAMP        : Tue Mar 26 16:05:54 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 60
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_22190_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 518309
+ENTRYID          : 1
+STATEMENT        : 5604
+TIMESTAMP        : Thu Mar 21 10:40:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 39
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=44517
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_27865_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 460589
+ENTRYID          : 1
+STATEMENT        : 4699
+TIMESTAMP        : Thu Mar 21 11:05:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 100
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=10012
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25444_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 645009
+ENTRYID          : 1
+STATEMENT        : 118
+TIMESTAMP        : Thu Mar 21 10:25:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 69
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=10932
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_89498_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 594312
+ENTRYID          : 1
+STATEMENT        : 7892
+TIMESTAMP        : Thu Mar 21 10:18:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 60
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=21239
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_57241_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 154617
+ENTRYID          : 1
+STATEMENT        : 3569
+TIMESTAMP        : Sun Mar 24 23:16:30 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 28
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=93692
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_57118_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 240829
+ENTRYID          : 1
+STATEMENT        : 5433
+TIMESTAMP        : Thu Mar 21 10:03:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 38
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=93995
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_34455_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 567429
+ENTRYID          : 1
+STATEMENT        : 732
+TIMESTAMP        : Thu Mar 21 17:24:11 2024
+USERID           : USER102
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 51
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_74629_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 497108
+ENTRYID          : 1
+STATEMENT        : 5755
+TIMESTAMP        : Sat Mar 02 15:28:46 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 24
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_78089_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 201836
+ENTRYID          : 1
+STATEMENT        : 1659
+TIMESTAMP        : Sun Mar 17 22:46:04 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 30
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=49833
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_45058_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 734792
+ENTRYID          : 1
+STATEMENT        : 6480
+TIMESTAMP        : Thu Mar 21 10:57:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 93
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=95591
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_65343_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 755698
+ENTRYID          : 1
+STATEMENT        : 3925
+TIMESTAMP        : Thu Mar 21 11:08:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 13
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=38913
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_52287_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 725874
+ENTRYID          : 1
+STATEMENT        : 834
+TIMESTAMP        : Mon Mar 11 16:45:59 2024
+USERID           : USER101
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 8
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_14234_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 476105
+ENTRYID          : 1
+STATEMENT        : 7416
+TIMESTAMP        : Wed Mar 27 09:44:50 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 29
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 8
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_62965_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 792616
+ENTRYID          : 1
+STATEMENT        : 5237
+TIMESTAMP        : Thu Mar 07 11:33:48 2024
+USERID           : USER105
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 10
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 9
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_46188_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 713099
+ENTRYID          : 1
+STATEMENT        : 1961
+TIMESTAMP        : Mon Mar 04 01:40:27 2024
+USERID           : EMP007
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 24
+ACTION           : SELECT NAME, RRN, ADDRESS, PHONE FROM MEMBERS WHERE ID=52534
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_21738_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 563324
+ENTRYID          : 1
+STATEMENT        : 5045
+TIMESTAMP        : Thu Mar 21 11:04:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 32
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=73131
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_99701_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 540186
+ENTRYID          : 1
+STATEMENT        : 2451
+TIMESTAMP        : Thu Mar 21 10:20:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 67
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=36522
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_86751_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 408334
+ENTRYID          : 1
+STATEMENT        : 7599
+TIMESTAMP        : Fri Mar 08 13:26:50 2024
+USERID           : USER201
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 50
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 4
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_91625_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 615895
+ENTRYID          : 1
+STATEMENT        : 3077
+TIMESTAMP        : Thu Mar 21 11:10:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 37
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=90967
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_75951_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 408545
+ENTRYID          : 1
+STATEMENT        : 5571
+TIMESTAMP        : Thu Mar 21 10:37:00 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 12
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=23954
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 3
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_33770_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 803571
+ENTRYID          : 1
+STATEMENT        : 9295
+TIMESTAMP        : Wed Mar 06 11:14:39 2024
+USERID           : USER103
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 27
+ACTION           : UPDATE orders SET status='shipped' WHERE order_id=12345
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 1
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_70142_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 814703
+ENTRYID          : 1
+STATEMENT        : 7549
+TIMESTAMP        : Thu Mar 21 10:38:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 102
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=41886
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_25509_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 793223
+ENTRYID          : 1
+STATEMENT        : 3774
+TIMESTAMP        : Thu Mar 21 10:14:30 2024
+USERID           : EMP003
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 80
+ACTION           : SELECT NAME, PHONE, RRN, EMAIL FROM CUSTOMERS WHERE CUST_ID=30625
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 2
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_32005_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 767090
+ENTRYID          : 1
+STATEMENT        : 1454
+TIMESTAMP        : Tue Mar 05 14:47:04 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 47
+ACTION           : SELECT COUNT(*) FROM orders GROUP BY status
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 5
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+
+
+Audit file /u01/app/oracle/admin/ORCL/adump/orcl_ora_62873_1.aud
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0
+Build label: RDBMS_19.3.0.0.0
+
+SESSIONID        : 549865
+ENTRYID          : 1
+STATEMENT        : 7822
+TIMESTAMP        : Tue Mar 26 10:08:39 2024
+USERID           : USER203
+USERHOST         : DBSERVER01
+TERMINAL         : pts/0
+ACTION#          : 84
+ACTION           : SELECT product_name, price FROM products WHERE category='electronics'
+RETURNCODE       : 0
+PRIVILEGE        : CREATE SESSION
+ROWS_PROCESSED   : 6
+OBJ$NAME         : CUSTOMERS
+OS_USERNAME      : oracle
+

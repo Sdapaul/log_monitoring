@@ -30,8 +30,6 @@ build_v2/
 dist/
 dist_v2/
 *.spec
-sample_logs/
-sample_docs/
 
 # 배포 패키지 (용량 큼) — v4.0만 추적
 *.zip

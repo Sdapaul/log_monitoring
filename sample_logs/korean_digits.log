@@ -1,0 +1,165 @@
+2024-03-01 10:22:01,000 WARN  [pool-1-thread-3] com.example.BatchJob - 사용자 로그인 처리 완료 - user_id=8215
+2024-03-01 10:38:24,000 INFO  [http-12] com.example.CustomerService - 고객 연락처 조회 - 담당자: admin01 전화번호: 공 일 공 일 이 삼 사 오 육 칠 팔
+2024-03-01 10:40:44,000 WARN  [pool-4-thread-7] com.example.BatchJob - 배치 작업 시작 - 처리 예정 건수=213
+2024-03-01 11:03:55,000 INFO  [payment-2] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사일일일-일일일일-일일일일-일일일일 결제 처리 시작
+2024-03-01 11:52:31,000 INFO  [pool-1-thread-2] com.example.ApiGateway - 주문 처리 완료 - order_id=64636 상태=완료
+2024-03-01 12:12:18,000 INFO  [pool-2-thread-5] com.example.OrderService - 사용자 로그인 처리 완료 - user_id=6567
+2024-03-01 15:27:54,000 INFO  [pool-3-thread-3] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=247
+2024-03-01 15:41:20,000 INFO  [pool-4-thread-4] com.example.ApiGateway - 캐시 히트율: 77%
+2024-03-02 11:13:08,000 INFO  [pool-2-thread-4] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=228
+2024-03-02 11:31:50,000 INFO  [pool-3-thread-8] com.example.OrderService - 주문 처리 완료 - order_id=25162 상태=완료
+2024-03-02 11:47:34,000 WARN  [pool-1-thread-5] com.example.UserService - 배치 작업 시작 - 처리 예정 건수=435
+2024-03-02 13:54:24,000 DEBUG [pool-1-thread-7] com.example.OrderService - 캐시 히트율: 87%
+2024-03-02 13:55:08,000 WARN  [pool-4-thread-4] com.example.UserService - 캐시 히트율: 70%
+2024-03-02 14:33:00,000 INFO  [pool-3-thread-7] com.example.ApiGateway - API 응답 시간: 1148ms
+2024-03-02 14:55:21,000 INFO  [pool-1-thread-8] com.example.ApiGateway - 배치 작업 시작 - 처리 예정 건수=318
+2024-03-02 16:47:02,000 INFO  [http-3] com.example.CustomerService - SMS 발송 요청 - 수신번호: 공일공-일이삼사-오육칠팔 발신자: admin01
+2024-03-03 02:40:44,000 WARN  [scheduler-3] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: batch01
+2024-03-03 02:43:27,000 WARN  [scheduler-3] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: emp007
+2024-03-03 07:52:52,000 INFO  [payment-2] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사오삼이-공일오일-일이팔삼-공삼육육 결제 처리 시작
+2024-03-03 09:43:17,000 INFO  [pool-4-thread-6] com.example.OrderService - 주문 처리 완료 - order_id=14514 상태=완료
+2024-03-03 13:35:30,000 INFO  [payment-3] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사일일일-일일일일-일일일일-일일일일 결제 처리 시작
+2024-03-03 14:01:38,000 WARN  [pool-4-thread-7] com.example.OrderService - 사용자 로그인 처리 완료 - user_id=9248
+2024-03-03 15:56:02,000 INFO  [pool-4-thread-3] com.example.OrderService - 캐시 히트율: 82%
+2024-03-04 11:20:42,000 WARN  [pool-4-thread-8] com.example.ApiGateway - API 응답 시간: 1395ms
+2024-03-04 14:04:48,000 INFO  [pool-3-thread-7] com.example.ApiGateway - API 응답 시간: 1086ms
+2024-03-04 14:36:28,000 WARN  [pool-3-thread-2] com.example.OrderService - 캐시 히트율: 62%
+2024-03-04 15:44:02,000 INFO  [pool-2-thread-5] com.example.BatchJob - 캐시 히트율: 86%
+2024-03-04 17:21:14,000 INFO  [api-4] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-05 08:24:16,000 INFO  [http-15] com.example.CustomerService - SMS 발송 요청 - 수신번호: 공 일 공 일 이 삼 사 오 육 칠 팔 발신자: emp007
+2024-03-05 12:54:46,000 INFO  [pool-1-thread-3] com.example.ApiGateway - 사용자 로그인 처리 완료 - user_id=7419
+2024-03-05 13:05:27,000 INFO  [api-3] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-05 14:36:40,000 WARN  [pool-4-thread-7] com.example.OrderService - API 응답 시간: 841ms
+2024-03-05 15:13:41,000 INFO  [pool-2-thread-8] com.example.BatchJob - 캐시 히트율: 62%
+2024-03-05 15:54:13,000 INFO  [http-12] com.example.CustomerService - 고객 연락처 조회 - 담당자: batch01 전화번호: 영일영-일일일일-이이이이
+2024-03-05 16:52:17,000 INFO  [pool-2-thread-1] com.example.UserService - 주문 처리 완료 - order_id=48554 상태=완료
+2024-03-06 12:15:27,000 INFO  [pool-2-thread-5] com.example.BatchJob - 사용자 로그인 처리 완료 - user_id=8344
+2024-03-06 13:58:06,000 INFO  [pool-2-thread-7] com.example.UserService - 배치 작업 시작 - 처리 예정 건수=166
+2024-03-06 14:11:45,000 INFO  [pool-2-thread-8] com.example.OrderService - 주문 처리 완료 - order_id=24449 상태=완료
+2024-03-06 15:52:51,000 INFO  [http-3] com.example.CustomerService - 고객 정보 로그 - 연락처=공일공-일이삼사-오육칠팔 처리자=emp007
+2024-03-06 16:43:08,000 INFO  [http-11] com.example.CustomerService - 고객 연락처 조회 - 담당자: emp007 전화번호: 공일육-삼사오-육칠팔구
+2024-03-07 09:47:11,000 INFO  [pool-3-thread-7] com.example.ApiGateway - 사용자 로그인 처리 완료 - user_id=2789
+2024-03-07 11:23:34,000 INFO  [pool-2-thread-7] com.example.ApiGateway - 배치 작업 시작 - 처리 예정 건수=426
+2024-03-07 12:40:58,000 INFO  [pool-1-thread-6] com.example.OrderService - 캐시 히트율: 81%
+2024-03-07 14:16:19,000 WARN  [pool-3-thread-4] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=14
+2024-03-07 16:28:54,000 WARN  [pool-1-thread-6] com.example.OrderService - API 응답 시간: 1561ms
+2024-03-07 16:38:21,000 INFO  [pool-2-thread-1] com.example.ApiGateway - 캐시 히트율: 86%
+2024-03-07 22:13:21,000 INFO  [payment-4] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사오삼이-공일오일-일이팔삼-공삼육육 결제 처리 시작
+2024-03-08 00:43:51,000 INFO  [http-7] com.example.CustomerService - 고객 정보 로그 - 연락처=공일공 일이삼사 오육칠팔 처리자=batch01
+2024-03-08 03:58:22,000 INFO  [http-13] com.example.CustomerService - 고객 연락처 조회 - 담당자: batch01 전화번호: 영일영-일일일일-이이이이
+2024-03-08 09:17:35,000 WARN  [pool-1-thread-4] com.example.OrderService - 캐시 히트율: 65%
+2024-03-08 12:10:48,000 WARN  [pool-1-thread-2] com.example.ApiGateway - API 응답 시간: 1952ms
+2024-03-08 17:37:50,000 WARN  [pool-4-thread-8] com.example.BatchJob - API 응답 시간: 434ms
+2024-03-08 22:43:04,000 INFO  [http-5] com.example.CustomerService - SMS 발송 요청 - 수신번호: 영일영-일일일일-이이이이 발신자: emp007
+2024-03-09 00:46:39,000 WARN  [scheduler-2] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: batch01
+2024-03-09 04:41:57,000 WARN  [scheduler-1] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 구공공삼일오-이일공공공공일 처리자: batch01
+2024-03-09 09:42:37,000 INFO  [pool-1-thread-4] com.example.UserService - API 응답 시간: 1609ms
+2024-03-09 10:38:20,000 WARN  [pool-4-thread-3] com.example.BatchJob - API 응답 시간: 1860ms
+2024-03-09 15:34:28,000 DEBUG [pool-1-thread-7] com.example.OrderService - 주문 처리 완료 - order_id=20722 상태=완료
+2024-03-09 15:40:58,000 WARN  [pool-1-thread-4] com.example.OrderService - 주문 처리 완료 - order_id=69255 상태=완료
+2024-03-09 16:57:45,000 WARN  [pool-2-thread-1] com.example.OrderService - 캐시 히트율: 96%
+2024-03-09 18:59:34,000 INFO  [http-13] com.example.CustomerService - SMS 발송 요청 - 수신번호: 영일영-일일일일-이이이이 발신자: emp007
+2024-03-09 21:19:56,000 INFO  [payment-4] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사오삼이-공일오일-일이팔삼-공삼육육 결제 처리 시작
+2024-03-10 15:48:56,000 WARN  [pool-1-thread-2] com.example.BatchJob - 배치 작업 시작 - 처리 예정 건수=393
+2024-03-10 15:56:24,000 WARN  [pool-2-thread-6] com.example.BatchJob - API 응답 시간: 222ms
+2024-03-11 00:16:30,000 INFO  [http-6] com.example.CustomerService - SMS 발송 요청 - 수신번호: 공일공-일이삼사-오육칠팔 발신자: admin01
+2024-03-11 10:50:08,000 INFO  [pool-4-thread-1] com.example.BatchJob - 캐시 히트율: 63%
+2024-03-11 13:23:00,000 WARN  [pool-2-thread-1] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=449
+2024-03-11 13:24:01,000 INFO  [pool-4-thread-4] com.example.BatchJob - 캐시 히트율: 78%
+2024-03-11 13:32:44,000 INFO  [pool-3-thread-8] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=370
+2024-03-11 14:51:43,000 INFO  [pool-2-thread-2] com.example.ApiGateway - 주문 처리 완료 - order_id=80555 상태=완료
+2024-03-12 09:04:56,000 INFO  [pool-4-thread-5] com.example.ApiGateway - 주문 처리 완료 - order_id=80278 상태=완료
+2024-03-12 15:11:53,000 WARN  [pool-1-thread-2] com.example.ApiGateway - 사용자 로그인 처리 완료 - user_id=7069
+2024-03-12 16:37:00,000 INFO  [http-13] com.example.CustomerService - 고객 정보 로그 - 연락처=영일영-일일일일-이이이이 처리자=monitor
+2024-03-13 10:17:04,000 DEBUG [pool-1-thread-4] com.example.ApiGateway - 사용자 로그인 처리 완료 - user_id=8949
+2024-03-13 10:33:58,000 INFO  [pool-4-thread-3] com.example.ApiGateway - 캐시 히트율: 84%
+2024-03-13 14:20:38,000 DEBUG [pool-2-thread-1] com.example.OrderService - 주문 처리 완료 - order_id=48559 상태=완료
+2024-03-13 17:23:31,000 WARN  [pool-4-thread-3] com.example.BatchJob - API 응답 시간: 1039ms
+2024-03-13 17:38:30,000 INFO  [pool-3-thread-3] com.example.ApiGateway - 사용자 로그인 처리 완료 - user_id=4206
+2024-03-13 22:38:15,000 WARN  [scheduler-1] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 구공공삼일오-이일공공공공일 처리자: emp007
+2024-03-13 23:50:59,000 WARN  [scheduler-1] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: batch01
+2024-03-14 09:21:25,000 INFO  [api-7] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-14 15:17:07,000 WARN  [pool-4-thread-8] com.example.BatchJob - 사용자 로그인 처리 완료 - user_id=9474
+2024-03-14 16:42:54,000 WARN  [pool-1-thread-7] com.example.BatchJob - 캐시 히트율: 96%
+2024-03-15 09:53:40,000 WARN  [pool-1-thread-7] com.example.BatchJob - API 응답 시간: 59ms
+2024-03-15 14:13:27,000 INFO  [http-2] com.example.CustomerService - 고객 정보 로그 - 연락처=공일육-삼사오-육칠팔구 처리자=monitor
+2024-03-15 19:34:08,000 INFO  [api-2] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-15 20:07:17,000 INFO  [api-7] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-16 04:21:53,000 INFO  [api-2] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-16 06:10:53,000 INFO  [http-4] com.example.CustomerService - 고객 정보 로그 - 연락처=공일공-일이삼사-오육칠팔 처리자=batch01
+2024-03-16 09:11:12,000 INFO  [pool-4-thread-5] com.example.OrderService - API 응답 시간: 1123ms
+2024-03-16 11:35:12,000 WARN  [pool-2-thread-2] com.example.OrderService - 주문 처리 완료 - order_id=26702 상태=완료
+2024-03-16 14:38:27,000 DEBUG [pool-3-thread-6] com.example.BatchJob - 캐시 히트율: 84%
+2024-03-16 15:51:01,000 WARN  [pool-3-thread-5] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=132
+2024-03-17 03:38:34,000 WARN  [scheduler-3] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: emp007
+2024-03-17 12:04:49,000 WARN  [pool-4-thread-2] com.example.ApiGateway - API 응답 시간: 1927ms
+2024-03-17 14:14:37,000 INFO  [pool-4-thread-6] com.example.ApiGateway - API 응답 시간: 887ms
+2024-03-17 17:41:05,000 DEBUG [pool-2-thread-2] com.example.UserService - 배치 작업 시작 - 처리 예정 건수=29
+2024-03-18 05:08:36,000 WARN  [scheduler-2] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔오공육공일-일구팔칠육오공 처리자: batch01
+2024-03-18 12:39:13,000 WARN  [pool-4-thread-7] com.example.UserService - 주문 처리 완료 - order_id=38020 상태=완료
+2024-03-18 15:34:39,000 INFO  [http-6] com.example.CustomerService - 고객 연락처 조회 - 담당자: sysadmin 전화번호: 영일영-일일일일-이이이이
+2024-03-18 23:43:35,000 WARN  [scheduler-2] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: batch01
+2024-03-19 00:26:52,000 WARN  [scheduler-1] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 구공공삼일오-이일공공공공일 처리자: batch01
+2024-03-19 05:06:33,000 WARN  [scheduler-2] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔오공육공일-일구팔칠육오공 처리자: batch01
+2024-03-19 12:57:36,000 INFO  [pool-3-thread-6] com.example.ApiGateway - 주문 처리 완료 - order_id=91376 상태=완료
+2024-03-19 14:08:54,000 DEBUG [pool-4-thread-1] com.example.BatchJob - API 응답 시간: 438ms
+2024-03-19 14:39:19,000 DEBUG [pool-3-thread-3] com.example.UserService - 주문 처리 완료 - order_id=15530 상태=완료
+2024-03-19 21:52:27,000 INFO  [payment-2] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사오삼이-공일오일-일이팔삼-공삼육육 결제 처리 시작
+2024-03-20 10:19:15,000 WARN  [pool-4-thread-4] com.example.UserService - 주문 처리 완료 - order_id=28029 상태=완료
+2024-03-20 10:21:41,000 WARN  [pool-1-thread-8] com.example.BatchJob - 사용자 로그인 처리 완료 - user_id=4153
+2024-03-21 11:00:03,000 DEBUG [pool-3-thread-5] com.example.ApiGateway - 배치 작업 시작 - 처리 예정 건수=118
+2024-03-21 14:55:02,000 WARN  [pool-3-thread-8] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=388
+2024-03-21 23:23:58,000 WARN  [scheduler-2] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 구공공삼일오-이일공공공공일 처리자: emp007
+2024-03-22 10:14:56,000 INFO  [pool-2-thread-3] com.example.UserService - 배치 작업 시작 - 처리 예정 건수=65
+2024-03-22 22:15:02,000 WARN  [scheduler-1] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: batch01
+2024-03-23 11:16:38,000 DEBUG [pool-2-thread-5] com.example.OrderService - API 응답 시간: 1628ms
+2024-03-23 12:29:39,000 INFO  [pool-2-thread-8] com.example.BatchJob - 배치 작업 시작 - 처리 예정 건수=214
+2024-03-23 13:25:39,000 INFO  [pool-4-thread-4] com.example.OrderService - 캐시 히트율: 71%
+2024-03-23 15:04:58,000 INFO  [pool-2-thread-3] com.example.BatchJob - 사용자 로그인 처리 완료 - user_id=6092
+2024-03-23 16:40:44,000 DEBUG [pool-1-thread-7] com.example.ApiGateway - 사용자 로그인 처리 완료 - user_id=5043
+2024-03-23 18:02:06,000 INFO  [api-5] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-23 23:34:34,000 INFO  [http-12] com.example.CustomerService - 고객 연락처 조회 - 담당자: emp007 전화번호: 영일영-일일일일-이이이이
+2024-03-24 10:24:57,000 INFO  [pool-2-thread-4] com.example.BatchJob - 캐시 히트율: 98%
+2024-03-25 12:59:15,000 DEBUG [pool-2-thread-4] com.example.UserService - 주문 처리 완료 - order_id=65270 상태=완료
+2024-03-25 13:14:46,000 DEBUG [pool-4-thread-2] com.example.OrderService - 배치 작업 시작 - 처리 예정 건수=381
+2024-03-25 13:43:58,000 WARN  [pool-3-thread-4] com.example.UserService - 사용자 로그인 처리 완료 - user_id=5967
+2024-03-25 17:54:00,000 INFO  [http-8] com.example.CustomerService - 고객 정보 로그 - 연락처=공일공-일이삼사-오육칠팔 처리자=admin01
+2024-03-26 06:32:12,000 INFO  [api-4] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-26 09:03:08,000 DEBUG [pool-4-thread-6] com.example.BatchJob - 캐시 히트율: 79%
+2024-03-26 12:14:16,000 INFO  [pool-3-thread-2] com.example.UserService - 사용자 로그인 처리 완료 - user_id=2460
+2024-03-26 12:33:21,000 WARN  [pool-4-thread-8] com.example.ApiGateway - 배치 작업 시작 - 처리 예정 건수=157
+2024-03-26 12:38:55,000 DEBUG [pool-3-thread-3] com.example.ApiGateway - 주문 처리 완료 - order_id=18469 상태=완료
+2024-03-26 14:21:14,000 DEBUG [pool-4-thread-7] com.example.BatchJob - 주문 처리 완료 - order_id=86933 상태=완료
+2024-03-26 14:42:10,000 WARN  [pool-4-thread-2] com.example.UserService - 캐시 히트율: 72%
+2024-03-26 14:59:00,000 INFO  [http-10] com.example.CustomerService - 고객 정보 로그 - 연락처=공일일-구팔칠-육오사삼 처리자=batch01
+2024-03-26 15:41:52,000 DEBUG [pool-1-thread-4] com.example.BatchJob - 주문 처리 완료 - order_id=41752 상태=완료
+2024-03-26 19:27:16,000 INFO  [payment-4] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사오삼이-공일오일-일이팔삼-공삼육육 결제 처리 시작
+2024-03-27 02:14:44,000 INFO  [http-6] com.example.CustomerService - SMS 발송 요청 - 수신번호: 영일영-일일일일-이이이이 발신자: sysadmin
+2024-03-27 03:57:33,000 INFO  [http-4] com.example.CustomerService - 고객 연락처 조회 - 담당자: sysadmin 전화번호: 공일공 일이삼사 오육칠팔
+2024-03-27 13:53:14,000 DEBUG [pool-4-thread-3] com.example.BatchJob - 캐시 히트율: 62%
+2024-03-27 14:23:59,000 INFO  [http-13] com.example.CustomerService - 고객 정보 로그 - 연락처=공일일-구팔칠-육오사삼 처리자=emp007
+2024-03-27 14:28:40,000 INFO  [http-13] com.example.CustomerService - SMS 발송 요청 - 수신번호: 공일공-일이삼사-오육칠팔 발신자: batch01
+2024-03-27 14:50:25,000 DEBUG [pool-1-thread-8] com.example.OrderService - API 응답 시간: 1531ms
+2024-03-27 18:35:35,000 INFO  [payment-3] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사일일일-일일일일-일일일일-일일일일 결제 처리 시작
+2024-03-27 23:51:25,000 INFO  [http-16] com.example.CustomerService - 고객 정보 로그 - 연락처=공일공-일이삼사-오육칠팔 처리자=admin01
+2024-03-28 01:08:38,000 WARN  [scheduler-3] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 팔공공일공일-일공공공공공팔 처리자: batch01
+2024-03-28 01:17:00,000 WARN  [scheduler-1] com.example.IdentityVerifier - 신원 검증 처리 - 대상: 구공공삼일오-이일공공공공일 처리자: emp007
+2024-03-28 12:59:36,000 WARN  [pool-1-thread-6] com.example.ApiGateway - API 응답 시간: 1657ms
+2024-03-28 17:45:22,000 INFO  [http-5] com.example.CustomerService - 고객 연락처 조회 - 담당자: monitor 전화번호: 공일공-일이삼사-오육칠팔
+2024-03-28 17:46:46,000 DEBUG [pool-4-thread-7] com.example.ApiGateway - 캐시 히트율: 79%
+2024-03-28 19:09:46,000 INFO  [http-16] com.example.CustomerService - 고객 정보 로그 - 연락처=공일일-구팔칠-육오사삼 처리자=sysadmin
+2024-03-28 22:17:33,000 INFO  [api-1] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔
+2024-03-29 04:11:45,000 INFO  [http-2] com.example.CustomerService - SMS 발송 요청 - 수신번호: 공 일 공 일 이 삼 사 오 육 칠 팔 발신자: monitor
+2024-03-29 15:13:39,000 WARN  [pool-3-thread-6] com.example.BatchJob - 배치 작업 시작 - 처리 예정 건수=135
+2024-03-29 16:48:25,000 WARN  [pool-1-thread-2] com.example.UserService - 캐시 히트율: 84%
+2024-03-29 17:46:50,000 DEBUG [pool-2-thread-1] com.example.BatchJob - 배치 작업 시작 - 처리 예정 건수=490
+2024-03-29 18:05:28,000 INFO  [payment-2] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사오삼이-공일오일-일이팔삼-공삼육육 결제 처리 시작
+2024-03-29 22:34:17,000 INFO  [http-6] com.example.CustomerService - 고객 정보 로그 - 연락처=공 일 공 일 이 삼 사 오 육 칠 팔 처리자=emp007
+2024-03-30 02:00:18,000 INFO  [http-6] com.example.CustomerService - SMS 발송 요청 - 수신번호: 공일공-일이삼사-오육칠팔 발신자: admin01
+2024-03-30 13:11:25,000 INFO  [payment-4] com.example.PaymentProcessor - 결제 수단 확인 - 카드번호: 사오삼이-공일오일-일이팔삼-공삼육육 결제 처리 시작
+2024-03-31 10:28:33,000 INFO  [http-13] com.example.CustomerService - 고객 연락처 조회 - 담당자: sysadmin 전화번호: 공일공 일이삼사 오육칠팔
+2024-03-31 12:23:28,000 WARN  [pool-4-thread-7] com.example.OrderService - 사용자 로그인 처리 완료 - user_id=1051
+2024-03-31 13:37:12,000 WARN  [pool-4-thread-5] com.example.OrderService - 캐시 히트율: 85%
+2024-03-31 14:25:24,000 INFO  [pool-4-thread-8] com.example.ApiGateway - API 응답 시간: 937ms
+2024-03-31 16:43:18,000 INFO  [http-15] com.example.CustomerService - 고객 연락처 조회 - 담당자: sysadmin 전화번호: 공일일-구팔칠-육오사삼
+2024-03-31 19:27:06,000 INFO  [api-2] com.example.MixedLogger - 혼합 형식 연락처 처리: 010-일이삼사-오육칠팔

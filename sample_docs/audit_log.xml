@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auditLog>
+  <event timestamp="2024-03-15 10:30:00" user="emp003" db="custdb">
+    <query>SELECT name, phone, rrn FROM customers WHERE dept=10</query>
+    <rowsAffected>120</rowsAffected>
+    <clientIp>192.168.1.55</clientIp>
+  </event>
+  <event timestamp="2024-03-15 22:45:00" user="emp007" db="custdb">
+    <query>SELECT cust_name, rrn, birthday FROM personal_info WHERE id=3042</query>
+    <rowsAffected>3</rowsAffected>
+    <clientIp>192.168.1.77</clientIp>
+  </event>
+  <event timestamp="2024-03-21 11:00:00" user="admin01" db="custdb">
+    <query>SELECT * FROM customers WHERE created_date >= '2024-01-01'</query>
+    <rowsAffected>4500</rowsAffected>
+    <clientIp>10.0.0.1</clientIp>
+  </event>
+  <customerRecord id="C001">
+    <name>김길동</name>
+    <rrn>800101-1000008</rrn>
+    <phone>010-3456-7890</phone>
+    <email>kim.g@example.com</email>
+    <address>서울시 강남구 테헤란로 152</address>
+  </customerRecord>
+  <customerRecord id="C002">
+    <name>이순이</name>
+    <rrn>900315-2100001</rrn>
+    <phone>010-9876-5432</phone>
+    <email>lee.s@example.co.kr</email>
+  </customerRecord>
+</auditLog>
