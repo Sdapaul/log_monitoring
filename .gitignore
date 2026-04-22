@@ -31,6 +31,8 @@ Desktop.ini
 
 # 배포 패키지 (용량 큼)
 *.zip
+!pii_checker_v3.0_offline.zip
+!pii_checker_v4.0_offline.zip
 build_v2/
 dist_v2/
 pii_checker_v1.0_offline/
