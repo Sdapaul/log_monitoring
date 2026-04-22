@@ -5,23 +5,18 @@ __pycache__/
 *.pyd
 .Python
 *.egg-info/
-dist/
-build/
-*.spec.bak
+*.egg
 
-# 업로드/보고서/이력 (운영 데이터)
+# 운영 데이터 (자동 생성)
 uploads/
 reports/
 history/*.json
 history/daily_counts.json
 test_output/
-sample_logs/
 
-# 환경
+# 개발 환경
 .env
 *.local
-
-# IDE
 .vscode/
 .idea/
 
@@ -29,20 +24,15 @@ sample_logs/
 Thumbs.db
 Desktop.ini
 
-# 배포 패키지 (용량 큼)
-*.zip
-!pii_checker_v3.0_offline.zip
-!pii_checker_v4.0_offline.zip
+# 빌드 산출물
+build/
 build_v2/
+dist/
 dist_v2/
-pii_checker_v1.0_offline/
-pii_checker_v3.0_offline/
+*.spec
+sample_logs/
 sample_docs/
-*.egg
 
-# pii_checker_v2.0_offline 내 제외 항목
-pii_checker_v2.0_offline/pii_checker/_internal/__pycache__/
-pii_checker_v2.0_offline/pii_checker/_internal/reports/
-pii_checker_v2.0_offline/pii_checker/_internal/uploads/
-pii_checker_v2.0_offline/pii_checker/_internal/history/
-
+# 배포 패키지 (용량 큼) — v4.0만 추적
+*.zip
+!pii_checker_v4.0_offline.zip
