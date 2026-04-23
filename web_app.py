@@ -453,8 +453,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <div class="drop-zone" id="dropZone">
           <div class="fs-3 mb-1">&#128196;</div>
           <div>파일을 여기에 드래그하거나 클릭하여 선택</div>
-          <div class="small text-muted mt-1">.log, .txt, .gz, .zip, .docx, .pdf, .xlsx 등 다중 선택 가능</div>
-          <input type="file" id="fileInput" multiple accept=".log,.gz,.txt,.audit,.json,.zip,.tar,.tgz,.docx,.pdf,.xlsx,.xls,.xlsm,.xml"
+          <div class="small text-muted mt-1">.log, .txt, .csv, .gz, .zip, .docx, .pdf, .xlsx 등 다중 선택 가능</div>
+          <input type="file" id="fileInput" multiple accept=".log,.gz,.txt,.csv,.audit,.json,.zip,.tar,.tgz,.docx,.pdf,.xlsx,.xls,.xlsm,.xml"
                  style="display:none">
         </div>
         <div id="fileList" class="mt-2 small text-muted"></div>
@@ -613,7 +613,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             <span class="welcome-icon">&#128269;</span>
             <div>
               <div class="fw-bold small">지원 파일 확장자</div>
-              <div class="small text-muted"><code>.log</code> · <code>.txt</code> · <code>.gz</code> · <code>.zip</code> · <code>.tar.gz</code> · <code>.docx</code> · <code>.pdf</code> · <code>.xlsx</code> · <code>.xml</code> · <code>.audit</code> · <code>.json</code> &nbsp;·&nbsp; 형식 자동 감지 · 압축/문서 자동 처리</div>
+              <div class="small text-muted"><code>.log</code> · <code>.txt</code> · <code>.csv</code> · <code>.gz</code> · <code>.zip</code> · <code>.tar.gz</code> · <code>.docx</code> · <code>.pdf</code> · <code>.xlsx</code> · <code>.xml</code> · <code>.audit</code> · <code>.json</code> &nbsp;·&nbsp; 형식 자동 감지 · 압축/문서 자동 처리</div>
             </div>
           </div>
         </div>
