@@ -17,7 +17,7 @@ DB/웹/앱 로그 분석 → PII 탐지 → 소명 근거 생성. Flask 기반.
 | 기타 CSV/텍스트 (`*.txt`, `*.csv`) | `GenericParser` | 정규식으로 timestamp·user·쿼리 추출; 비정형도 숫자 패턴(전화/주민/카드)으로 PII 탐지 |
 
 ### 탐지하는 PII 종류 (`config.py → PII_PATTERNS`)
-`RRN`(주민번호) · `PHONE` · `ACCOUNT_NO` · `CREDIT_CARD` · `PASSPORT` · `EMAIL` · `NAME_IN_QUERY` · `ADDRESS` · `EMP_ID_IN_QUERY` · `BIRTHDATE`
+`RRN`(주민번호) · `PHONE` · `ACCOUNT_NO` · `CREDIT_CARD` · `PASSPORT` · `EMAIL` · `NAME_IN_QUERY` · `ADDRESS` · `EMP_ID_IN_QUERY` · `EMP_ID_STANDALONE` · `BIRTHDATE` · `IP_ADDRESS`
 
 ### 핵심 분석 지표
 - **effective_pii_exposure** = result_row_count × PII_select_field_count  
@@ -28,35 +28,45 @@ DB/웹/앱 로그 분석 → PII 탐지 → 소명 근거 생성. Flask 기반.
 
 ```
 config.py                        # PII_PATTERNS, THRESHOLDS, LOG_FORMAT_SIGNATURES
-pipeline/runner.py               # 핵심 파이프라인 (process_file → score_all → 보고서)
+main.py                          # CLI 진입점
+web_app.py                       # Flask UI (http://localhost:5000)
 parsers/auto_detector.py         # 로그 포맷 자동 감지 (특이성 점수 기반)
-parsers/{db,web,app,generic}_*   # 파서 4종
-detectors/pii_detector.py        # 정규식 스캔 + RRN체크섬 + Luhn 검증
+parsers/base_parser.py           # 파서 공통 기반 클래스
+parsers/{db,web,app,generic}_*   # 파서 4종 (DB/Web/App/Generic)
+detectors/pii_detector.py        # 정규식 스캔 + 한글숫자 변환 + RRN체크섬 + Luhn 검증
 detectors/sql_clause_analyzer.py # SELECT/WHERE PII 컬럼 분석, 결과건수 파싱
 detectors/access_counter.py      # 시간·일별 쿼리 집계
 detectors/anomaly_scorer.py      # score_all → risk_score, risk_level
 models/log_event.py              # LogEvent + PiiHit (파싱 결과)
 models/finding.py                # Finding (탐지 결과)
 models/user_summary.py           # UserSummary (사용자별 집계)
+pipeline/runner.py               # 핵심 파이프라인 (process_file → score_all → 보고서)
+pipeline/stream_reader.py        # 파일 스트리밍, .gz 해제, 문서 파일 라우팅
+pipeline/doc_extractor.py        # Word/PDF/Excel/PPTX/XML 텍스트 추출
+pipeline/aggregator.py           # 사용자별 UserSummary 집계, Finding 생성
 reports/excel_reporter.py        # 7시트 Excel
-reports/html_reporter.py         # Bootstrap5 HTML
+reports/html_reporter.py         # Bootstrap5 HTML (CSS/JS 인라인 내장)
 reports/justification_builder.py # JustificationItem + priority_score
-history/manager.py               # 스냅샷 저장·이력 비교
-main.py                          # CLI 진입점
-web_app.py                       # Flask UI (http://localhost:5000)
+history/manager.py               # JSON 스냅샷 저장·이력 비교·delta 계산
+history/daily_counts.py          # 일별 쿼리 수 추세 데이터 누적 저장·로드
+utils/date_utils.py              # 날짜 파싱, 분석 범위 내 날짜 여부 판단
 ```
 
 ## 파이프라인 흐름
 
 ```
-로그파일 → detect_format → parser.parse_line → LogEvent
-       → scan_event(PII) + analyze_sql → pii_hits, exposure
-       → AccessCounter.add → 집계
-       → build_user_summaries → UserSummary
-       → score_all → risk_score/level
-       → save_snapshot + compute_deltas
-       → generate_excel + generate_html
-       → build_justification_list → JustificationItem[]
+로그/문서 파일
+  → stream_reader.stream_lines()          # .gz 해제, 문서 파일 분기
+      ├─ 텍스트/CSV/로그 → detect_format → parser.parse_line → LogEvent
+      └─ 문서(.docx/.pdf/.xlsx/.xml) → doc_extractor.extract_lines() → GenericParser → LogEvent
+  → scan_event(PII) + analyze_sql         # pii_hits, exposure_type, result_row_count
+  → AccessCounter.add                     # 시간·일별 집계
+  → build_user_summaries → UserSummary
+  → score_all → risk_score / risk_level
+  → save_snapshot + compute_deltas        # history/*.json
+  → save_daily_counts                     # history/daily_counts 추세 저장
+  → generate_excel + generate_html
+  → build_justification_list → JustificationItem[]
 ```
 
 ## Finding 카테고리
@@ -71,6 +81,7 @@ web_app.py                       # Flask UI (http://localhost:5000)
 | `POST /api/analyze` | 분석 시작 → job_id |
 | `GET /api/status/<job_id>` | 진행률 폴링 (error 필드 확인) |
 | `GET /api/download/<job_id>/<fmt>` | xlsx/html 다운로드 |
+| `GET /api/jobs` | 전체 Job 목록 조회 |
 
 파라미터: `start_date`, `end_date`, `log_files[]`, `check_misuse`, `check_excess`, `min_risk_level`, `log_format`, `report_formats[]`
 
